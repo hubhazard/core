@@ -1,0 +1,37 @@
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: 'tsconfig.json',
+    sourceType: 'module',
+  },
+  plugins: ['@typescript-eslint/eslint-plugin'],
+  extends: [
+    'airbnb-base',
+    'plugin:import/typescript',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    'prettier/@typescript-eslint',
+  ],
+  root: true,
+  env: {
+    node: true,
+    jest: true,
+  },
+  rules: {
+    '@typescript-eslint/interface-name-prefix': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    'import/extensions': 'off',
+    'import/prefer-default-export': 'off',
+    'import/no-cycle': 'off',
+    'no-console': 'off',
+    'class-methods-use-this': 'off',
+    'no-use-before-define': 'off',
+    'no-param-reassign': 'off',
+    'no-restricted-syntax': 'off',
+    'no-continue': 'off',
+    'no-useless-constructor': 'off',
+    'no-plusplus': 'off',
+  },
+};
