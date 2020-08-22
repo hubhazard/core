@@ -1,4 +1,9 @@
 /**
+ * @packageDocumentation
+ * @module Automations
+ */
+
+/**
  * Base class for every trigger definition.
  */
 export abstract class TriggerDefinition {

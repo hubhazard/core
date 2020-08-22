@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module HubitatApi
+ */
+
 import { DeviceInfoAttributeDto } from './device-info-attribute.dto';
 import { DeviceInfoCapabilityDto } from './device-info-capability.dto';
 

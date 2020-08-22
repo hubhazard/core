@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module TimerEvents
+ */
+
 import { Module } from '@nestjs/common';
 import { AutomationsModule } from '../automations/automations.module';
 import { TimerEventsService } from './timer-events.service';

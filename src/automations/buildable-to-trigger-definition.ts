@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module Automations
+ */
+
 import { TriggerDefinition } from './trigger-definition';
 
 /**

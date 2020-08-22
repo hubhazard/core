@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module Automations
+ */
+
 import { Injectable } from '@nestjs/common';
 import { AutomationEvent } from './automation-event';
 import { BuildableToTriggerDefinition } from './buildable-to-trigger-definition';

@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module Automations
+ */
+
 import { Module } from '@nestjs/common';
 import { AutomationsService } from './automations.service';
 

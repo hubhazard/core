@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module HubitatDeviceEvents
+ */
+
 import { Module } from '@nestjs/common';
 import { AutomationsModule } from '../automations/automations.module';
 import { HubitatApiModule } from '../hubitat-api/hubitat-api.module';

@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module TimerEvents
+ */
+
 import { TriggerDefinition } from '../../automations/trigger-definition';
 import { TIMER_EVENT_TYPE } from '../timer-event';
 import { ShortInterval } from './timer-trigger';

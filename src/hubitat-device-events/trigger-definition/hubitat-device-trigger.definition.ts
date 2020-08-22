@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module HubitatDeviceEvents
+ */
+
 import { TriggerDefinition } from '../../automations/trigger-definition';
 import { HUBITAT_DEVICE_EVENT_TYPE } from '../hubitat-device-event';
 import { AttributeFilter } from './attribute-filter';

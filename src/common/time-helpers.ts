@@ -1,4 +1,9 @@
 /**
+ * @packageDocumentation
+ * @module Common
+ */
+
+/**
  * An async version of `setTimeout`.
  * @param ms Delay in milliseconds.
  */

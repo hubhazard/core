@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module HubitatDeviceEvents
+ */
+
 import { all } from '../common/collections-helpers';
 import { DeviceInfoDto } from '../hubitat-api/dtos/device-info.dto';
 import { HubitatApiService } from '../hubitat-api/hubitat-api.service';

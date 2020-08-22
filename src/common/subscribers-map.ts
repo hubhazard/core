@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module Common
+ */
+
 import { SubscribersSet } from './subscribers-set';
 
 export class SubscribersMap<T, U> {

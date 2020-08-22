@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module Common
+ */
+
 export class SubscribersSet<T> implements Iterable<T> {
   private subscribers: Set<T> = new Set<T>();
 

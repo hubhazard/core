@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module HubitatDeviceEvents
+ */
+
 import { BuildableToTriggerDefinition } from '../../automations/buildable-to-trigger-definition';
 import { AttributeFilter } from '../trigger-definition/attribute-filter';
 import { ChangeGroup } from '../trigger-definition/change-group';

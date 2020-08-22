@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module HubitatDeviceEvents
+ */
+
 import { ChangeFilter } from '../trigger-definition/change-filter';
 import { HubitatDeviceTriggerDefinition } from '../trigger-definition/hubitat-device-trigger.definition';
 import { WithAttributesDefinition } from './with-attributes.definition';

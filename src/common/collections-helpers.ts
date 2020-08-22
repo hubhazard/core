@@ -1,6 +1,10 @@
 /**
- * Check if all elements of the collection return `true` for the provided predicate.
- * @todo TEST IT
+ * @packageDocumentation
+ * @module Common
+ */
+
+/**
+ * Checks if all elements of the collection return `true` for the provided predicate.
  */
 export function all<T>(collection: Iterable<T>, predicate: (collectionElement: T) => boolean): boolean {
   for (const element of collection) {
@@ -11,7 +15,6 @@ export function all<T>(collection: Iterable<T>, predicate: (collectionElement: T
 
 /**
  * Check if any element of the collection returns `true` for the provided predicate.
- * @todo TEST IT
  */
 export function any<T>(collection: Iterable<T>, predicate: (collectionElement: T) => boolean): boolean {
   for (const element of collection) {
@@ -47,7 +50,8 @@ export function repeat(times: number): null[] {
 }
 
 /**
- * Performs provided action specified number of times. If the action returns a
+ * Performs provided action specified number of times. An index of the
+ * iteration is passed to the action. If the action returns a
  * value, the function will returns an array of returned values.
  */
 export function doTimes<T>(times: number, action: (index: number) => T): T[] {

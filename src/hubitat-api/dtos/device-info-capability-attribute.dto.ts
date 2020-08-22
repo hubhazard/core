@@ -1,4 +1,9 @@
 /**
+ * @packageDocumentation
+ * @module HubitatApi
+ */
+
+/**
  * DTO describing an attribute of the device's capability.
  */
 export class DeviceInfoCapabilityAttributeDto {

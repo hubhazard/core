@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module HubitatApi
+ */
+
 import { Body, Controller, Post } from '@nestjs/common';
 import { DeviceEventDto } from './dtos/device-event.dto';
 import { HubitatApiService } from './hubitat-api.service';

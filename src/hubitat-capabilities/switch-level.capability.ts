@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module HubitatCapabilities
+ */
+
 import { HubitatDevice } from '../hubitat-device-events/hubitat-device';
 import { getDevice } from './capabilities.helpers';
 import { setSwitch } from './switch.capability';

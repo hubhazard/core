@@ -1,4 +1,9 @@
 /**
+ * @packageDocumentation
+ * @module HubitatApi
+ */
+
+/**
  * DTO describing a device in the devices list.
  */
 export class DevicesListItemDto {

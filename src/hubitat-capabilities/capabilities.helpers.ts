@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module HubitatCapabilities
+ */
+
 import { HubitatDevice } from '../hubitat-device-events/hubitat-device';
 import { HubitatDevicesService } from '../hubitat-device-events/hubitat-devices.service';
 

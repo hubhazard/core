@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module HubitatDeviceEvents
+ */
+
 import { AutomationEvent } from '../automations/automation-event';
 import { HubitatDevice } from './hubitat-device';
 

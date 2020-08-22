@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module HubitatDeviceEvents
+ */
+
 import { ChangeFilter } from './change-filter';
 
 export class ChangeGroup {

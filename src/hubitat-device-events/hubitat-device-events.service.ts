@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module HubitatDeviceEvents
+ */
+
 import { Injectable } from '@nestjs/common';
 import { Automation } from '../automations/automation';
 import { AutomationsService } from '../automations/automations.service';
