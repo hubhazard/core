@@ -1,6 +1,14 @@
 /**
+ * The HubitatCapabilities module is a collection of functions that simplify
+ * interactions with Hubitat's devices. Those functions are following the
+ * naming conventions and functionalities of
+ * [Hubitat device capabilities](https://docs.hubitat.com/index.php?title=Driver_Capability_List).
+ *
+ * **These functions are intended to be used within automations only.**
+ *
  * @packageDocumentation
  * @module HubitatCapabilities
+ * @preferred
  */
 
 import { HubitatDevice } from '../hubitat-device-events/hubitat-device';
