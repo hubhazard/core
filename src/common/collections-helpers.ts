@@ -1,6 +1,10 @@
 /**
+ * The Common module contains classes and functions that provide a functionality
+ * shared between other modules.
+ *
  * @packageDocumentation
  * @module Common
+ * @preferred
  */
 
 /**
