@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2018",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "strictNullChecks": true
+  },
+  "typedocOptions": {
+    "inputFiles": ["./src"],
+    "mode": "modules",
+    "out": "docs",
+    "exclude": "**/*+(index|.spec|.e2e).ts",
+    "excludePrivate": true,
+    "excludeExternals": true,
+    "stripInternal": true,
+    "name": "HubHazard Core",
+    "includeVersion": true
+  }
+}
