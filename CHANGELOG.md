@@ -17,10 +17,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0-beta.2] - 2020-08-22
+
 ### Added
 
 - Added auto-generated documentation using TypeDoc and GitHub actions. [ #1 ]
 - Added a documentation of `common` module functions and classes. [ #1 ]
+
+### Removed
+
+- Removed unused functions from `number-helpers`.
 
 ## [0.1.0-beta.1] - 2020-08-21
 
@@ -38,7 +44,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `common` functions set to mostly simplify interactions with collections and random number generation for
   testing purposes.
 
-<!-- [Unreleased]: https://github.com/hubhazard/core/compare/v1.0.0...HEAD -->
-<!-- [0.0.2]: https://github.com/hubhazard/core/compare/v0.0.1...v0.0.2 -->
-
+[Unreleased]: https://github.com/hubhazard/core/compare/v0.1.0-beta.2...HEAD
+[0.1.0-beta.2]: https://github.com/hubhazard/core/compare/v0.1.0-beta.1...v0.1.0-beta.2
 [0.1.0-beta.1]: https://github.com/hubhazard/core/releases/tag/v0.1.0-beta.1
