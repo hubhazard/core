@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module HubitatDeviceEvents
+ */
+
 import { Injectable } from '@nestjs/common';
 import { DeviceEventDto } from '../hubitat-api/dtos/device-event.dto';
 import { DeviceInfoDto } from '../hubitat-api/dtos/device-info.dto';

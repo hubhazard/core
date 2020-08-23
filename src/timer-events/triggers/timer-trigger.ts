@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module TimerEvents
+ */
+
 import { ShortIntervalDefinition } from './short-interval.definition';
 import { TimerTriggerDefinition } from './timer-trigger-definition';
 

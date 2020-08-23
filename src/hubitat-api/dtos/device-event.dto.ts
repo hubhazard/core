@@ -1,4 +1,9 @@
 /**
+ * @packageDocumentation
+ * @module HubitatApi
+ */
+
+/**
  * DTO for the device update event from Hubitat's Maker API.
  */
 export class DeviceEventDto {

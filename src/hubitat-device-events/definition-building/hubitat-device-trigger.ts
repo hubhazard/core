@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module HubitatDeviceEvents
+ */
+
 import { HubitatDeviceTriggerDefinition } from '../trigger-definition/hubitat-device-trigger.definition';
 import { WithoutAttributesDefinition } from './without-attributes.definition';
 

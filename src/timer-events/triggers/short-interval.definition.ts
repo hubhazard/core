@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module TimerEvents
+ */
+
 import { BuildableToTriggerDefinition } from '../../automations/buildable-to-trigger-definition';
 import { TriggerDefinition } from '../../automations/trigger-definition';
 import { TimerTriggerDefinition } from './timer-trigger-definition';

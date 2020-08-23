@@ -1,4 +1,9 @@
 /**
+ * @packageDocumentation
+ * @module HubitatDeviceEvents
+ */
+
+/**
  * An enum containing all possible hubitat's device capability names.
  */
 export enum ECapability {

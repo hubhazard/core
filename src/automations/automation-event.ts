@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module Automations
+ */
+
 import { Constructor } from '@nestjs/common/utils/merge-with-values.util';
 
 /**

@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module TimerEvents
+ */
+
 import { Injectable } from '@nestjs/common';
 import { interval, Subscription } from 'rxjs';
 import { Automation } from '../automations/automation';

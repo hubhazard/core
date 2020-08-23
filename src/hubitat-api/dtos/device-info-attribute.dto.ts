@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module HubitatApi
+ */
+
 type EDeviceAttributeDataType = 'ENUM' | 'JSON_OBJECT' | 'NUMBER' | 'STRING';
 
 /**

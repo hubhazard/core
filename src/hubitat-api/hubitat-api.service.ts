@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module HubitatApi
+ */
+
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import fetch from 'node-fetch';

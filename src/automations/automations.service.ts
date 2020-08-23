@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module Automations
+ */
+
 import { Injectable } from '@nestjs/common';
 import { Automation } from './automation';
 import { IEventsService } from './events-service.interface';

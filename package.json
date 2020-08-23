@@ -16,6 +16,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
+    "docs": "typedoc --tsconfig",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
@@ -67,6 +68,8 @@
     "ts-loader": "^8.0.0",
     "ts-node": "^8.10.0",
     "tsconfig-paths": "^3.9.0",
+    "typedoc": "^0.18.0",
+    "typedoc-plugin-external-module-name": "^4.0.3",
     "typescript": "^3.9.7"
   },
   "jest": {

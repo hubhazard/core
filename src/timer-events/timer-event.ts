@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module TimerEvents
+ */
+
 import { AutomationEvent } from '../automations/automation-event';
 
 /**

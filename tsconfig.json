@@ -12,5 +12,16 @@
     "baseUrl": "./",
     "incremental": true,
     "strictNullChecks": true
+  },
+  "typedocOptions": {
+    "inputFiles": ["./src"],
+    "mode": "modules",
+    "out": "docs",
+    "exclude": "**/*+(index|.spec|.e2e).ts",
+    "excludePrivate": true,
+    "excludeExternals": true,
+    "stripInternal": true,
+    "name": "HubHazard Core",
+    "includeVersion": true
   }
 }
