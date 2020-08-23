@@ -10,8 +10,8 @@ jobs:
     steps:
       - name: Checkout master
       - uses: actions/checkout@v2
-          with:
-              - ref: master
+        with:
+          - ref: master
 
       - name: Merge master -> gh-pages
         uses: devmasx/merge-branch@v1.3.0
@@ -23,13 +23,13 @@ jobs:
 
       - name: Checkout gh-pages
       - uses: actions/checkout@v2
-          with:
-              - ref: gh-pages
+        with:
+          - ref: gh-pages
 
       - name: Install packages
       - uses: actions/setup-node@v1
-          with:
-            node-version: 10
+        with:
+          node-version: 10
       - run: npm install
 
       - name: Generate documentation
