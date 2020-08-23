@@ -14,7 +14,7 @@ jobs:
           - ref: master
 
       - name: Merge master -> gh-pages
-        uses: devmasx/merge-branch@v1.3.0
+      - uses: devmasx/merge-branch@v1.3.0
         with:
           type: now
           from_branch: master
@@ -36,10 +36,10 @@ jobs:
       - run: npm run docs
 
       - name: Commit generated docs
-        run: |
+      - run: |
           git commit -m "Generate documentation" -a
 
       - name: Push changes
-        uses: ad-m/github-push-action@master
+      - uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
