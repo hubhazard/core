@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout master
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
         with:
           - ref: master
 
@@ -22,18 +22,20 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout gh-pages
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
         with:
           - ref: gh-pages
 
-      - name: Install packages
-      - uses: actions/setup-node@v1
+      - name: Setup Node.js 10
+        uses: actions/setup-node@v1
         with:
           node-version: 10
-      - run: npm install
+
+      - name: Install packages
+        run: npm install
 
       - name: Generate documentation
-      - run: npm run docs
+        run: npm run docs
 
       - name: Commit generated docs
         run: |
