@@ -91,7 +91,7 @@ In addition, there are utility-based functionality groups:
 
 Creating a new automation server with HubHazard is very simple. In following sections we'll describe it step by step\
 from the beginning, but if you want to get your hands on a fully preconfigured project, go and grab the
-[HubHazard Server Template][hubhazardtemplate].
+[HubHazard Basic Template][hubhazardtemplate].
 
 ### Basic terms
 
@@ -324,7 +324,7 @@ See the [open issues][issues] for a list of proposed features (and known issues)
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire,
+Contributions are what make the open source community such an amazing place to learn, inspire,
 and create. Any contributions you make are **greatly appreciated**.
 
 1. Find an existing issue or create a new one
