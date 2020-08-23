@@ -26,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-- Removed unused functions from `number-helpers`.
+- Removed unused functions from `number-helpers`. [ #2 ]
 
 ## [0.1.0-beta.1] - 2020-08-21
 
