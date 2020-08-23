@@ -1,0 +1,45 @@
+name: Generate documentation
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  sync-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master
+      - uses: actions/checkout@v2
+          with:
+              - ref: master
+
+      - name: Merge master -> gh-pages
+        uses: devmasx/merge-branch@v1.3.0
+        with:
+          type: now
+          from_branch: master
+          target_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout gh-pages
+      - uses: actions/checkout@v2
+          with:
+              - ref: gh-pages
+
+      - name: Install packages
+      - uses: actions/setup-node@v1
+          with:
+            node-version: 10
+      - run: npm install
+
+      - name: Generate documentation
+      - run: npm run docs
+
+      - name: Commit generated docs
+        run: |
+          git commit -m "Generate documentation" -a
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
