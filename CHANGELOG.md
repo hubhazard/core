@@ -17,6 +17,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added auto-generated documentation using TypeDoc and GitHub actions. [ #1 ]
+- Added a documentation of `common` module functions and classes. [ #1 ]
+
 ## [0.1.0-beta.1] - 2020-08-21
 
 ### Added
