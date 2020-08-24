@@ -30,6 +30,10 @@ import { Module } from '@nestjs/common';
 import { HubitatApiController } from './hubitat-api.controller';
 import { HubitatApiService } from './hubitat-api.service';
 
+/**
+ * A Nest.js module providing the functionality of the HubHazard's hubitat-api
+ * module.
+ */
 @Module({
   imports: [],
   controllers: [HubitatApiController],
