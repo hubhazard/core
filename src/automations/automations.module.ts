@@ -28,8 +28,8 @@ import { Module } from '@nestjs/common';
 import { AutomationsService } from './automations.service';
 
 /**
- * A Nest.js module providing the functionality of the HubHazard's automations
- * module.
+ * A [Nest.js module](https://docs.nestjs.com/modules) providing the
+ * functionality of the HubHazard's automations module.
  */
 @Module({
   imports: [],
