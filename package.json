@@ -1,6 +1,6 @@
 {
   "name": "@hubhazard/core",
-  "version": "0.1.0-beta.2",
+  "version": "0.1.0-beta.3",
   "description": "A core package for HubHazard server.",
   "author": "Beniamin Dudek <online.xkonti@gmail.com>",
   "license": "MIT",

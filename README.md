@@ -8,6 +8,8 @@
   <p align="center">
     A core module of the HubHazard server.
     <br />
+    <a href="https://hubhazard.github.io/core/">Documentation</a>
+    ·
     <a href="https://github.com/hubhazard/core/issues">Report Bug</a>
     ·
     <a href="https://github.com/hubhazard/core/issues">Request Feature</a>
@@ -312,7 +314,7 @@ export class StaircaseButtonAutomation extends Automation {
 
 ## Documentation
 
-The documentation will be available soon. For now you can browse the code as it's well documented.
+The project documentation is available at [hubhazard.github.io/core/][hubhazardcoredocs].
 
 <!-- ROADMAP -->
 
@@ -379,4 +381,5 @@ Project Link: [https://github.com/hubhazard/core][hubhazardcore]
 [issues]: https://github.com/hubhazard/core/issues
 [twitterxkonti]: https://twitter.com/xkonti
 [hubhazardcore]: https://github.com/hubhazard/core
+[hubhazardcoredocs]: https://hubhazard.github.io/core/
 [hubhazardtemplate]: https://github.com/hubhazard/hubhazard-basic-template
