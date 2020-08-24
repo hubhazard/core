@@ -11,7 +11,7 @@ import { AutomationEvent } from '../automations/automation-event';
 export const TIMER_EVENT_TYPE = 'timer';
 
 /**
- * A timer event.
+ * An event sent by the timer module.
  */
 export class TimerEvent extends AutomationEvent {
   readonly eventType = TIMER_EVENT_TYPE;
