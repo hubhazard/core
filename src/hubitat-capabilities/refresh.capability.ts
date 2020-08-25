@@ -7,12 +7,18 @@ import { HubitatDevice } from '../hubitat-device-events/hubitat-device';
 import { getDevice } from './capabilities.helpers';
 
 /**
- Refreshed the device.
+ * Refreshes the device.
+ *
+ * @param device A target device.
+ * @category Refresh capability
  */
 export async function refresh(device: HubitatDevice): Promise<void>;
 
 /**
- Refreshed the device.
+ * Refreshes the device.
+ *
+ * @param deviceId An ID of the target device.
+ * @category Refresh capability
  */
 export async function refresh(deviceId: number): Promise<void>;
 

@@ -7,12 +7,24 @@ import { HubitatDevice } from '../hubitat-device-events/hubitat-device';
 import { getDevice } from './capabilities.helpers';
 
 /**
- Returns current contact sensor status.
+ * Returns current contact sensor status.
+ *
+ * @param device A target device.
+ * @param defaultValue A value returned in case getting the device status has
+ * failed.
+ * @returns A status of the contact sensor or the default value.
+ * @category ContactSensor capability
  */
 export function getContactSensorStatus(device: HubitatDevice, defaultValue: 'closed' | 'open'): 'closed' | 'open';
 
 /**
- Returns current contact sensor status.
+ * Returns current contact sensor status.
+ *
+ * @param deviceId An ID of the target device.
+ * @param defaultValue A value returned in case getting the device status has
+ * failed.
+ * @returns A status of the contact sensor or the default value.
+ * @category ContactSensor capability
  */
 export function getContactSensorStatus(deviceId: number, defaultValue: 'closed' | 'open'): 'closed' | 'open';
 
@@ -26,12 +38,24 @@ export function getContactSensorStatus(
 }
 
 /**
- Returns current switch status. True is 'on', false is 'off'.
+ * Returns a value whether the contact sensor is open.
+ *
+ * @param device A target device.
+ * @param defaultValue A value returned in case getting the device status has
+ * failed.
+ * @returns `true` if the sensor is open; `false` if sensor is closed.
+ * @category ContactSensor capability
  */
 export function isContactOpen(device: HubitatDevice, defaultValue: boolean): boolean;
 
 /**
- Returns current switch status. True is 'on', false is 'off'.
+ * Returns a value whether the contact sensor is open.
+ *
+ * @param deviceId An ID of the target device.
+ * @param defaultValue A value returned in case getting the device status has
+ * failed.
+ * @returns `true` if the sensor is open; `false` if sensor is closed.
+ * @category ContactSensor capability
  */
 export function isContactOpen(deviceId: number, defaultValue: boolean): boolean;
 

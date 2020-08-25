@@ -7,12 +7,20 @@ import { HubitatDevice } from '../hubitat-device-events/hubitat-device';
 import { getDevice } from './capabilities.helpers';
 
 /**
- Returns current temperature.
+ * Returns the last temperature measurement.
+ *
+ * @param device A target device.
+ * @returns Returns the last temperature measurement.
+ * @category TemperatureMeasurement capability
  */
 export function getTemperature(device: HubitatDevice): number;
 
 /**
- Returns current temperature.
+ * Returns the last temperature measurement.
+ *
+ * @param deviceId An ID of the target device.
+ * @returns Returns the last temperature measurement.
+ * @category TemperatureMeasurement capability
  */
 export function getTemperature(deviceId: number): number;
 
