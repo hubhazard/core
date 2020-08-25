@@ -3,14 +3,19 @@
  * @module HubitatApi
  */
 
+/**
+ * All possible values of the {@link DeviceInfoAttributeDto.dataType}.
+ */
 type EDeviceAttributeDataType = 'ENUM' | 'JSON_OBJECT' | 'NUMBER' | 'STRING';
 
 /**
- * DTO describing attributes of a device.
+ * DTO describing attributes of a device received from
+ * [Hubitat's Maker API](https://docs.hubitat.com/index.php?title=Maker_API) as
+ * a part of {@link DeviceInfoDto}.
  */
 export class DeviceInfoAttributeDto {
   /**
-   * Name of the attribute.
+   * A name of the attribute.
    */
   name: string;
 
@@ -20,12 +25,12 @@ export class DeviceInfoAttributeDto {
   currentValue: string | number | null;
 
   /**
-   * Type of the attribute value's data.
+   * A type of the attribute value's data.
    */
   dataType: EDeviceAttributeDataType;
 
   /**
-   * List of values of the attribute.
+   * A list of values of the attribute.
    */
   values?: string[];
 }

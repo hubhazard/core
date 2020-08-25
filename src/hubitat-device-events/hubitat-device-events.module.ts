@@ -21,6 +21,10 @@ import { HubitatApiModule } from '../hubitat-api/hubitat-api.module';
 import { HubitatDeviceEventsService } from './hubitat-device-events.service';
 import { HubitatDevicesService } from './hubitat-devices.service';
 
+/**
+ * A [Nest.js module](https://docs.nestjs.com/modules) providing the
+ * functionality of the HubHazard's hubitat-device-events module.
+ */
 @Module({
   imports: [HubitatApiModule, AutomationsModule],
   controllers: [],

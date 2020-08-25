@@ -4,21 +4,22 @@
  */
 
 /**
- * DTO describing a device in the devices list.
+ * DTO describing a device in the devices list received from
+ * [Hubitat's Maker API](https://docs.hubitat.com/index.php?title=Maker_API).
  */
 export class DevicesListItemDto {
   /**
-   * Id of the device.
+   * An ID of the device.
    */
   id: string;
 
   /**
-   * Name of the device.
+   * A name of the device.
    */
   name: string;
 
   /**
-   * Label of the device.
+   * A label of the device.
    */
   label: string;
 }

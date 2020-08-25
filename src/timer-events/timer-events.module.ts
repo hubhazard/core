@@ -12,6 +12,10 @@ import { Module } from '@nestjs/common';
 import { AutomationsModule } from '../automations/automations.module';
 import { TimerEventsService } from './timer-events.service';
 
+/**
+ * A [Nest.js module](https://docs.nestjs.com/modules) providing the
+ * functionality of the HubHazard's timer-events module.
+ */
 @Module({
   imports: [AutomationsModule],
   controllers: [],

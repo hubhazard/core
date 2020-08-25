@@ -6,20 +6,22 @@
 import { TriggerDefinition } from './trigger-definition';
 
 /**
- * Base class for all classes representing a trigger that is ready to be built
- * into a `TriggerDefinition`.
+ * A base class for all classes representing a trigger that is ready to be
+ * *built* into a {@link TriggerDefinition}.
  */
 export abstract class BuildableToTriggerDefinition {
   /**
-   * A reference to a trigger definition instance. Will be returned when
-   * `build()` method is called.
+   * A reference to a {@link TriggerDefinition} instance. It will be returned
+   * when the `build` method is called.
    * @protected
    */
   protected abstract triggerDefinition: TriggerDefinition;
 
   /**
-   * Returns a reference to TriggerDefinition. Throws an error when
-   * `TriggerDefinition` reference is invalid.
+   * Returns a reference to the {@link TriggerDefinition}.
+   * @throws Throws an error when the {@link TriggerDefinition} reference is
+   * invalid.
+   * @internal
    */
   build(): TriggerDefinition {
     if (this.triggerDefinition == null) {

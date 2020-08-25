@@ -10,12 +10,14 @@ import { Automation } from './automation';
  */
 export interface IEventsService {
   /**
-   * Register automation to this events service.
+   * Registers the provided automation to this events service.
+   * @param automation An automation to register.
    */
   registerAutomation(automation: Automation): void;
 
   /**
-   * Unregister automation from this events service.
+   * Unregister the provided automation from this events service.
+   * @param automation An automation to unregister.
    */
   unregisterAutomation(automation: Automation): void;
 }

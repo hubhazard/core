@@ -10,7 +10,7 @@ import { ECapability } from './capability.enum';
 import { HubitatDevicesService } from './hubitat-devices.service';
 
 /**
- * A hubitat's device.
+ * A representation of a Hubitat's device.
  */
 export class HubitatDevice {
   /**
@@ -19,17 +19,17 @@ export class HubitatDevice {
   readonly id: number;
 
   /**
-   * Name of the device.
+   * A name of the device.
    */
   name: string;
 
   /**
-   * Label of the device.
+   * A label of the device.
    */
   label: string;
 
   /**
-   * Set of capabilities of the device.
+   * A set of capabilities of the device.
    * @private
    */
   private capabilities: Set<string>;
@@ -47,17 +47,26 @@ export class HubitatDevice {
   private commands: Set<string>;
 
   /**
-   * A not-injected reference to the `HubitatApiService`.
+   * A reference to the {@link HubitatApiService} passed in the constructor.
    * @private
    */
   private readonly apiService: HubitatApiService;
 
   /**
-   * A not-injected reference to the `HubitatDevicesService`.
+   * A reference to the {@link HubitatDevicesService} passed in the constructor.
    * @private
    */
   private readonly devicesService: HubitatDevicesService;
 
+  /**
+   * Creates a new device instance.
+   * @param dto A DTO with device data received from
+   * [Hubitat's Maker API](https://docs.hubitat.com/index.php?title=Maker_API).
+   * @param hubitatApiService A reference to the {@link HubitatApiService} so
+   * that the device can send device commands to the Hubitat hub.
+   * @param devicesService A reference to the {@link HubitatDevicesService} so
+   * that the device can announce it's attribute changes.
+   */
   constructor(dto: DeviceInfoDto, hubitatApiService: HubitatApiService, devicesService: HubitatDevicesService) {
     this.apiService = hubitatApiService;
     this.devicesService = devicesService;
@@ -92,7 +101,9 @@ export class HubitatDevice {
   }
 
   /**
-   * Returns a value of an attribute with specified name. Returns `undefined` if
+   * Returns a value of an attribute with specified name.
+   * @param attributeName The name of the attribute.
+   * @returns Returns a value of an attribute or `undefined` if
    * there is no such attribute.
    */
   getAttribute(attributeName: string): string | null | undefined {
@@ -101,6 +112,8 @@ export class HubitatDevice {
 
   /**
    * Returns a list of all attribute names and their values.
+   * @returns Returns a list of all attribute names and their values. The list
+   * can be empty.
    */
   getAttributes(): { attributeName: string; attributeValue: string | null }[] {
     return [...this.attributes.entries()].map((attribute) => ({
@@ -110,8 +123,10 @@ export class HubitatDevice {
   }
 
   /**
-   * Gets value of the attribute as a floating point number. Returns `0` if
-   * there's no such attribute or its value is not parsable.
+   * Gets a value of the attribute as a floating point number.
+   * @param name Name of the attribute.
+   * @returns Returns a value of the attribute as a floating number. Returns `0`
+   * if there's no such attribute or its value is not parsable.
    */
   getAttributeAsFloat(name: string): number {
     try {
@@ -123,8 +138,10 @@ export class HubitatDevice {
   }
 
   /**
-   * Gets value of the attribute as an integer. Returns `0` if there's no such
-   * attribute or its value is not parsable.
+   * Gets a value of the attribute as an integer.
+   * @param name Name of the attribute.
+   * @returns Returns a value of the attribute as an integer. Returns `0` if
+   * there's no such attribute or its value is not parsable.
    */
   getAttributeAsInt(name: string): number {
     try {
@@ -136,30 +153,41 @@ export class HubitatDevice {
   }
 
   /**
-   * Gets value of the attribute as a string. Returns `undefined` if there's no
-   * such attribute or its value is empty.
+   * Gets a value of the attribute as a string.
+   * @param name Name of the attribute.
+   * @returns Gets a value of the attribute as a string. Returns `undefined` if
+   * there's no such attribute or its value is empty.
    */
   getAttributeAsString(name: string): string | undefined {
     return this.getAttribute(name) ?? undefined;
   }
 
   /**
-   * Return a value whether the device contains an attribute with the specified
+   * Returns a value whether the device contains an attribute with the specified
    * name.
+   * @param attributeName The name of the attribute.
+   * @returns `true` if the device has the attribute; `false` if the device
+   * doesn't have the attribute.
    */
   hasAttribute(attributeName: string): boolean {
     return this.attributes.has(attributeName);
   }
 
   /**
-   * Returns a value whether the device contains the specified capability.
+   * Returns a value whether the device contains the specified capability
+   * @param capability The capability to check for.
+   * @returns `true` if the device has the capability; `false` if the device
+   * doesn't have the capability.
    */
   hasCapability(capability: ECapability): boolean {
     return this.capabilities.has(capability);
   }
 
   /**
-   * Returns a value whether the device contains all of specified capabilities.
+   * Returns a value whether the device contains all of the specified capabilities.
+   * @param capabilities A collection of capabilities to look for.
+   * @returns `true` if the device has all the specified capabilities;
+   * `false` if the device doesn't have all of the specified capabilities.
    */
   hasCapabilities(capabilities: Iterable<ECapability>): boolean {
     return all(capabilities, (capability) => this.hasCapability(capability));
@@ -167,6 +195,9 @@ export class HubitatDevice {
 
   /**
    * Returns a value whether the device supports the specified command.
+   * @param command A command string.
+   * @returns `true` if the device supports the specified command;
+   * `false` if the device doesn't support the specified command.
    */
   hasCommand(command: string): boolean {
     return this.commands.has(command);
@@ -174,18 +205,20 @@ export class HubitatDevice {
 
   /**
    * Sends a command to the device on Hubitat.
+   * @param command A command string to send.
+   * @param value An optional value to send.
    */
   async sendCommand(command: string, value?: string | number): Promise<void> {
     await this.apiService.sendDeviceCommand(this.id, command, value);
   }
 
   /**
-   * Sets a value of an attribute and emit the device update event if the value
-   * has changed.
-   * @param attributeName A name of the attribute which value will be set.
+   * Sets a value of an attribute and emits (announces) the device update event
+   * if the value has changed.
+   * @param attributeName A name of the attribute.
    * @param newValue A new value of the attribute.
-   * @param forceChangeAnnouncement If set to true it will send the device
-   *        update event regardless whether the value changed or not.
+   * @param forceChangeAnnouncement If set to `true` it will announce the device
+   * update event regardless whether the value changed or not.
    */
   setAttribute(attributeName: string, newValue: string | null, forceChangeAnnouncement = false): void {
     const previousValue = this.getAttribute(attributeName);
@@ -195,11 +228,12 @@ export class HubitatDevice {
   }
 
   /**
-   * Updates the device with data from provided device. It throws an error if
-   * there's a mismatch between id's of this and provided _source_ device.
+   * Updates the device with data from provided device.
    * @param sourceDevice A device to copy data from.
    * @param forceAttributeChangeAnnouncement  If set to `true`, it will force
-   *        the device update event to be emitted. It's `false` by default.
+   * the device update event to be emitted. It's `false` by default.
+   * @throws Throws an error if
+   * there's a mismatch between id's of this and provided *source* device.
    */
   update(sourceDevice: HubitatDevice, forceAttributeChangeAnnouncement = false): void {
     if (this.id !== sourceDevice.id) {

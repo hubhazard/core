@@ -17,7 +17,9 @@ import { ChangeFilter } from './trigger-definition/change-filter';
 import { HubitatDeviceTriggerDefinition } from './trigger-definition/hubitat-device-trigger.definition';
 
 /**
- * An events service handling hubitat device events.
+ * An events service handling Hubitat's device events. It's responsible for
+ * registering automations and routing the device events to listening
+ * automations.
  */
 @Injectable()
 export class HubitatDeviceEventsService implements IEventsService {
@@ -45,12 +47,19 @@ export class HubitatDeviceEventsService implements IEventsService {
    */
   private subscribedAutomations: Set<Automation> = new Set<Automation>();
 
+  /**
+   * Creates a new service instance. Use only for testing as service's creation
+   * is handled by the Dependency Injection.
+   *
+   * @param automationsService A reference to the {@link AutomationsService}
+   * instance that this events service will registered to.
+   */
   constructor(private readonly automationsService: AutomationsService) {
     automationsService.registerEventsService(this);
   }
 
   /**
-   * Method handling new hubitat device events. It's responsible for routing
+   * A method for handling new hubitat device events. It's responsible for routing
    * the event to matching automations.
    * @param event
    */

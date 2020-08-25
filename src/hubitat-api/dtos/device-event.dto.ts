@@ -4,11 +4,12 @@
  */
 
 /**
- * DTO for the device update event from Hubitat's Maker API.
+ * DTO for the device update event received from the
+ * [Hubitat's Maker API](https://docs.hubitat.com/index.php?title=Maker_API).
  */
 export class DeviceEventDto {
   /**
-   * Id of the device.
+   * Id of the device. Should be parsable into an integer.
    */
   deviceId: string;
 

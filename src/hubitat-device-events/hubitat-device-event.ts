@@ -16,16 +16,19 @@ export const HUBITAT_DEVICE_EVENT_TYPE = 'hubitat-device';
  * Hubitat device.
  */
 export class HubitatDeviceEvent extends AutomationEvent {
+  /**
+   * A string value describing the hubitat device event type.
+   */
   readonly eventType = HUBITAT_DEVICE_EVENT_TYPE;
 
   /**
-   * Creates a new `HubitatDeviceEvent`
+   * Creates a new event instance.
    * @param attributeName A name of the attribute which value has changed.
    * @param device A reference to the updated device.
    * @param deviceId An id of the changed device.
    * @param newValue A new value of the specified attribute.
    * @param previousValue A value of the specified attribute before the change
-   *        appeared.
+   * appeared.
    */
   public constructor(
     public readonly attributeName: string,

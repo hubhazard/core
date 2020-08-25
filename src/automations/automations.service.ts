@@ -8,7 +8,7 @@ import { Automation } from './automation';
 import { IEventsService } from './events-service.interface';
 
 /**
- * A service for registering automations and events services.
+ * A service used for registering automations and events services.
  */
 @Injectable()
 export class AutomationsService {
@@ -25,7 +25,10 @@ export class AutomationsService {
   private registeredAutomations: Set<Automation> = new Set<Automation>();
 
   /**
-   * Registers provided automation to all registered events services.
+   * Registers provided automation to all registered events services. If any
+   * events service will be registered at later time, the automation will be
+   * automatically registered to it.
+   * @param automation An automation to register.
    */
   public registerAutomation(automation: Automation): void {
     console.log(`Registering automation: ${automation.name}`);
@@ -42,9 +45,10 @@ export class AutomationsService {
   }
 
   /**
-   * Registers provided events service. After registration all currently
+   * Registers the provided events service. After registration all currently
    * registered automations will be automatically registered to that events
    * service.
+   * @param eventsService An events service to register.
    */
   public registerEventsService(eventsService: IEventsService): void {
     this.registeredEventsServices.add(eventsService);
