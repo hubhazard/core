@@ -14,10 +14,9 @@ jobs:
           ref: master
 
       - name: Merge master -> gh-pages
-        uses: devmasx/merge-branch@v1.3.0
+        uses: everlytic/branch-merge@1.1.0
         with:
-          type: now
-          from_branch: master
+          source_ref: master
           target_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
