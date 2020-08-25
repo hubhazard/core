@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TimerEventsService | HubHazard Core - v0.1.0-beta.3</title>
-	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.3">
+	<title>TimerEventsService | HubHazard Core - v0.1.0-beta.4</title>
+	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.4">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.3</a>
+					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.4</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -70,7 +70,8 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>An events service for timer events.</p>
+						<p>An events service for timer events. Allows for registering actions triggered
+						periodically.</p>
 					</div>
 				</div>
 			</section>
@@ -120,13 +121,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/timer-events/timer-events.service.ts#L31">src/timer-events/timer-events.service.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/timer-events/timer-events.service.ts#L32">src/timer-events/timer-events.service.ts:32</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a service instance. Use only for testing as service&#39;s creation
+									is handled by the Dependency Injection.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>automationsService: <a href="automations.automationsservice.html" class="tsd-signature-type">AutomationsService</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A reference to the <a href="automations.automationsservice.html">AutomationsService</a>
+											instance that this events service will registered to.</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="timerevents.timereventsservice.html" class="tsd-signature-type">TimerEventsService</a></h4>
@@ -147,7 +160,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/automations.ieventsservice.html">IEventsService</a>.<a href="../interfaces/automations.ieventsservice.html#registerautomation">registerAutomation</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/timer-events/timer-events.service.ts#L41">src/timer-events/timer-events.service.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/timer-events/timer-events.service.ts#L50">src/timer-events/timer-events.service.ts:50</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -160,6 +173,9 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>automation: <a href="automations.automation.html" class="tsd-signature-type">Automation</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The automation to be registered.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -177,7 +193,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/automations.ieventsservice.html">IEventsService</a>.<a href="../interfaces/automations.ieventsservice.html#unregisterautomation">unregisterAutomation</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/timer-events/timer-events.service.ts#L102">src/timer-events/timer-events.service.ts:102</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/timer-events/timer-events.service.ts#L112">src/timer-events/timer-events.service.ts:112</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -189,6 +205,9 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>automation: <a href="automations.automation.html" class="tsd-signature-type">Automation</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The automation to be unregistered.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>

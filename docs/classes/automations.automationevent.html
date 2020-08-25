@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>AutomationEvent | HubHazard Core - v0.1.0-beta.3</title>
-	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.3">
+	<title>AutomationEvent | HubHazard Core - v0.1.0-beta.4</title>
+	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.4">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.3</a>
+					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.4</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -70,7 +70,9 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>A base class for all types of automation events.</p>
+						<p>A base class for events passed to automations. Every automation event
+							provides the <a href="automations.automationevent.html#eventtype">eventType</a> string field that
+						allows for identification of the event type inside the automation.</p>
 					</div>
 				</div>
 			</section>
@@ -117,13 +119,22 @@
 					<div class="tsd-signature tsd-kind-icon">event<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/automations/automation-event.ts#L15">src/automations/automation-event.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/automations/automation-event.ts#L27">src/automations/automation-event.ts:27</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A type of this event. Used for routing and filtering of events.</p>
 						</div>
+						<dl class="tsd-comment-tags">
+							<dt>example</dt>
+							<dd><p>Can be used to identify the type of the event in automation:</p>
+								<pre><code class="language-ts"><span class="hljs-keyword">async</span> handleEvent(event: TimerEvent) {
+  <span class="hljs-keyword">if</span>(event.eventType === TIMER_EVENT_TYPE)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-built_in">this</span>.name}</span> was triggered!`</span>);
+}</code></pre>
+							</dd>
+						</dl>
 					</div>
 				</section>
 			</section>
@@ -139,14 +150,28 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/automations/automation-event.ts#L21">src/automations/automation-event.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/automations/automation-event.ts#L48">src/automations/automation-event.ts:48</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Force-cast the event as specified type. If the event isn&#39;t of specified
-									type, an error will be thrown.</p>
+									<p>Force-cast the event as specified type.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><p>Can be used to identify the type of the event in an automation:</p>
+										<pre><code class="language-ts"><span class="hljs-keyword">async</span> handleEvent(event: AutomationEvent) {
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">const</span> timerEvent = event.handleAs(TimerEvent);
+  } <span class="hljs-keyword">catch</span> (e) {
+    <span class="hljs-comment">// ...</span>
+  }
+}</code></pre>
+									</dd>
+									<dt>throws</dt>
+									<dd><p>Throws an error if the cast failed.</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
@@ -158,9 +183,13 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>eventClass: <span class="tsd-signature-type">Constructor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An <a href="automations.automationevent.html">AutomationEvent</a> subclass to cast this event to.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+							<p>An event casted to a type specified in <code>eventClass</code> argument.</p>
 						</li>
 					</ul>
 				</section>

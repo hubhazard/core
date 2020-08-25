@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>HubitatDeviceEventsService | HubHazard Core - v0.1.0-beta.3</title>
-	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.3">
+	<title>HubitatDeviceEventsService | HubHazard Core - v0.1.0-beta.4</title>
+	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.4">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.3</a>
+					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.4</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -70,7 +70,9 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>An events service handling hubitat device events.</p>
+						<p>An events service handling Hubitat&#39;s device events. It&#39;s responsible for
+							registering automations and routing the device events to listening
+						automations.</p>
 					</div>
 				</div>
 			</section>
@@ -121,13 +123,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-device-events/hubitat-device-events.service.ts#L46">src/hubitat-device-events/hubitat-device-events.service.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-device-events/hubitat-device-events.service.ts#L48">src/hubitat-device-events/hubitat-device-events.service.ts:48</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a new service instance. Use only for testing as service&#39;s creation
+									is handled by the Dependency Injection.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>automationsService: <a href="automations.automationsservice.html" class="tsd-signature-type">AutomationsService</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A reference to the <a href="automations.automationsservice.html">AutomationsService</a>
+											instance that this events service will registered to.</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="hubitatdeviceevents.hubitatdeviceeventsservice.html" class="tsd-signature-type">HubitatDeviceEventsService</a></h4>
@@ -147,12 +161,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-device-events/hubitat-device-events.service.ts#L57">src/hubitat-device-events/hubitat-device-events.service.ts:57</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-device-events/hubitat-device-events.service.ts#L66">src/hubitat-device-events/hubitat-device-events.service.ts:66</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Method handling new hubitat device events. It&#39;s responsible for routing
+									<p>A method for handling new hubitat device events. It&#39;s responsible for routing
 									the event to matching automations.</p>
 								</div>
 							</div>
@@ -179,7 +193,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/automations.ieventsservice.html">IEventsService</a>.<a href="../interfaces/automations.ieventsservice.html#registerautomation">registerAutomation</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-device-events/hubitat-device-events.service.ts#L103">src/hubitat-device-events/hubitat-device-events.service.ts:103</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-device-events/hubitat-device-events.service.ts#L112">src/hubitat-device-events/hubitat-device-events.service.ts:112</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -212,7 +226,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/automations.ieventsservice.html">IEventsService</a>.<a href="../interfaces/automations.ieventsservice.html#unregisterautomation">unregisterAutomation</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-device-events/hubitat-device-events.service.ts#L140">src/hubitat-device-events/hubitat-device-events.service.ts:140</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-device-events/hubitat-device-events.service.ts#L149">src/hubitat-device-events/hubitat-device-events.service.ts:149</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>HubitatDeviceTriggerDefinition | HubHazard Core - v0.1.0-beta.3</title>
-	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.3">
+	<title>HubitatDeviceTriggerDefinition | HubHazard Core - v0.1.0-beta.4</title>
+	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.4">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.3</a>
+					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.4</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -117,14 +117,14 @@
 					<div class="tsd-signature tsd-kind-icon">attributes<span class="tsd-signature-symbol">:</span> <a href="hubitatdeviceevents.attributefilter.html" class="tsd-signature-type">AttributeFilter</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts#L27">src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts#L30">src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts:30</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A list of attribute filters. This trigger will accept only events matching
-								those attributes. If the list is empty, events won&#39;t be filtered by their
-							attribute name and/or value.</p>
+								at least one of those attributes. If the list is empty, events won&#39;t be
+							filtered by their attribute name and/or value.</p>
 						</div>
 					</div>
 				</section>
@@ -134,13 +134,13 @@
 					<div class="tsd-signature tsd-kind-icon">devices<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts#L20">src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts#L23">src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts:23</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>A list of device ids. This trigger will accept only events from those
-							device. If the list is empty, events won&#39;t be filtered by device id.</p>
+							<p>A list of device IDs. This trigger will accept only events from those
+							devices. If the list is empty, events won&#39;t be filtered by device ID.</p>
 						</div>
 					</div>
 				</section>
@@ -151,9 +151,14 @@
 					<aside class="tsd-sources">
 						<p>Overrides <a href="automations.triggerdefinition.html">TriggerDefinition</a>.<a href="automations.triggerdefinition.html#triggertype">triggerType</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts#L14">src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts#L17">src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts:17</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A string value describing the hubitat device event type.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -168,16 +173,18 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts#L33">src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts#L38">src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts:38</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns a list of all attribute names contained in <code>attributes</code> field.
+									<p>Returns a list of all attribute names contained in
+										<a href="hubitatdeviceevents.hubitatdevicetriggerdefinition.html#attributes"><code>attributes</code></a> field.
 									There are no duplicates on that list.</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>Returns a list of all attributes without duplicates.</p>
 						</li>
 					</ul>
 				</section>
@@ -191,16 +198,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts#L46">src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts#L52">src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition.ts:52</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns the last attribute filter of this definition. Returns <code>undefined</code>
-									if there are no attribute filters.</p>
+									<p>Returns the last attribute filter of this definition.</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <a href="hubitatdeviceevents.attributefilter.html" class="tsd-signature-type">AttributeFilter</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<p>Returns the last attribute filter or <code>undefined</code>
+							if there are no attribute filters.</p>
 						</li>
 					</ul>
 				</section>

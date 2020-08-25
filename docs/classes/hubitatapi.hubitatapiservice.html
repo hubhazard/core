@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>HubitatApiService | HubHazard Core - v0.1.0-beta.3</title>
-	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.3">
+	<title>HubitatApiService | HubHazard Core - v0.1.0-beta.4</title>
+	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.4">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.3</a>
+					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.4</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -67,6 +67,15 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A <a href="https://docs.nestjs.com/providers#services">Nest.js service</a> that allows
+							for querying Hubitat&#39;s devices, sending commands to Hubitat&#39;s devices and
+						exposes an observable providing device update events from Hubitat hub.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -96,7 +105,6 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="hubitatapi.hubitatapiservice.html#getdeviceinfo" class="tsd-kind-icon">get<wbr>Device<wbr>Info</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="hubitatapi.hubitatapiservice.html#getdeviceslist" class="tsd-kind-icon">get<wbr>Devices<wbr>List</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="hubitatapi.hubitatapiservice.html#handledeviceupdate" class="tsd-kind-icon">handle<wbr>Device<wbr>Update</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="hubitatapi.hubitatapiservice.html#senddevicecommand" class="tsd-kind-icon">send<wbr>Device<wbr>Command</a></li>
 							</ul>
 						</section>
@@ -115,13 +123,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-api/hubitat-api.service.ts#L20">src/hubitat-api/hubitat-api.service.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-api/hubitat-api.service.ts#L28">src/hubitat-api/hubitat-api.service.ts:28</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a new service instance. Use only for testing as service&#39;s creation
+									is handled by the Dependency Injection.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>configService: <span class="tsd-signature-type">ConfigService</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>A configuration service providing the configuration
+											data required to establish a connection with the Hubitat hub.</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="hubitatapi.hubitatapiservice.html" class="tsd-signature-type">HubitatApiService</a></h4>
@@ -141,15 +161,22 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-api/hubitat-api.service.ts#L33">src/hubitat-api/hubitat-api.service.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-api/hubitat-api.service.ts#L56">src/hubitat-api/hubitat-api.service.ts:56</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns an observer for device update events.</p>
+									<p>Returns an new observer for device update events.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-ts"><span class="hljs-keyword">const</span> subscription = hubitatApiService.deviceUpdateObservable
+  .subscribe(<span class="hljs-function"><span class="hljs-params">eventData</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(eventData)));</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="hubitatapi.deviceeventdto.html" class="tsd-signature-type">DeviceEventDto</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>An observable that will provide all future device events.</p>
 						</li>
 					</ul>
 				</section>
@@ -166,22 +193,33 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-api/hubitat-api.service.ts#L48">src/hubitat-api/hubitat-api.service.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-api/hubitat-api.service.ts#L93">src/hubitat-api/hubitat-api.service.ts:93</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Fetches full data for specified device. If the device wasn&#39;t found or there
-									was some other error, returns <code>undefined</code>.</p>
+									<p>Fetches full data for a specified device.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-ts"><span class="hljs-keyword">const</span> deviceInfo = <span class="hljs-keyword">await</span> hubitatApiService.getDeviceInfo(<span class="hljs-number">42</span>);
+<span class="hljs-keyword">if</span> (deviceInfo != <span class="hljs-literal">null</span>)
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Device details: <span class="hljs-subst">${<span class="hljs-built_in">JSON</span>.stringify(deviceInfo)}</span>`</span>);</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>deviceId: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Id of the device to fetch.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="hubitatapi.deviceinfodto.html" class="tsd-signature-type">DeviceInfoDto</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Returns details of a specified device. Returns <code>undefined</code> if the
+							fetching the data failed.</p>
 						</li>
 					</ul>
 				</section>
@@ -195,43 +233,26 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-api/hubitat-api.service.ts#L40">src/hubitat-api/hubitat-api.service.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-api/hubitat-api.service.ts#L75">src/hubitat-api/hubitat-api.service.ts:75</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Fetches a list of all devices from Hubitat&#39;s Maker API.</p>
+									<p>Fetches a list of all devices provided by
+									<a href="https://docs.hubitat.com/index.php?title=Maker_API">Hubitat&#39;s Maker API</a>.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-ts"><span class="hljs-keyword">const</span> devices = <span class="hljs-keyword">await</span> hubitatApiService.getDevicesList();
+<span class="hljs-keyword">if</span> (devices != <span class="hljs-literal">null</span>)
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Received <span class="hljs-subst">${devices.length}</span> devices`</span>);</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="hubitatapi.deviceslistitemdto.html" class="tsd-signature-type">DevicesListItemDto</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="handledeviceupdate" class="tsd-anchor"></a>
-					<h3>handle<wbr>Device<wbr>Update</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">handle<wbr>Device<wbr>Update<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="hubitatapi.deviceeventdto.html" class="tsd-signature-type">DeviceEventDto</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-api/hubitat-api.service.ts#L55">src/hubitat-api/hubitat-api.service.ts:55</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Method used by the <code>HubitatApiController</code> to pass new device update events.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>event: <a href="hubitatapi.deviceeventdto.html" class="tsd-signature-type">DeviceEventDto</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<p>Returns a list of devices provided by
+								<a href="https://docs.hubitat.com/index.php?title=Maker_API">Hubitat&#39;s Maker API</a>.
+							The list can be empty. Returns <code>undefined</code> if fetching devices failed.</p>
 						</li>
 					</ul>
 				</section>
@@ -245,15 +266,23 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-api/hubitat-api.service.ts#L67">src/hubitat-api/hubitat-api.service.ts:67</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-api/hubitat-api.service.ts#L125">src/hubitat-api/hubitat-api.service.ts:125</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Sends device command to Hubitat&#39;s Maker API. Only one value is supported as
-										the Hubitat&#39;s Maker API doesn&#39;t support receiving two values. This makes it
-									impossible to send commands like <code>setLevel</code> with the <code>duration</code> value.</p>
+									<p>Sends command to Hubitat&#39;s device. <strong>Only one value is supported</strong> as the
+										<a href="https://docs.hubitat.com/index.php?title=Maker_API">Hubitat&#39;s Maker API</a>
+										doesn&#39;t support receiving two values. This makes it impossible to send
+										commands like
+									<a href="https://docs.hubitat.com/index.php?title=Driver_Capability_List#SwitchLevel"><code>setLevel</code> with the <code>duration</code> value</a>.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-ts"><span class="hljs-keyword">await</span> hubitatApiService.sendDeviceCommand(<span class="hljs-number">160</span>, <span class="hljs-string">&#x27;on&#x27;</span>);
+<span class="hljs-keyword">await</span> hubitatApiService.sendDeviceCommand(<span class="hljs-number">160</span>, <span class="hljs-string">&#x27;setLevel&#x27;</span>, <span class="hljs-number">75</span>);</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -350,9 +379,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="hubitatapi.hubitatapiservice.html#getdeviceslist" class="tsd-kind-icon">get<wbr>Devices<wbr>List</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="hubitatapi.hubitatapiservice.html#handledeviceupdate" class="tsd-kind-icon">handle<wbr>Device<wbr>Update</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="hubitatapi.hubitatapiservice.html#senddevicecommand" class="tsd-kind-icon">send<wbr>Device<wbr>Command</a>

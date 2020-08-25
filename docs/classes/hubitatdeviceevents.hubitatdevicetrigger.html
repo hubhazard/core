@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>HubitatDeviceTrigger | HubHazard Core - v0.1.0-beta.3</title>
-	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.3">
+	<title>HubitatDeviceTrigger | HubHazard Core - v0.1.0-beta.4</title>
+	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.4">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.3</a>
+					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.4</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -109,22 +109,51 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-device-events/definition-building/hubitat-device-trigger.ts#L25">src/hubitat-device-events/definition-building/hubitat-device-trigger.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-device-events/definition-building/hubitat-device-trigger.ts#L75">src/hubitat-device-events/definition-building/hubitat-device-trigger.ts:75</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Creates a trigger accepting user-automations-module from specified devices. You need to
-									specify at least one device id.</p>
+									<p>Creates a trigger accepting user-automations-module from specified devices.
+									You need to specify at least one device id.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><p>Accept all device events from one device:</p>
+										<pre><code class="language-ts"><span class="hljs-keyword">readonly</span> triggers = [
+  HubitatDeviceTrigger.for(<span class="hljs-number">68</span>),
+];</code></pre>
+									</dd>
+									<dt>example</dt>
+									<dd><p>Accept events from 3 devices but only about the <code>level</code> or &#39;switch&#39;
+										attribute being changed:</p>
+										<pre><code class="language-ts"><span class="hljs-keyword">const</span> DESK_LAMP = <span class="hljs-number">61</span>;
+<span class="hljs-keyword">const</span> DRESSER_LAMP = <span class="hljs-number">62</span>;
+<span class="hljs-keyword">const</span> TABLE_LAMP = <span class="hljs-number">65</span>;
+
+<span class="hljs-keyword">readonly</span> triggers = [
+  HubitatDeviceTrigger
+    .for(DESK_LAMP, DRESSER_LAMP, TABLE_LAMP)
+    .where(<span class="hljs-string">&#x27;level&#x27;</span>, <span class="hljs-string">&#x27;switch&#x27;</span>).changes(),
+];</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>deviceId: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An ID of the device to accepts events from. You
+										can specify more allowed device IDs using the <code>otherDevicesIds</code>.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>otherDevicesIds: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Other device IDs in case you want to allow
+										device events from more than one device. Optional.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="hubitatdeviceevents.withoutattributesdefinition.html" class="tsd-signature-type">WithoutAttributesDefinition</a></h4>
@@ -141,13 +170,29 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-device-events/definition-building/hubitat-device-trigger.ts#L17">src/hubitat-device-events/definition-building/hubitat-device-trigger.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-device-events/definition-building/hubitat-device-trigger.ts#L35">src/hubitat-device-events/definition-building/hubitat-device-trigger.ts:35</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Creates a trigger accepting trigger-definition user-automations-module from all devices.</p>
+									<p>Creates a trigger accepting device events sent by any device.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><p>Accept all device events from all devices:</p>
+										<pre><code class="language-ts"><span class="hljs-keyword">readonly</span> triggers = [
+  HubitatDeviceTrigger.forAllDevices(),
+];</code></pre>
+									</dd>
+									<dt>example</dt>
+									<dd><p>Accept events from all devices but only about the <code>switch</code> attribute being
+										changed:</p>
+										<pre><code class="language-ts"><span class="hljs-keyword">readonly</span> triggers = [
+  HubitatDeviceTrigger.forAllDevices()
+    .where(<span class="hljs-string">&#x27;switch&#x27;</span>).changes(),
+];</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <a href="hubitatdeviceevents.withoutattributesdefinition.html" class="tsd-signature-type">WithoutAttributesDefinition</a></h4>
 						</li>

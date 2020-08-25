@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ChangeGroup | HubHazard Core - v0.1.0-beta.3</title>
-	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.3">
+	<title>ChangeGroup | HubHazard Core - v0.1.0-beta.4</title>
+	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.4">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.3</a>
+					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.4</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -67,6 +67,14 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A group of <a href="hubitatdeviceevents.changefilter.html">change filters</a> configurations for the
+						attributes value change filtering. Learn more in <a href="hubitatdeviceevents.attributefilter.html">AttributeFilter</a> docs.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -102,9 +110,15 @@
 					<div class="tsd-signature tsd-kind-icon">filters<span class="tsd-signature-symbol">:</span> <a href="hubitatdeviceevents.changefilter.html" class="tsd-signature-type">ChangeFilter</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-device-events/trigger-definition/change-group.ts#L9">src/hubitat-device-events/trigger-definition/change-group.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-device-events/trigger-definition/change-group.ts#L17">src/hubitat-device-events/trigger-definition/change-group.ts:17</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A list of filters to filter the attribute&#39;s value through. A value needs to
+							match all filters.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -119,10 +133,16 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/e5803b0/src/hubitat-device-events/trigger-definition/change-group.ts#L11">src/hubitat-device-events/trigger-definition/change-group.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/7488f80/src/hubitat-device-events/trigger-definition/change-group.ts#L23">src/hubitat-device-events/trigger-definition/change-group.ts:23</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the last filter of the group.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <a href="hubitatdeviceevents.changefilter.html" class="tsd-signature-type">ChangeFilter</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<p>Returns the last filter or <code>undefined</code> if there are no filters.</p>
 						</li>
 					</ul>
 				</section>
