@@ -4,7 +4,9 @@
  */
 
 /**
- * An enum containing all possible hubitat's device capability names.
+ * An enum containing all possible
+ * [Hubitat's device capability](https://docs.hubitat.com/index.php?title=Driver_Capability_List)
+ * names.
  */
 export enum ECapability {
   AccelerationSensor = 'AccelerationSensor',
@@ -17,7 +19,7 @@ export enum ECapability {
   Bulb = 'Bulb',
 
   /**
-   * @deprecated
+   * @deprecated Deprecated by Hubitat.
    */
   Button = 'Button',
 
