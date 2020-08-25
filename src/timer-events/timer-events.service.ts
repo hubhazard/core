@@ -13,7 +13,8 @@ import { TIMER_EVENT_TYPE, TimerEvent } from './timer-event';
 import { TimerTriggerDefinition } from './triggers/timer-trigger-definition';
 
 /**
- * An events service for timer events.
+ * An events service for timer events. Allows for registering actions triggered
+ * periodically.
  */
 @Injectable()
 export class TimerEventsService implements IEventsService {
@@ -30,6 +31,13 @@ export class TimerEventsService implements IEventsService {
    */
   private subscribedAutomations: Set<Automation> = new Set<Automation>();
 
+  /**
+   * Creates a service instance. Use only for testing as service's creation
+   * is handled by the Dependency Injection.
+   *
+   * @param automationsService A reference to the {@link AutomationsService}
+   * instance that this events service will registered to.
+   */
   constructor(private readonly automationsService: AutomationsService) {
     automationsService.registerEventsService(this);
   }
@@ -37,6 +45,7 @@ export class TimerEventsService implements IEventsService {
   /**
    * Registers provided automation to this events service. If the automation
    * doesn't contain any valid timer triggers, it won't be registered.
+   * @param automation The automation to be registered.
    */
   registerAutomation(automation: Automation): void {
     // Don't allow registering of same automation twice.
@@ -98,6 +107,7 @@ export class TimerEventsService implements IEventsService {
 
   /**
    * Unregisters provided automation from this events service.
+   * @param automation The automation to be unregistered.
    */
   unregisterAutomation(automation: Automation): void {
     this.subscribedAutomations.delete(automation);

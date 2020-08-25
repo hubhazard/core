@@ -8,15 +8,16 @@ import { DeviceEventDto } from './dtos/device-event.dto';
 import { HubitatApiService } from './hubitat-api.service';
 
 /**
- * A Nest.js controller responsible for receiving device events from Hubitat hub.
+ * A [Nest.js controller](https://docs.nestjs.com/controllers) responsible for
+ * catching device events sent by the [Hubitat hub](https://hubitat.com/).
  */
 @Controller('hubitat/event')
 export class HubitatApiController {
   constructor(private readonly hubitatApiService: HubitatApiService) {}
 
   /**
-   * Handles device events sent from the Hubitat hub.
-   * @param eventData Device event data sent by the Hubitat hub.
+   * A handler of device events sent by Hubitat hub via POST request.
+   * @param eventData Data describing a device event.
    */
   @Post()
   async onEvent(@Body('content') eventData: DeviceEventDto): Promise<void> {

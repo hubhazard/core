@@ -6,7 +6,7 @@
  *
  * - {@link Automation} - a base class for every automation. Allows for
  *      automations to be correctly registered and triggered.
- * - {@link AutomationEvent} - base class for events passed to automations.
+ * - {@link AutomationEvent} - a base class for events passed to automations.
  *      Every automation event provides the `eventType` string field that allows
  *      for identification of the event type inside the automation.
  * - {@link AutomationsService} - a service for registering automations and
@@ -27,6 +27,10 @@
 import { Module } from '@nestjs/common';
 import { AutomationsService } from './automations.service';
 
+/**
+ * A [Nest.js module](https://docs.nestjs.com/modules) providing the
+ * functionality of the HubHazard's automations module.
+ */
 @Module({
   imports: [],
   controllers: [],

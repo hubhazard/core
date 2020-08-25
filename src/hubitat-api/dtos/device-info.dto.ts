@@ -7,36 +7,37 @@ import { DeviceInfoAttributeDto } from './device-info-attribute.dto';
 import { DeviceInfoCapabilityDto } from './device-info-capability.dto';
 
 /**
- * DTO describing a device in full detail.
+ * DTO describing a device in full detail as received from
+ * [Hubitat's Maker API](https://docs.hubitat.com/index.php?title=Maker_API).
  */
 export class DeviceInfoDto {
   /**
-   * Id of the device.
+   * An ID of the device.
    */
   id: string;
 
   /**
-   * Name of the device.
+   * A name of the device.
    */
   name: string;
 
   /**
-   * Label of the device.
+   * A label of the device.
    */
   label: string;
 
   /**
-   * List of capabilities of the device.
+   * A list of capabilities of the device.
    */
   capabilities: (string | DeviceInfoCapabilityDto)[];
 
   /**
-   * List of attributes of the device.
+   * A list of attributes of the device.
    */
   attributes: DeviceInfoAttributeDto[];
 
   /**
-   * List of commands supported by the device.
+   * A list of commands supported by the device.
    */
   commands: string[];
 }

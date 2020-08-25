@@ -4,7 +4,8 @@
  */
 
 /**
- * Base class for every trigger definition.
+ * A base class for trigger definitions. Trigger definitions describe what kind
+ * of events an automation awaits.
  */
 export abstract class TriggerDefinition {
   /**
