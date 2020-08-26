@@ -21,6 +21,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Tests for `AutomationEvent` class
 
+### Changed
+
+- The `Automation.handleEvent` function isn't marked as *internal* anymore.
 ## [0.1.0-beta.4] - 2020-08-22
 
 ### Added
