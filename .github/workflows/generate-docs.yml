@@ -9,6 +9,11 @@ jobs:
   sync-branch:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout master
+        uses: actions/checkout@v2
+        with:
+          ref: master
+
       - name: Checkout gh-pages
         uses: actions/checkout@v2
         with:
