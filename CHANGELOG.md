@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0-beta.5] - 2020-08-26
+
 ### Added
 
 - Tests for `AutomationEvent` class
@@ -27,13 +29,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Documentation links now direct to the project wiki
 - Roadmap section now leads to a list of issues with a `task` label
 
-## [0.1.0-beta.4] - 2020-08-22
+## [0.1.0-beta.4] - 2020-08-25
 
 ### Added
 
 - Completed the documentation of all source code. [ #7 ]
 
-## [0.1.0-beta.3] - 2020-08-22
+## [0.1.0-beta.3] - 2020-08-23
 
 ### Added
 
@@ -60,7 +62,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `common` functions set to mostly simplify interactions with collections and random number generation for
   testing purposes.
 
-[Unreleased]: https://github.com/hubhazard/core/compare/v0.1.0-beta.4...HEAD
-[0.1.0-beta.3]: https://github.com/hubhazard/core/compare/v0.1.0-beta.3...v0.1.0-beta.4
+[Unreleased]: https://github.com/hubhazard/core/compare/v0.1.0-beta.5...HEAD
+[0.1.0-beta.5]: https://github.com/hubhazard/core/compare/v0.1.0-beta.4...v0.1.0-beta.5
+[0.1.0-beta.4]: https://github.com/hubhazard/core/compare/v0.1.0-beta.3...v0.1.0-beta.4
 [0.1.0-beta.3]: https://github.com/hubhazard/core/compare/v0.1.0-beta.1...v0.1.0-beta.3
 [0.1.0-beta.1]: https://github.com/hubhazard/core/releases/tag/v0.1.0-beta.1
