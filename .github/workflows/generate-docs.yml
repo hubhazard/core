@@ -21,7 +21,7 @@ jobs:
 
       - name: Merge master -> gh-pages
         run: |
-          git merge -s recursive -X theirs master
+          git merge -s recursive -X theirs origin/master
 
       - name: Setup Node.js 10
         uses: actions/setup-node@v1
