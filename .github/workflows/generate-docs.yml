@@ -1,25 +1,12 @@
 name: Generate documentation
 
 on:
-  release:
-    types: [created]
+  workflow_dispatch:
 
 jobs:
-  sync-branch:
+  generate-docs:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout master
-        uses: actions/checkout@v2
-        with:
-          ref: master
-
-      - name: Merge master -> gh-pages
-        uses: everlytic/branch-merge@1.1.0
-        with:
-          source_ref: master
-          target_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Checkout gh-pages
         uses: actions/checkout@v2
         with:

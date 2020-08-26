@@ -50,9 +50,11 @@ export abstract class Automation {
   }
 
   /**
-   * A function called upon event matching automations triggers. This function
-   * is called by {@link IEventsService events services}.
-   * @internal
+   * A function called when an event matches any of automations triggers.
+   * This function is called by {@link IEventsService events services}.
+   * @param automationEvent The event accepted by any of automations triggers.
+   * The event is generalized to the {@link AutomationEvent} type, but can be
+   * narrowed down back to the original event within the automation.
    */
   abstract async handleEvent(automationEvent: AutomationEvent): Promise<void>;
 }
