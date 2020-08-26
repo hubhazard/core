@@ -1,27 +1,16 @@
 name: Generate documentation
 
 on:
-  release:
-    types: [created]
   workflow_dispatch:
 
 jobs:
-  sync-branch:
+  generate-docs:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout master
-        uses: actions/checkout@v2
-        with:
-          ref: master
-
       - name: Checkout gh-pages
         uses: actions/checkout@v2
         with:
           ref: gh-pages
-
-      - name: Merge master -> gh-pages
-        run: |
-          git merge -s recursive -X theirs origin/master
 
       - name: Setup Node.js 10
         uses: actions/setup-node@v1
