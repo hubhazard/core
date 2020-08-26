@@ -8,7 +8,7 @@
   <p align="center">
     A core module of the HubHazard server.
     <br />
-    <a href="https://hubhazard.github.io/core/">Documentation</a>
+    <a href="https://github.com/hubhazard/core/wiki">Documentation</a>
     ·
     <a href="https://github.com/hubhazard/core/issues">Report Bug</a>
     ·
@@ -314,13 +314,13 @@ export class StaircaseButtonAutomation extends Automation {
 
 ## Documentation
 
-The project documentation is available at [hubhazard.github.io/core/][hubhazardcoredocs].
+The project documentation is available in for of a wiki at [https://github.com/hubhazard/core/wiki/][hubhazardcorewiki].
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
-See the [open issues][issues] for a list of proposed features (and known issues).
+See a list of [open issues][tasks] with the `task` label.
 
 <!-- CONTRIBUTING -->
 
@@ -378,8 +378,8 @@ Project Link: [https://github.com/hubhazard/core][hubhazardcore]
 [nestjsstart]: https://docs.nestjs.com/cli/usages#nest-start
 [nestjsconfig]: https://docs.nestjs.com/techniques/configuration
 [typescript]: https://www.typescriptlang.org/
-[issues]: https://github.com/hubhazard/core/issues
+[tasks]: https://github.com/hubhazard/core/labels/task
 [twitterxkonti]: https://twitter.com/xkonti
 [hubhazardcore]: https://github.com/hubhazard/core
-[hubhazardcoredocs]: https://hubhazard.github.io/core/
+[hubhazardcorewiki]: https://github.com/hubhazard/core/wiki
 [hubhazardtemplate]: https://github.com/hubhazard/hubhazard-basic-template

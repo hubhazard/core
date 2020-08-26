@@ -24,6 +24,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - The `Automation.handleEvent` function isn't marked as *internal* anymore.
+- Documentation links now direct to the project wiki
+- Roadmap section now leads to a list of issues with a `task` label
+
 ## [0.1.0-beta.4] - 2020-08-22
 
 ### Added
