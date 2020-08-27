@@ -1,13 +1,13 @@
 import { doTimes } from '../../common/collections-helpers';
 import { randomIntRange } from '../../common/number-helpers';
 import { randomDeviceTriggerDef } from '../definition-building/hubitat-device-trigger.spec';
-import { HUBITAT_DEVICE_EVENT_TYPE } from '../hubitat-device-event';
 import { randomAttributeFilter, randomAttributeFilters } from './attribute-filter.spec';
+import { isHubitatDeviceEvent } from '../is-hubitat-device-event.function';
 
 describe('HubitatDeviceTriggerDefinition', () => {
   describe('triggerType', () => {
     it('should return DeviceUpdate', () => {
-      expect(randomDeviceTriggerDef('random').triggerType).toEqual(HUBITAT_DEVICE_EVENT_TYPE);
+      expect(isHubitatDeviceEvent(randomDeviceTriggerDef('random'))).toBeTruthy();
     });
   });
 

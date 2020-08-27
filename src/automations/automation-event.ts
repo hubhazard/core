@@ -19,7 +19,7 @@ export abstract class AutomationEvent {
    * Can be used to identify the type of the event in automation:
    * ```ts
    * async handleEvent(event: TimerEvent) {
-   *   if(event.eventType === TIMER_EVENT_TYPE)
+   *   if(isTimerEvent(event))
    *     console.log(`${this.name} was triggered!`);
    * }
    * ```

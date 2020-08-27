@@ -9,8 +9,9 @@ import { Automation } from '../automations/automation';
 import { AutomationsService } from '../automations/automations.service';
 import { IEventsService } from '../automations/events-service.interface';
 import { TriggerDefinition } from '../automations/trigger-definition';
-import { TIMER_EVENT_TYPE, TimerEvent } from './timer-event';
 import { TimerTriggerDefinition } from './triggers/timer-trigger-definition';
+import { TimerEvent } from './timer-event';
+import { isTimerEvent } from './is-timer-event.function';
 
 /**
  * An events service for timer events. Allows for registering actions triggered
@@ -76,7 +77,6 @@ export class TimerEventsService implements IEventsService {
       // Without it in case of an interval of 24 hours the first automation call
       // would be after 24 hours which in most cases is not desirable.
       setTimeout(async () => {
-        // Call for the first time TODO
         try {
           const event = new TimerEvent();
           await automation.handleEvent(event);
@@ -126,7 +126,7 @@ export class TimerEventsService implements IEventsService {
    * @private
    */
   private getCompatibleTriggers(triggerDefinitions: TriggerDefinition[]): TimerTriggerDefinition[] {
-    const validTriggers = triggerDefinitions.filter((trigger) => trigger.triggerType === TIMER_EVENT_TYPE);
+    const validTriggers = triggerDefinitions.filter(isTimerEvent);
     return validTriggers as TimerTriggerDefinition[];
   }
 
