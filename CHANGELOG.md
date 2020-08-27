@@ -17,6 +17,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added capability functions for thermostat devices:
+  * `getCoolingSetpoint` and `setCoolingSetpoint`
+  * `getHeatingSetpoint` and `setHeatingSetpoint`
+  * `getThermostatSchedule` and `setThermostatSchedule`
+  * `getSupportedThermostatFanModes`
+  * `getSupportedThermostatModes`
+  * `getThermostatFanMode` and `setThermostatFanMode`
+  * `getThermostatMode` and `setThermostatMode`
+  * `getThermostatOperatingState`
+  * `getThermostatSetpoint` and `setThermostatSetpoint`
+- Added capability functions for virtual thermostat devices:
+  * `setSupportedThermostatFanModes`
+  * `setSupportedThermostatModes`
+  * `setThermostatOperatingState`
+- Added capability function for virtual temperature sensor devices: `setTemperature`.
+- Added capability-related helper function `enumListToStringList`.
+
 ## [0.1.0-beta.5] - 2020-08-26
 
 ### Added
