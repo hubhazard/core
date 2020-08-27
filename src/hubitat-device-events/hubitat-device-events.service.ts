@@ -11,10 +11,11 @@ import { TriggerDefinition } from '../automations/trigger-definition';
 import { all } from '../common/collections-helpers';
 import { SubscribersMap } from '../common/subscribers-map';
 import { SubscribersSet } from '../common/subscribers-set';
-import { HUBITAT_DEVICE_EVENT_TYPE, HubitatDeviceEvent } from './hubitat-device-event';
+import { HubitatDeviceEvent } from './hubitat-device-event';
 import { AttributeFilter } from './trigger-definition/attribute-filter';
 import { ChangeFilter } from './trigger-definition/change-filter';
 import { HubitatDeviceTriggerDefinition } from './trigger-definition/hubitat-device-trigger.definition';
+import { isHubitatDeviceEvent } from './is-hubitat-device-event.function';
 
 /**
  * An events service handling Hubitat's device events. It's responsible for
@@ -65,7 +66,7 @@ export class HubitatDeviceEventsService implements IEventsService {
    */
   public handleEvent(event: HubitatDeviceEvent): void {
     // Handle only device update user-automations-module
-    if (event.eventType !== HUBITAT_DEVICE_EVENT_TYPE) return;
+    if (!isHubitatDeviceEvent(event)) return;
 
     // Create working copy of all subscribing user-automations
     const unhandledAutomations = new Set(this.subscribedAutomations);
@@ -170,7 +171,7 @@ export class HubitatDeviceEventsService implements IEventsService {
   }
 
   private getCompatibleTriggers(triggerDefinitions: TriggerDefinition[]): HubitatDeviceTriggerDefinition[] {
-    const validTriggers = triggerDefinitions.filter((trigger) => trigger.triggerType === HUBITAT_DEVICE_EVENT_TYPE);
+    const validTriggers = triggerDefinitions.filter(isHubitatDeviceEvent);
     return validTriggers as HubitatDeviceTriggerDefinition[];
   }
 

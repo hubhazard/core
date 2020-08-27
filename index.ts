@@ -51,9 +51,11 @@ export * from './src/hubitat-capabilities/thermostat.capability';
 export * from './src/hubitat-device-events/capability.enum';
 export * from './src/hubitat-device-events/hubitat-device';
 export * from './src/hubitat-device-events/hubitat-device-event';
+export * from './src/hubitat-device-events/hubitat-device-event-type.const';
 export * from './src/hubitat-device-events/hubitat-device-events.module';
 export * from './src/hubitat-device-events/hubitat-device-events.service';
 export * from './src/hubitat-device-events/hubitat-devices.service';
+export * from './src/hubitat-device-events/is-hubitat-device-event.function';
 
 export * from './src/hubitat-device-events/definition-building/await-change-filter.definition';
 export * from './src/hubitat-device-events/definition-building/hubitat-device-trigger';
