@@ -11,7 +11,13 @@ export { getTemperature as getThermostatTemperature } from './temperature-measur
 export type EThermostatFanMode = 'on' | 'circulate' | 'auto';
 export type EThermostatMode = 'auto' | 'off' | 'heat' | 'emergency heat' | 'cool';
 export type EThermostatOperatingState =
-  'heating' | 'pending cool' | 'pending heat' | 'vent economizer' | 'idle' | 'cooling' | 'fan only';
+  | 'heating'
+  | 'pending cool'
+  | 'pending heat'
+  | 'vent economizer'
+  | 'idle'
+  | 'cooling'
+  | 'fan only';
 
 /* ==========================================
  *     Cooling setpoint
@@ -156,7 +162,10 @@ export async function setThermostatSchedule(device: HubitatDevice, schedule: Rec
  */
 export async function setThermostatSchedule(deviceId: number, schedule: Record<string, any>): Promise<void>;
 
-export async function setThermostatSchedule(deviceOrId: HubitatDevice | number, schedule: Record<string, any>): Promise<void> {
+export async function setThermostatSchedule(
+  deviceOrId: HubitatDevice | number,
+  schedule: Record<string, any>,
+): Promise<void> {
   const device = getDevice(deviceOrId);
   await device.sendCommand('setSchedule', JSON.stringify(schedule));
 }
@@ -206,7 +215,10 @@ export async function setSupportedThermostatFanModes(device: HubitatDevice, mode
  */
 export async function setSupportedThermostatFanModes(deviceId: number, modes: EThermostatFanMode[]): Promise<void>;
 
-export async function setSupportedThermostatFanModes(deviceOrId: HubitatDevice | number, modes: EThermostatFanMode[]): Promise<void> {
+export async function setSupportedThermostatFanModes(
+  deviceOrId: HubitatDevice | number,
+  modes: EThermostatFanMode[],
+): Promise<void> {
   const command = 'setSupportedThermostatFanModes';
   const device = getDevice(deviceOrId);
   if (!device.hasCommand(command))
@@ -259,7 +271,10 @@ export async function setSupportedThermostatModes(device: HubitatDevice, modes: 
  */
 export async function setSupportedThermostatModes(deviceId: number, modes: EThermostatMode[]): Promise<void>;
 
-export async function setSupportedThermostatModes(deviceOrId: HubitatDevice | number, modes: EThermostatMode[]): Promise<void> {
+export async function setSupportedThermostatModes(
+  deviceOrId: HubitatDevice | number,
+  modes: EThermostatMode[],
+): Promise<void> {
   const command = 'setSupportedThermostatModes';
   const device = getDevice(deviceOrId);
   if (!device.hasCommand(command))
@@ -291,7 +306,10 @@ export function getThermostatFanMode(device: HubitatDevice, defaultValue: ETherm
  */
 export function getThermostatFanMode(deviceId: number, defaultValue: EThermostatFanMode): EThermostatFanMode;
 
-export function getThermostatFanMode(deviceOrId: HubitatDevice | number, defaultValue: EThermostatFanMode = 'auto'): EThermostatFanMode {
+export function getThermostatFanMode(
+  deviceOrId: HubitatDevice | number,
+  defaultValue: EThermostatFanMode = 'auto',
+): EThermostatFanMode {
   const fanMode = getDevice(deviceOrId).getAttributeAsString('thermostatFanMode') ?? defaultValue;
   return fanMode as EThermostatFanMode;
 }
@@ -314,7 +332,10 @@ export async function setThermostatFanMode(device: HubitatDevice, mode: EThermos
  */
 export async function setThermostatFanMode(deviceId: number, mode: EThermostatFanMode): Promise<void>;
 
-export async function setThermostatFanMode(deviceOrId: HubitatDevice | number, mode: EThermostatFanMode): Promise<void> {
+export async function setThermostatFanMode(
+  deviceOrId: HubitatDevice | number,
+  mode: EThermostatFanMode,
+): Promise<void> {
   const device = getDevice(deviceOrId);
   await device.sendCommand('setThermostatFanMode', mode);
 }
@@ -343,7 +364,10 @@ export function getThermostatMode(device: HubitatDevice, defaultValue: EThermost
  */
 export function getThermostatMode(deviceId: number, defaultValue: EThermostatMode): EThermostatMode;
 
-export function getThermostatMode(deviceOrId: HubitatDevice | number, defaultValue: EThermostatMode = 'auto'): EThermostatMode {
+export function getThermostatMode(
+  deviceOrId: HubitatDevice | number,
+  defaultValue: EThermostatMode = 'auto',
+): EThermostatMode {
   const fanMode = getDevice(deviceOrId).getAttributeAsString('thermostatMode') ?? defaultValue;
   return fanMode as EThermostatMode;
 }
@@ -383,7 +407,10 @@ export async function setThermostatMode(deviceOrId: HubitatDevice | number, mode
  * @returns Returns current operating state of the thermostat.
  * @category Thermostat capability
  */
-export function getThermostatOperatingState(device: HubitatDevice, defaultValue: EThermostatOperatingState): EThermostatOperatingState;
+export function getThermostatOperatingState(
+  device: HubitatDevice,
+  defaultValue: EThermostatOperatingState,
+): EThermostatOperatingState;
 
 /**
  * Returns current operating state of the thermostat.
@@ -393,9 +420,15 @@ export function getThermostatOperatingState(device: HubitatDevice, defaultValue:
  * @returns Returns current operating state of the thermostat.
  * @category Thermostat capability
  */
-export function getThermostatOperatingState(deviceId: number, defaultValue: EThermostatOperatingState): EThermostatOperatingState;
+export function getThermostatOperatingState(
+  deviceId: number,
+  defaultValue: EThermostatOperatingState,
+): EThermostatOperatingState;
 
-export function getThermostatOperatingState(deviceOrId: HubitatDevice | number, defaultValue: EThermostatOperatingState = 'idle'): EThermostatOperatingState {
+export function getThermostatOperatingState(
+  deviceOrId: HubitatDevice | number,
+  defaultValue: EThermostatOperatingState = 'idle',
+): EThermostatOperatingState {
   const operatingState = getDevice(deviceOrId).getAttributeAsString('thermostatOperatingState') ?? defaultValue;
   return operatingState as EThermostatOperatingState;
 }
@@ -407,7 +440,10 @@ export function getThermostatOperatingState(deviceOrId: HubitatDevice | number, 
  * @param mode An operating mode to set.
  * @category Thermostat capability
  */
-export async function setThermostatOperatingState(device: HubitatDevice, mode: EThermostatOperatingState): Promise<void>;
+export async function setThermostatOperatingState(
+  device: HubitatDevice,
+  mode: EThermostatOperatingState,
+): Promise<void>;
 
 /**
  * Sets the operating mode of a **virtual** thermostat device.
@@ -418,7 +454,10 @@ export async function setThermostatOperatingState(device: HubitatDevice, mode: E
  */
 export async function setThermostatOperatingState(deviceId: number, mode: EThermostatOperatingState): Promise<void>;
 
-export async function setThermostatOperatingState(deviceOrId: HubitatDevice | number, mode: EThermostatOperatingState): Promise<void> {
+export async function setThermostatOperatingState(
+  deviceOrId: HubitatDevice | number,
+  mode: EThermostatOperatingState,
+): Promise<void> {
   const command = 'setThermostatOperatingState';
   const device = getDevice(deviceOrId);
   if (!device.hasCommand(command))
@@ -451,4 +490,3 @@ export function getThermostatSetpoint(deviceId: number): number;
 export function getThermostatSetpoint(deviceOrId: HubitatDevice | number): number {
   return getDevice(deviceOrId).getAttributeAsFloat('thermostatSetpoint');
 }
-

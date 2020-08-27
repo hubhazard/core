@@ -35,7 +35,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   * `setThermostatOperatingState`
 - Added capability function for virtual temperature sensor devices: `setTemperature`.
 - Added capability-related helper function `enumListToStringList`.
-  
 
 ## [0.1.0-beta.5] - 2020-08-26
 

@@ -59,7 +59,7 @@ export function getDevice(deviceOrId: HubitatDevice | number): HubitatDevice {
  */
 export function enumListToStringList(enumList: string): string[] {
   // Check if the enumList string is within []
-  if (enumList.length < 2 ||  enumList.charAt(0) !== '[' || enumList.charAt(enumList.length -1) !== ']')  {
+  if (enumList.length < 2 || enumList.charAt(0) !== '[' || enumList.charAt(enumList.length - 1) !== ']') {
     console.error(`Failed to convert the enum list ("${enumList}") into string list.`);
     return [];
   }
@@ -68,7 +68,8 @@ export function enumListToStringList(enumList: string): string[] {
   enumList = enumList.substring(1, enumList.length - 1);
 
   // Extract values
-  return enumList.split(',')
-    .map(value => value.trim())
-    .filter(value => value.length > 0);
+  return enumList
+    .split(',')
+    .map((value) => value.trim())
+    .filter((value) => value.length > 0);
 }
