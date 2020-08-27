@@ -66,7 +66,9 @@ export * from './src/hubitat-device-events/trigger-definition/change-group';
 export * from './src/hubitat-device-events/trigger-definition/hubitat-device-trigger.definition';
 
 // TIMER-EVENTS
+export * from './src/timer-events/is-timer-event.function';
 export * from './src/timer-events/timer-event';
+export * from './src/timer-events/timer-event-type.const';
 export * from './src/timer-events/timer-events.module';
 export * from './src/timer-events/timer-events.service';
 
