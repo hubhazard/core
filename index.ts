@@ -45,6 +45,7 @@ export * from './src/hubitat-capabilities/releasable-button.capability';
 export * from './src/hubitat-capabilities/switch.capability';
 export * from './src/hubitat-capabilities/switch-level.capability';
 export * from './src/hubitat-capabilities/temperature-measurement.capability';
+export * from './src/hubitat-capabilities/thermostat.capability';
 
 // HUBITAT-DEVICE-EVENTS
 export * from './src/hubitat-device-events/capability.enum';
