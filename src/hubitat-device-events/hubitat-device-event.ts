@@ -5,11 +5,7 @@
 
 import { AutomationEvent } from '../automations/automation-event';
 import { HubitatDevice } from './hubitat-device';
-
-/**
- * A string value describing hubitat device event type.
- */
-export const HUBITAT_DEVICE_EVENT_TYPE = 'hubitat-device';
+import { HUBITAT_DEVICE_EVENT_TYPE } from './hubitat-device-event-type.const';
 
 /**
  * A Hubitat device event. It represents a single attribute value change in a

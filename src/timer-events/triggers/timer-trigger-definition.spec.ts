@@ -1,5 +1,5 @@
-import { TIMER_EVENT_TYPE } from '../timer-event';
 import { TimerTriggerDefinition } from './timer-trigger-definition';
+import { isTimerEvent } from '../is-timer-event.function';
 
 describe('TimerTriggerDefinition', () => {
   describe('constructor()', () => {
@@ -14,7 +14,7 @@ describe('TimerTriggerDefinition', () => {
 
   describe('triggerType', () => {
     it('should return Timer', () => {
-      expect(new TimerTriggerDefinition().triggerType).toEqual(TIMER_EVENT_TYPE);
+      expect(isTimerEvent(new TimerTriggerDefinition())).toBeTruthy();
     });
   });
 });
