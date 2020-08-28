@@ -6,6 +6,8 @@
 import { TriggerDefinition } from '../../automations/trigger-definition';
 import { AttributeFilter } from './attribute-filter';
 import { HUBITAT_DEVICE_EVENT_TYPE } from '../hubitat-device-event-type.const';
+import { HubitatDeviceEvent } from '../hubitat-device-event';
+import { any } from '../../common/collections-helpers';
 
 /**
  * A class defining a hubitat device trigger.
@@ -52,5 +54,21 @@ export class HubitatDeviceTriggerDefinition extends TriggerDefinition {
   get lastAttribute(): AttributeFilter | undefined {
     if (this.attributes.length === 0) return undefined;
     return this.attributes[this.attributes.length - 1];
+  }
+
+  /**
+   * Verifies if the provided event is matching the requirements of this trigger.
+   * @param event An event to match.
+   * @returns Returns a value indicating whether the event is a match.
+   */
+  match(event: HubitatDeviceEvent): boolean {
+    // Filter devices
+    if (this.devices.length > 0 && !this.devices.includes(event.deviceId)) return false;
+    // Filter attributes
+    if (this.attributes.length > 0) {
+      return any(this.attributes, (attribute) => attribute.match(event));
+    }
+    // No filters specified, pass everything
+    return true;
   }
 }

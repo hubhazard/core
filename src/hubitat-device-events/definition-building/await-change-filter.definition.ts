@@ -6,6 +6,7 @@
 import { ChangeFilter } from '../trigger-definition/change-filter';
 import { HubitatDeviceTriggerDefinition } from '../trigger-definition/hubitat-device-trigger.definition';
 import { WithAttributesDefinition } from './with-attributes.definition';
+import { HubitatEventMatchFunction } from '../trigger-definition/hubitat-event-match-function.type';
 
 /**
  * An in-progress {@link HubitatDeviceTriggerDefinition} builder class.
@@ -33,7 +34,7 @@ export class AwaitChangeFilterDefinition {
    * ```
    */
   changes(): WithAttributesDefinition {
-    return this.registerChangeFilter('changes');
+    return this.registerChangeFilter(() => true);
   }
 
   /**
@@ -52,7 +53,7 @@ export class AwaitChangeFilterDefinition {
    * @param value A value of the attribute that is required to match the trigger.
    */
   is(value: string | number): WithAttributesDefinition {
-    return this.registerChangeFilter('is', value);
+    return this.registerChangeFilter((event) => event.newValue === `${value}`);
   }
 
   /**
@@ -72,7 +73,7 @@ export class AwaitChangeFilterDefinition {
    * the trigger.
    */
   was(value: string | number): WithAttributesDefinition {
-    return this.registerChangeFilter('was', value);
+    return this.registerChangeFilter((event) => event.previousValue === `${value}`);
   }
 
   /**
@@ -91,7 +92,7 @@ export class AwaitChangeFilterDefinition {
    * @param value A value of the attribute that is not allowed to match the trigger.
    */
   isNot(value: string | number): WithAttributesDefinition {
-    return this.registerChangeFilter('is-not', value);
+    return this.registerChangeFilter((event) => event.newValue !== `${value}`);
   }
 
   /**
@@ -111,13 +112,11 @@ export class AwaitChangeFilterDefinition {
    * the trigger.
    */
   wasNot(value: string | number): WithAttributesDefinition {
-    return this.registerChangeFilter('was-not', value);
+    return this.registerChangeFilter((event) => event.previousValue !== `${value}`);
   }
 
-  private registerChangeFilter(name: string, value?: string | number): WithAttributesDefinition {
-    const filter = new ChangeFilter();
-    filter.name = name;
-    if (value != null) filter.value = value;
+  private registerChangeFilter(matchFunction: HubitatEventMatchFunction): WithAttributesDefinition {
+    const filter = new ChangeFilter(matchFunction);
     this.addChangeFilter(filter);
     return new WithAttributesDefinition(this.triggerDefinition);
   }

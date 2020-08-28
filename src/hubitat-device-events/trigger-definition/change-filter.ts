@@ -3,18 +3,26 @@
  * @module HubitatDeviceEvents
  */
 
+import { HubitatEventMatchFunction } from './hubitat-event-match-function.type';
+
 /**
  * A class representing a configuration af a filter for the attributes value
  * change. Learn more in {@link AttributeFilter} docs.
  */
 export class ChangeFilter {
   /**
-   * A name of the filter to apply.
+   * Verifies if the provided event is matching the requirements of this filter.
+   * @param event An event to match.
+   * @returns Returns a value indicating whether the event is a match.
    */
-  name: string;
+  match: HubitatEventMatchFunction;
 
   /**
-   * A value of the filter to apply. It's existence depends on the filter.
+   * Creates a change filter with provided matching function.
+   * @param matchFunction A function that verifies if provided event is matching
+   * the requirements of this filter.
    */
-  value?: string | number;
+  constructor(matchFunction: HubitatEventMatchFunction) {
+    this.match = matchFunction;
+  }
 }

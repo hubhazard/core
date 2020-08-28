@@ -35,16 +35,6 @@ describe('AwaitChangeFilterDefinition', () => {
       });
     });
 
-    it('should create filter with "changes" name', () => {
-      doTimes(15, () => {
-        const withAttributes = getWithAttributes();
-        const trigger = withAttributes.build() as HubitatDeviceTriggerDefinition;
-        const awaitingChangeFilter = withAttributes.andWhere(name.findName());
-        expect(awaitingChangeFilter.changes()).toBeInstanceOf(WithAttributesDefinition);
-        expect(trigger.lastAttribute?.lastGroup?.lastFilter?.name).toEqual('changes');
-      });
-    });
-
     it('should throw error when there are no filter attributes', () => {
       const withAttributes = getWithAttributes();
       const trigger = withAttributes.build() as HubitatDeviceTriggerDefinition;
@@ -80,18 +70,6 @@ describe('AwaitChangeFilterDefinition', () => {
         expect(awaitingChange.is(name.findName())).toBeInstanceOf(WithAttributesDefinition);
         expect(trigger.lastAttribute?.lastGroup?.filters.length).toEqual(filtersNumber + 1);
         expect(trigger.lastAttribute?.lastGroup?.lastFilter).not.toBe(lastFilter);
-      });
-    });
-
-    it('should create filter with "is" name and provided value', () => {
-      doTimes(15, () => {
-        const withAttributes = getWithAttributes();
-        const trigger = withAttributes.build() as HubitatDeviceTriggerDefinition;
-        const value = name.findName();
-        const awaitingChangeFilter = withAttributes.andWhere(name.findName());
-        expect(awaitingChangeFilter.is(value)).toBeInstanceOf(WithAttributesDefinition);
-        expect(trigger.lastAttribute?.lastGroup?.lastFilter?.name).toEqual('is');
-        expect(trigger.lastAttribute?.lastGroup?.lastFilter?.value).toEqual(value);
       });
     });
 
@@ -133,18 +111,6 @@ describe('AwaitChangeFilterDefinition', () => {
       });
     });
 
-    it('should create filter with "is-not" name and provided value', () => {
-      doTimes(15, () => {
-        const withAttributes = getWithAttributes();
-        const trigger = withAttributes.build() as HubitatDeviceTriggerDefinition;
-        const value = name.findName();
-        const awaitingChangeFilter = withAttributes.andWhere(name.findName());
-        expect(awaitingChangeFilter.isNot(value)).toBeInstanceOf(WithAttributesDefinition);
-        expect(trigger.lastAttribute?.lastGroup?.lastFilter?.name).toEqual('is-not');
-        expect(trigger.lastAttribute?.lastGroup?.lastFilter?.value).toEqual(value);
-      });
-    });
-
     it('should throw when there are no filter attributes', () => {
       const withAttributes = getWithAttributes();
       const trigger = withAttributes.build() as HubitatDeviceTriggerDefinition;
@@ -183,18 +149,6 @@ describe('AwaitChangeFilterDefinition', () => {
       });
     });
 
-    it('should create filter with "was" name and provided value', () => {
-      doTimes(15, () => {
-        const withAttributes = getWithAttributes();
-        const trigger = withAttributes.build() as HubitatDeviceTriggerDefinition;
-        const value = name.findName();
-        const awaitingChangeFilter = withAttributes.andWhere(name.findName());
-        expect(awaitingChangeFilter.was(value)).toBeInstanceOf(WithAttributesDefinition);
-        expect(trigger.lastAttribute?.lastGroup?.lastFilter?.name).toEqual('was');
-        expect(trigger.lastAttribute?.lastGroup?.lastFilter?.value).toEqual(value);
-      });
-    });
-
     it('should throw when there are no filter attributes', () => {
       const withAttributes = getWithAttributes();
       const trigger = withAttributes.build() as HubitatDeviceTriggerDefinition;
@@ -230,18 +184,6 @@ describe('AwaitChangeFilterDefinition', () => {
         expect(awaitingChange.wasNot(name.findName())).toBeInstanceOf(WithAttributesDefinition);
         expect(trigger.lastAttribute?.lastGroup?.filters.length).toEqual(filtersNumber + 1);
         expect(trigger.lastAttribute?.lastGroup?.lastFilter).not.toBe(lastFilter);
-      });
-    });
-
-    it('should create filter with "was-not" name and provided value', () => {
-      doTimes(15, () => {
-        const withAttributes = getWithAttributes();
-        const trigger = withAttributes.build() as HubitatDeviceTriggerDefinition;
-        const value = name.findName();
-        const awaitingChangeFilter = withAttributes.andWhere(name.findName());
-        expect(awaitingChangeFilter.wasNot(value)).toBeInstanceOf(WithAttributesDefinition);
-        expect(trigger.lastAttribute?.lastGroup?.lastFilter?.name).toEqual('was-not');
-        expect(trigger.lastAttribute?.lastGroup?.lastFilter?.value).toEqual(value);
       });
     });
 
