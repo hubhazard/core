@@ -22,7 +22,7 @@ describe('ChangeGroup testing helpers', () => {
   describe('makeChangeGroup', () => {
     it('should create a valid group', () => {
       doTimes(15, () => {
-        const filters = randomChangeFilters(Math.random() * 5);
+        const filters = randomChangeFilters(randomIntRange(0, 5));
         expect(makeChangeGroup(filters).filters).toBe(filters);
       });
     });
