@@ -41,7 +41,6 @@ describe('AwaitChangeFilterDefinition', () => {
         const awaitingChange = new AwaitChangeFilterDefinition(trigger);
         const filtersNumber = trigger.lastAttribute?.lastGroup?.filters.length ?? -30;
         const lastFilter = trigger.lastAttribute?.lastGroup?.lastFilter;
-        // Use 'changes'
         expect(awaitingChange.changes()).toBeInstanceOf(WithAttributesDefinition);
         expect(trigger.lastAttribute?.lastGroup?.filters.length).toEqual(filtersNumber + 1);
         expect(trigger.lastAttribute?.lastGroup?.lastFilter).not.toBe(lastFilter);
@@ -68,6 +67,26 @@ describe('AwaitChangeFilterDefinition', () => {
       expect(() => {
         awaitingChangeFilter.changes();
       }).toThrow();
+    });
+
+    it('should accept all events', () => {
+      const test = (newValue: string | null) => {
+        const event = createEvent(newValue, undefined);
+        const withAttributes = getWithAttributes();
+        const trigger = withAttributes.andWhere(event.attributeName).changes()
+          .build() as HubitatDeviceTriggerDefinition;
+        expect(trigger.lastAttribute?.lastGroup?.lastFilter?.match(event)).toBeTruthy();
+      };
+
+      test(null);
+      test('null');
+      test('undefined');
+      test('0');
+      test('1.123');
+      test('on');
+      test('-1');
+      test('off');
+      test('hello-world');
     });
   });
 
@@ -800,6 +819,43 @@ describe('AwaitChangeFilterDefinition', () => {
       test('-1357.999', '-1358', false);
       test('1', '0.21', false);
       test('-6', '0.23', true);
+    });
+  });
+
+  describe('customFilter', () => {
+    it('should add a new filter to the last group of a last attribute', () => {
+      doTimes(15, () => {
+        const withAttributes = getWithAttributes();
+        const trigger = withAttributes.build() as HubitatDeviceTriggerDefinition;
+        const awaitingChange = new AwaitChangeFilterDefinition(trigger);
+        const filtersNumber = trigger.lastAttribute?.lastGroup?.filters.length ?? -30;
+        const lastFilter = trigger.lastAttribute?.lastGroup?.lastFilter;
+        expect(awaitingChange.customFilter(() => true)).toBeInstanceOf(WithAttributesDefinition);
+        expect(trigger.lastAttribute?.lastGroup?.filters.length).toEqual(filtersNumber + 1);
+        expect(trigger.lastAttribute?.lastGroup?.lastFilter).not.toBe(lastFilter);
+      });
+    });
+
+    it('should throw error when there are no filter attributes', () => {
+      const withAttributes = getWithAttributes();
+      const trigger = withAttributes.build() as HubitatDeviceTriggerDefinition;
+      const awaitingChangeFilter = withAttributes.andWhere(name.findName());
+      trigger.attributes = [];
+      expect(() => {
+        awaitingChangeFilter.customFilter(() => true);
+      }).toThrow();
+    });
+
+    it('should throw error when there are no changes groups', () => {
+      const withAttributes = getWithAttributes();
+      const trigger = withAttributes.build() as HubitatDeviceTriggerDefinition;
+      const awaitingChangeFilter = withAttributes.andWhere(name.findName());
+      const { lastAttribute } = trigger;
+      if (lastAttribute == null) throw new Error(`There are no attributes!`);
+      lastAttribute.changeGroups = [];
+      expect(() => {
+        awaitingChangeFilter.customFilter(() => true);
+      }).toThrow();
     });
   });
 })

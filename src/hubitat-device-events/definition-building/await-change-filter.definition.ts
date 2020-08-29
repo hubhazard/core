@@ -255,6 +255,15 @@ export class AwaitChangeFilterDefinition {
     });
   }
 
+  /**
+   * Adds a change filter with custom filtering function.
+   * @param filterFunction A function that decides what events is accepted
+   * (`=> true`) and what event is rejected (`=> false`).
+   */
+  customFilter(filterFunction: HubitatEventMatchFunction): WithAttributesDefinition {
+    return this.registerChangeFilter(filterFunction);
+  }
+
   private addChangeFilter(filter: ChangeFilter) {
     const { lastAttribute } = this.triggerDefinition;
     if (lastAttribute == null) {
