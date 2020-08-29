@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>AwaitChangeFilterDefinition | HubHazard Core - v0.1.0-beta.6</title>
-	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.6">
+	<title>AwaitChangeFilterDefinition | HubHazard Core - v0.1.0-beta.7</title>
+	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.7">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.6</a>
+					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.7</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -90,9 +90,16 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="hubitatdeviceevents.awaitchangefilterdefinition.html#changes" class="tsd-kind-icon">changes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="hubitatdeviceevents.awaitchangefilterdefinition.html#customfilter" class="tsd-kind-icon">custom<wbr>Filter</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="hubitatdeviceevents.awaitchangefilterdefinition.html#decreased" class="tsd-kind-icon">decreased</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="hubitatdeviceevents.awaitchangefilterdefinition.html#increased" class="tsd-kind-icon">increased</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="hubitatdeviceevents.awaitchangefilterdefinition.html#is" class="tsd-kind-icon">is</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="hubitatdeviceevents.awaitchangefilterdefinition.html#isgreaterthan" class="tsd-kind-icon">is<wbr>Greater<wbr>Than</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="hubitatdeviceevents.awaitchangefilterdefinition.html#islesserthan" class="tsd-kind-icon">is<wbr>Lesser<wbr>Than</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="hubitatdeviceevents.awaitchangefilterdefinition.html#isnot" class="tsd-kind-icon">is<wbr>Not</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="hubitatdeviceevents.awaitchangefilterdefinition.html#was" class="tsd-kind-icon">was</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="hubitatdeviceevents.awaitchangefilterdefinition.html#wasgreaterthan" class="tsd-kind-icon">was<wbr>Greater<wbr>Than</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="hubitatdeviceevents.awaitchangefilterdefinition.html#waslesserthan" class="tsd-kind-icon">was<wbr>Lesser<wbr>Than</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="hubitatdeviceevents.awaitchangefilterdefinition.html#wasnot" class="tsd-kind-icon">was<wbr>Not</a></li>
 							</ul>
 						</section>
@@ -111,7 +118,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/85d8d72/src/hubitat-device-events/definition-building/await-change-filter.definition.ts#L35">src/hubitat-device-events/definition-building/await-change-filter.definition.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/8d60829/src/hubitat-device-events/definition-building/await-change-filter.definition.ts#L36">src/hubitat-device-events/definition-building/await-change-filter.definition.ts:36</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -133,16 +140,112 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="is" class="tsd-anchor"></a>
-					<h3>is</h3>
+					<a name="customfilter" class="tsd-anchor"></a>
+					<h3>custom<wbr>Filter</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></li>
+						<li class="tsd-signature tsd-kind-icon">custom<wbr>Filter<span class="tsd-signature-symbol">(</span>filterFunction<span class="tsd-signature-symbol">: </span><a href="../modules/src_hubitat_device_events_trigger_definition.html#hubitateventmatchfunction" class="tsd-signature-type">HubitatEventMatchFunction</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/85d8d72/src/hubitat-device-events/definition-building/await-change-filter.definition.ts#L54">src/hubitat-device-events/definition-building/await-change-filter.definition.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/8d60829/src/hubitat-device-events/definition-building/await-change-filter.definition.ts#L263">src/hubitat-device-events/definition-building/await-change-filter.definition.ts:263</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a change filter with custom filtering function.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>filterFunction: <a href="../modules/src_hubitat_device_events_trigger_definition.html#hubitateventmatchfunction" class="tsd-signature-type">HubitatEventMatchFunction</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A function that decides what events is accepted
+										(<code>=&gt; true</code>) and what event is rejected (<code>=&gt; false</code>).</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="decreased" class="tsd-anchor"></a>
+					<h3>decreased</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">decreased<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/8d60829/src/hubitat-device-events/definition-building/await-change-filter.definition.ts#L251">src/hubitat-device-events/definition-building/await-change-filter.definition.ts:251</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a change filter that accepts only current attribute&#39;s value only when
+									it decreased in comparison to the previous one.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-ts"><span class="hljs-keyword">readonly</span> triggers = [
+  HubitatDeviceTrigger.for(<span class="hljs-number">119</span>)
+    .where(<span class="hljs-string">&#x27;level&#x27;</span>)
+    .decreased(),
+];</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="increased" class="tsd-anchor"></a>
+					<h3>increased</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">increased<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/8d60829/src/hubitat-device-events/definition-building/await-change-filter.definition.ts#L231">src/hubitat-device-events/definition-building/await-change-filter.definition.ts:231</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a change filter that accepts only current attribute&#39;s value only when
+									it increased in comparison to the previous one.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-ts"><span class="hljs-keyword">readonly</span> triggers = [
+  HubitatDeviceTrigger.for(<span class="hljs-number">119</span>)
+    .where(<span class="hljs-string">&#x27;level&#x27;</span>)
+    .increased(),
+];</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="is" class="tsd-anchor"></a>
+					<h3>is</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/8d60829/src/hubitat-device-events/definition-building/await-change-filter.definition.ts#L55">src/hubitat-device-events/definition-building/await-change-filter.definition.ts:55</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -163,9 +266,91 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5>value: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A value of the attribute that is required to match the trigger.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isgreaterthan" class="tsd-anchor"></a>
+					<h3>is<wbr>Greater<wbr>Than</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Greater<wbr>Than<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/8d60829/src/hubitat-device-events/definition-building/await-change-filter.definition.ts#L145">src/hubitat-device-events/definition-building/await-change-filter.definition.ts:145</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a change filter that accepts only current attribute&#39;s value greater
+									than the one specified.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-ts"><span class="hljs-keyword">readonly</span> triggers = [
+  HubitatDeviceTrigger.for(<span class="hljs-number">119</span>)
+    .where(<span class="hljs-string">&#x27;level&#x27;</span>)
+    .wasGreaterThan(<span class="hljs-number">15</span>),
+];</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A value of the attribute that is not allowed to match the trigger.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="islesserthan" class="tsd-anchor"></a>
+					<h3>is<wbr>Lesser<wbr>Than</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Lesser<wbr>Than<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/8d60829/src/hubitat-device-events/definition-building/await-change-filter.definition.ts#L189">src/hubitat-device-events/definition-building/await-change-filter.definition.ts:189</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a change filter that accepts only current attribute&#39;s value lesser
+									than the one specified.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-ts"><span class="hljs-keyword">readonly</span> triggers = [
+  HubitatDeviceTrigger.for(<span class="hljs-number">119</span>)
+    .where(<span class="hljs-string">&#x27;level&#x27;</span>)
+    .isLesserThan(<span class="hljs-number">15</span>),
+];</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A value of the attribute that is not allowed to match the trigger.</p>
 									</div>
 								</li>
 							</ul>
@@ -177,13 +362,13 @@
 					<a name="isnot" class="tsd-anchor"></a>
 					<h3>is<wbr>Not</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Not<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Not<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/85d8d72/src/hubitat-device-events/definition-building/await-change-filter.definition.ts#L93">src/hubitat-device-events/definition-building/await-change-filter.definition.ts:93</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/8d60829/src/hubitat-device-events/definition-building/await-change-filter.definition.ts#L100">src/hubitat-device-events/definition-building/await-change-filter.definition.ts:100</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -204,7 +389,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5>value: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A value of the attribute that is not allowed to match the trigger.</p>
 									</div>
@@ -218,13 +403,13 @@
 					<a name="was" class="tsd-anchor"></a>
 					<h3>was</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">was<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></li>
+						<li class="tsd-signature tsd-kind-icon">was<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/85d8d72/src/hubitat-device-events/definition-building/await-change-filter.definition.ts#L74">src/hubitat-device-events/definition-building/await-change-filter.definition.ts:74</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/8d60829/src/hubitat-device-events/definition-building/await-change-filter.definition.ts#L78">src/hubitat-device-events/definition-building/await-change-filter.definition.ts:78</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -245,7 +430,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5>value: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A previous value of the attribute that is required to match
 										the trigger.</p>
@@ -257,16 +442,98 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="wasnot" class="tsd-anchor"></a>
-					<h3>was<wbr>Not</h3>
+					<a name="wasgreaterthan" class="tsd-anchor"></a>
+					<h3>was<wbr>Greater<wbr>Than</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">was<wbr>Not<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></li>
+						<li class="tsd-signature tsd-kind-icon">was<wbr>Greater<wbr>Than<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/85d8d72/src/hubitat-device-events/definition-building/await-change-filter.definition.ts#L113">src/hubitat-device-events/definition-building/await-change-filter.definition.ts:113</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/8d60829/src/hubitat-device-events/definition-building/await-change-filter.definition.ts#L167">src/hubitat-device-events/definition-building/await-change-filter.definition.ts:167</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a change filter that accepts only previous attribute&#39;s value greater
+									than the one specified.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-ts"><span class="hljs-keyword">readonly</span> triggers = [
+  HubitatDeviceTrigger.for(<span class="hljs-number">119</span>)
+    .where(<span class="hljs-string">&#x27;level&#x27;</span>)
+    .isGreaterThan(<span class="hljs-number">15</span>),
+];</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A value of the attribute that is not allowed to match the trigger.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="waslesserthan" class="tsd-anchor"></a>
+					<h3>was<wbr>Lesser<wbr>Than</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">was<wbr>Lesser<wbr>Than<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/8d60829/src/hubitat-device-events/definition-building/await-change-filter.definition.ts#L211">src/hubitat-device-events/definition-building/await-change-filter.definition.ts:211</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a change filter that accepts only previous attribute&#39;s value lesser
+									than the one specified.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-ts"><span class="hljs-keyword">readonly</span> triggers = [
+  HubitatDeviceTrigger.for(<span class="hljs-number">119</span>)
+    .where(<span class="hljs-string">&#x27;level&#x27;</span>)
+    .wasLesserThan(<span class="hljs-number">15</span>),
+];</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A value of the attribute that is not allowed to match the trigger.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="wasnot" class="tsd-anchor"></a>
+					<h3>was<wbr>Not</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">was<wbr>Not<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hubitatdeviceevents.withattributesdefinition.html" class="tsd-signature-type">WithAttributesDefinition</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/8d60829/src/hubitat-device-events/definition-building/await-change-filter.definition.ts#L123">src/hubitat-device-events/definition-building/await-change-filter.definition.ts:123</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -287,7 +554,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5>value: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A previous value of the attribute that is not allowed to match
 										the trigger.</p>
@@ -324,6 +591,9 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/timerevents.html">Timer<wbr>Events</a>
 					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/src_hubitat_device_events_trigger_definition.html">src\hubitat-<wbr>device-<wbr>events\trigger-<wbr>definition</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
@@ -343,13 +613,34 @@
 								<a href="hubitatdeviceevents.awaitchangefilterdefinition.html#changes" class="tsd-kind-icon">changes</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="hubitatdeviceevents.awaitchangefilterdefinition.html#customfilter" class="tsd-kind-icon">custom<wbr>Filter</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="hubitatdeviceevents.awaitchangefilterdefinition.html#decreased" class="tsd-kind-icon">decreased</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="hubitatdeviceevents.awaitchangefilterdefinition.html#increased" class="tsd-kind-icon">increased</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="hubitatdeviceevents.awaitchangefilterdefinition.html#is" class="tsd-kind-icon">is</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="hubitatdeviceevents.awaitchangefilterdefinition.html#isgreaterthan" class="tsd-kind-icon">is<wbr>Greater<wbr>Than</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="hubitatdeviceevents.awaitchangefilterdefinition.html#islesserthan" class="tsd-kind-icon">is<wbr>Lesser<wbr>Than</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="hubitatdeviceevents.awaitchangefilterdefinition.html#isnot" class="tsd-kind-icon">is<wbr>Not</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="hubitatdeviceevents.awaitchangefilterdefinition.html#was" class="tsd-kind-icon">was</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="hubitatdeviceevents.awaitchangefilterdefinition.html#wasgreaterthan" class="tsd-kind-icon">was<wbr>Greater<wbr>Than</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="hubitatdeviceevents.awaitchangefilterdefinition.html#waslesserthan" class="tsd-kind-icon">was<wbr>Lesser<wbr>Than</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="hubitatdeviceevents.awaitchangefilterdefinition.html#wasnot" class="tsd-kind-icon">was<wbr>Not</a>

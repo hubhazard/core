@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ChangeGroup | HubHazard Core - v0.1.0-beta.6</title>
-	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.6">
+	<title>ChangeGroup | HubHazard Core - v0.1.0-beta.7</title>
+	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.7">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.6</a>
+					<a href="../index.html" class="title">HubHazard Core - v0.1.0-beta.7</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -99,6 +99,12 @@
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="hubitatdeviceevents.changegroup.html#lastfilter" class="tsd-kind-icon">last<wbr>Filter</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="hubitatdeviceevents.changegroup.html#match" class="tsd-kind-icon">match</a></li>
+							</ul>
+						</section>
 					</div>
 				</section>
 			</section>
@@ -110,7 +116,7 @@
 					<div class="tsd-signature tsd-kind-icon">filters<span class="tsd-signature-symbol">:</span> <a href="hubitatdeviceevents.changefilter.html" class="tsd-signature-type">ChangeFilter</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/hubhazard/core/blob/85d8d72/src/hubitat-device-events/trigger-definition/change-group.ts#L17">src/hubitat-device-events/trigger-definition/change-group.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/hubhazard/core/blob/8d60829/src/hubitat-device-events/trigger-definition/change-group.ts#L19">src/hubitat-device-events/trigger-definition/change-group.ts:19</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -133,7 +139,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hubhazard/core/blob/85d8d72/src/hubitat-device-events/trigger-definition/change-group.ts#L23">src/hubitat-device-events/trigger-definition/change-group.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/8d60829/src/hubitat-device-events/trigger-definition/change-group.ts#L25">src/hubitat-device-events/trigger-definition/change-group.ts:25</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -143,6 +149,41 @@
 							</div>
 							<h4 class="tsd-returns-title">Returns <a href="hubitatdeviceevents.changefilter.html" class="tsd-signature-type">ChangeFilter</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
 							<p>Returns the last filter or <code>undefined</code> if there are no filters.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="match" class="tsd-anchor"></a>
+					<h3>match</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">match<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="hubitatdeviceevents.hubitatdeviceevent.html" class="tsd-signature-type">HubitatDeviceEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/hubhazard/core/blob/8d60829/src/hubitat-device-events/trigger-definition/change-group.ts#L35">src/hubitat-device-events/trigger-definition/change-group.ts:35</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Verifies if the provided event is matching the requirements of this group.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <a href="hubitatdeviceevents.hubitatdeviceevent.html" class="tsd-signature-type">HubitatDeviceEvent</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An event to match.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>Returns a value indicating whether the event is a match.</p>
 						</li>
 					</ul>
 				</section>
@@ -172,6 +213,9 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/timerevents.html">Timer<wbr>Events</a>
 					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/src_hubitat_device_events_trigger_definition.html">src\hubitat-<wbr>device-<wbr>events\trigger-<wbr>definition</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
@@ -198,6 +242,9 @@
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 								<a href="hubitatdeviceevents.changegroup.html#lastfilter" class="tsd-kind-icon">last<wbr>Filter</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="hubitatdeviceevents.changegroup.html#match" class="tsd-kind-icon">match</a>
 							</li>
 						</ul>
 					</li>
@@ -258,6 +305,7 @@
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
 				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TimerEventsModule | HubHazard Core - v0.1.0-beta.7</title>
+	<title>src\hubitat-device-events\trigger-definition | HubHazard Core - v0.1.0-beta.7</title>
 	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.7">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,34 +54,68 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/timerevents.html">TimerEvents</a>
-				</li>
-				<li>
-					<a href="timerevents.timereventsmodule.html">TimerEventsModule</a>
+					<a href="src_hubitat_device_events_trigger_definition.html">src\hubitat-device-events\trigger-definition</a>
 				</li>
 			</ul>
-			<h1>Class TimerEventsModule</h1>
+			<h1>Module src\hubitat-device-events\trigger-definition</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>A <a href="https://docs.nestjs.com/modules">Nest.js module</a> providing the
-						functionality of the HubHazard&#39;s timer-events module.</p>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="src_hubitat_device_events_trigger_definition.html#hubitateventmatchfunction" class="tsd-kind-icon">Hubitat<wbr>Event<wbr>Match<wbr>Function</a></li>
+							</ul>
+						</section>
 					</div>
-				</div>
+				</section>
 			</section>
-			<section class="tsd-panel tsd-hierarchy">
-				<h3>Hierarchy</h3>
-				<ul class="tsd-hierarchy">
-					<li>
-						<span class="target">TimerEventsModule</span>
-					</li>
-				</ul>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="hubitateventmatchfunction" class="tsd-anchor"></a>
+					<h3>Hubitat<wbr>Event<wbr>Match<wbr>Function</h3>
+					<div class="tsd-signature tsd-kind-icon">Hubitat<wbr>Event<wbr>Match<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="../classes/hubitatdeviceevents.hubitatdeviceevent.html" class="tsd-signature-type">HubitatDeviceEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/hubhazard/core/blob/8d60829/src/hubitat-device-events/trigger-definition/hubitat-event-match-function.type.ts#L7">src/hubitat-device-events/trigger-definition/hubitat-event-match-function.type.ts:7</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A function type used to verify if hubitat event matches requirements of a
+							trigger or it&#39;s part.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="../classes/hubitatdeviceevents.hubitatdeviceevent.html" class="tsd-signature-type">HubitatDeviceEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>event: <a href="../classes/hubitatdeviceevents.hubitatdeviceevent.html" class="tsd-signature-type">HubitatDeviceEvent</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -91,63 +125,32 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/automations.html">Automations</a>
+						<a href="automations.html">Automations</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/common.html">Common</a>
+						<a href="common.html">Common</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/hubitatapi.html">Hubitat<wbr>Api</a>
+						<a href="hubitatapi.html">Hubitat<wbr>Api</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/hubitatcapabilities.html">Hubitat<wbr>Capabilities</a>
+						<a href="hubitatcapabilities.html">Hubitat<wbr>Capabilities</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/hubitatdeviceevents.html">Hubitat<wbr>Device<wbr>Events</a>
+						<a href="hubitatdeviceevents.html">Hubitat<wbr>Device<wbr>Events</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="timerevents.html">Timer<wbr>Events</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="../modules/timerevents.html">Timer<wbr>Events</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/src_hubitat_device_events_trigger_definition.html">src\hubitat-<wbr>device-<wbr>events\trigger-<wbr>definition</a>
+						<a href="src_hubitat_device_events_trigger_definition.html">src\hubitat-<wbr>device-<wbr>events\trigger-<wbr>definition</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="timerevents.shortintervaldefinition.html" class="tsd-kind-icon">Short<wbr>Interval<wbr>Definition</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="timerevents.timerevent.html" class="tsd-kind-icon">Timer<wbr>Event</a>
-					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-module">
-						<a href="timerevents.timereventsmodule.html" class="tsd-kind-icon">Timer<wbr>Events<wbr>Module</a>
-					</li>
-				</ul>
-				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="timerevents.timereventsservice.html" class="tsd-kind-icon">Timer<wbr>Events<wbr>Service</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="timerevents.timertrigger.html" class="tsd-kind-icon">Timer<wbr>Trigger</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="timerevents.timertriggerdefinition.html" class="tsd-kind-icon">Timer<wbr>Trigger<wbr>Definition</a>
-					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/timerevents.html#shortinterval" class="tsd-kind-icon">Short<wbr>Interval</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/timerevents.html#shortintervalunit" class="tsd-kind-icon">Short<wbr>Interval<wbr>Unit</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="../modules/timerevents.html#timer_event_type" class="tsd-kind-icon">TIMER_<wbr>EVENT_<wbr>TYPE</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/timerevents.html#istimerevent" class="tsd-kind-icon">is<wbr>Timer<wbr>Event</a>
+						<a href="src_hubitat_device_events_trigger_definition.html#hubitateventmatchfunction" class="tsd-kind-icon">Hubitat<wbr>Event<wbr>Match<wbr>Function</a>
 					</li>
 				</ul>
 			</nav>
