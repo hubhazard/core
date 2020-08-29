@@ -8,14 +8,12 @@ import { Automation } from '../automations/automation';
 import { AutomationsService } from '../automations/automations.service';
 import { IEventsService } from '../automations/events-service.interface';
 import { TriggerDefinition } from '../automations/trigger-definition';
-import { all } from '../common/collections-helpers';
 import { SubscribersMap } from '../common/subscribers-map';
 import { SubscribersSet } from '../common/subscribers-set';
 import { HubitatDeviceEvent } from './hubitat-device-event';
-import { AttributeFilter } from './trigger-definition/attribute-filter';
-import { ChangeFilter } from './trigger-definition/change-filter';
 import { HubitatDeviceTriggerDefinition } from './trigger-definition/hubitat-device-trigger.definition';
 import { isHubitatDeviceEvent } from './is-hubitat-device-event.function';
+import { any } from '../common/collections-helpers';
 
 /**
  * An events service handling Hubitat's device events. It's responsible for
@@ -188,57 +186,7 @@ export class HubitatDeviceEventsService implements IEventsService {
 
   private matchEvent(automation: Automation, event: HubitatDeviceEvent): boolean {
     const triggers = this.getCompatibleTriggers(automation.builtTriggers);
-    for (const trigger of triggers) {
-      if (trigger.devices.length === 0) {
-        // All user-automations-module accepted:
-        if (trigger.attributes.length === 0) {
-          return true;
-        }
-        // Attribute user-automations-module accepted:
-        if (this.matchAttributes(trigger, event)) return true;
-      } else if (this.matchDevice(trigger, event)) return true;
-    }
-    return false;
-  }
-
-  private matchDevice(trigger: HubitatDeviceTriggerDefinition, event: HubitatDeviceEvent): boolean {
-    if (!trigger.devices.includes(event.deviceId)) return false;
-    if (trigger.attributes.length === 0) return true;
-    return this.matchAttributes(trigger, event);
-  }
-
-  private matchAttributes(trigger: HubitatDeviceTriggerDefinition, event: HubitatDeviceEvent): boolean {
-    for (const attributeFilter of trigger.attributes) {
-      if (!attributeFilter.attributeNames.includes(event.attributeName)) continue;
-      if (this.matchGroups(attributeFilter, event)) return true;
-    }
-    return false;
-  }
-
-  private matchGroups(attributeFilter: AttributeFilter, event: HubitatDeviceEvent): boolean {
-    for (const changeGroup of attributeFilter.changeGroups) {
-      if (all(changeGroup.filters, (filter) => this.matchFilter(filter, event))) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  private matchFilter(filter: ChangeFilter, event: HubitatDeviceEvent): boolean {
-    switch (filter.name) {
-      case 'changes':
-        return true;
-      case 'is':
-        return event.newValue === `${filter.value}`;
-      case 'is-not':
-        return event.newValue !== `${filter.value}`;
-      case 'was':
-        return event.previousValue === `${filter.value}`;
-      case 'was-not':
-        return event.previousValue !== `${filter.value}`;
-      default:
-        break;
-    }
-    return false;
+    if (triggers.length === 0) return false; // Don't run automations without triggers
+    return any(triggers, (trigger) => trigger.match(event));
   }
 }
