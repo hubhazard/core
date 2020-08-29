@@ -10,13 +10,16 @@ import { randomIntRange } from '../../common/number-helpers';
 import { HubitatDeviceEvent } from '../hubitat-device-event';
 import { HubitatDevice } from '../hubitat-device';
 
-function createEvent(newValue: string | number | null, previousValue: string | number | null | undefined): HubitatDeviceEvent {
+function createEvent(
+  newValue: string | number | null,
+  previousValue: string | number | null | undefined,
+): HubitatDeviceEvent {
   return new HubitatDeviceEvent(
     'some-attribute',
     {} as HubitatDevice,
     randomIntRange(1, 300),
     newValue == null ? newValue : String(newValue),
-    previousValue == null ? previousValue : String(previousValue)
+    previousValue == null ? previousValue : String(previousValue),
   );
 }
 
@@ -73,7 +76,9 @@ describe('AwaitChangeFilterDefinition', () => {
       const test = (newValue: string | null) => {
         const event = createEvent(newValue, undefined);
         const withAttributes = getWithAttributes();
-        const trigger = withAttributes.andWhere(event.attributeName).changes()
+        const trigger = withAttributes
+          .andWhere(event.attributeName)
+          .changes()
           .build() as HubitatDeviceTriggerDefinition;
         expect(trigger.lastAttribute?.lastGroup?.lastFilter?.match(event)).toBeTruthy();
       };
@@ -130,7 +135,9 @@ describe('AwaitChangeFilterDefinition', () => {
       const test = (newValue: string | null, filterValue: string | number | null, expected: boolean) => {
         const event = createEvent(newValue, undefined);
         const withAttributes = getWithAttributes();
-        const trigger = withAttributes.andWhere(event.attributeName).is(filterValue)
+        const trigger = withAttributes
+          .andWhere(event.attributeName)
+          .is(filterValue)
           .build() as HubitatDeviceTriggerDefinition;
         expect(trigger.lastAttribute?.lastGroup?.lastFilter?.match(event)).toBe(expected);
       };
@@ -201,7 +208,9 @@ describe('AwaitChangeFilterDefinition', () => {
       const test = (newValue: string | null, filterValue: string | number | null, expected: boolean) => {
         const event = createEvent(newValue, undefined);
         const withAttributes = getWithAttributes();
-        const trigger = withAttributes.andWhere(event.attributeName).isNot(filterValue)
+        const trigger = withAttributes
+          .andWhere(event.attributeName)
+          .isNot(filterValue)
           .build() as HubitatDeviceTriggerDefinition;
         expect(trigger.lastAttribute?.lastGroup?.lastFilter?.match(event)).toBe(expected);
       };
@@ -268,11 +277,16 @@ describe('AwaitChangeFilterDefinition', () => {
     });
 
     it('should accept only events with equal previousValue', () => {
-      const test = (previousValue: string | null | undefined,
-                    filterValue: string | number | null | undefined, expected: boolean) => {
+      const test = (
+        previousValue: string | null | undefined,
+        filterValue: string | number | null | undefined,
+        expected: boolean,
+      ) => {
         const event = createEvent(null, previousValue);
         const withAttributes = getWithAttributes();
-        const trigger = withAttributes.andWhere(event.attributeName).was(filterValue)
+        const trigger = withAttributes
+          .andWhere(event.attributeName)
+          .was(filterValue)
           .build() as HubitatDeviceTriggerDefinition;
         expect(trigger.lastAttribute?.lastGroup?.lastFilter?.match(event)).toBe(expected);
       };
@@ -347,10 +361,16 @@ describe('AwaitChangeFilterDefinition', () => {
     });
 
     it('should accept only events with not equal previousValue', () => {
-      const test = (previousValue: string | null | undefined, filterValue: string | number | null | undefined, expected: boolean) => {
+      const test = (
+        previousValue: string | null | undefined,
+        filterValue: string | number | null | undefined,
+        expected: boolean,
+      ) => {
         const event = createEvent(null, previousValue);
         const withAttributes = getWithAttributes();
-        const trigger = withAttributes.andWhere(event.attributeName).wasNot(filterValue)
+        const trigger = withAttributes
+          .andWhere(event.attributeName)
+          .wasNot(filterValue)
           .build() as HubitatDeviceTriggerDefinition;
         expect(trigger.lastAttribute?.lastGroup?.lastFilter?.match(event)).toBe(expected);
       };
@@ -427,7 +447,9 @@ describe('AwaitChangeFilterDefinition', () => {
       const test = (newValue: string | null, filterValue: number, expected: boolean) => {
         const event = createEvent(newValue, undefined);
         const withAttributes = getWithAttributes();
-        const trigger = withAttributes.andWhere(event.attributeName).isGreaterThan(filterValue)
+        const trigger = withAttributes
+          .andWhere(event.attributeName)
+          .isGreaterThan(filterValue)
           .build() as HubitatDeviceTriggerDefinition;
         expect(trigger.lastAttribute?.lastGroup?.lastFilter?.match(event)).toBe(expected);
       };
@@ -494,7 +516,9 @@ describe('AwaitChangeFilterDefinition', () => {
       const test = (previousValue: string | null | undefined, filterValue: number, expected: boolean) => {
         const event = createEvent(null, previousValue);
         const withAttributes = getWithAttributes();
-        const trigger = withAttributes.andWhere(event.attributeName).wasGreaterThan(filterValue)
+        const trigger = withAttributes
+          .andWhere(event.attributeName)
+          .wasGreaterThan(filterValue)
           .build() as HubitatDeviceTriggerDefinition;
         expect(trigger.lastAttribute?.lastGroup?.lastFilter?.match(event)).toBe(expected);
       };
@@ -566,7 +590,9 @@ describe('AwaitChangeFilterDefinition', () => {
       const test = (newValue: string | null, filterValue: number, expected: boolean) => {
         const event = createEvent(newValue, undefined);
         const withAttributes = getWithAttributes();
-        const trigger = withAttributes.andWhere(event.attributeName).isLesserThan(filterValue)
+        const trigger = withAttributes
+          .andWhere(event.attributeName)
+          .isLesserThan(filterValue)
           .build() as HubitatDeviceTriggerDefinition;
         expect(trigger.lastAttribute?.lastGroup?.lastFilter?.match(event)).toBe(expected);
       };
@@ -633,7 +659,9 @@ describe('AwaitChangeFilterDefinition', () => {
       const test = (previousValue: string | null | undefined, filterValue: number, expected: boolean) => {
         const event = createEvent(null, previousValue);
         const withAttributes = getWithAttributes();
-        const trigger = withAttributes.andWhere(event.attributeName).wasLesserThan(filterValue)
+        const trigger = withAttributes
+          .andWhere(event.attributeName)
+          .wasLesserThan(filterValue)
           .build() as HubitatDeviceTriggerDefinition;
         expect(trigger.lastAttribute?.lastGroup?.lastFilter?.match(event)).toBe(expected);
       };
@@ -705,7 +733,9 @@ describe('AwaitChangeFilterDefinition', () => {
       const test = (newValue: string | null, previousValue: string | null | undefined, expected: boolean) => {
         const event = createEvent(newValue, previousValue);
         const withAttributes = getWithAttributes();
-        const trigger = withAttributes.andWhere(event.attributeName).increased()
+        const trigger = withAttributes
+          .andWhere(event.attributeName)
+          .increased()
           .build() as HubitatDeviceTriggerDefinition;
         expect(trigger.lastAttribute?.lastGroup?.lastFilter?.match(event)).toBe(expected);
       };
@@ -783,7 +813,9 @@ describe('AwaitChangeFilterDefinition', () => {
       const test = (newValue: string | null, previousValue: string | null | undefined, expected: boolean) => {
         const event = createEvent(newValue, previousValue);
         const withAttributes = getWithAttributes();
-        const trigger = withAttributes.andWhere(event.attributeName).decreased()
+        const trigger = withAttributes
+          .andWhere(event.attributeName)
+          .decreased()
           .build() as HubitatDeviceTriggerDefinition;
         expect(trigger.lastAttribute?.lastGroup?.lastFilter?.match(event)).toBe(expected);
       };
@@ -858,5 +890,4 @@ describe('AwaitChangeFilterDefinition', () => {
       }).toThrow();
     });
   });
-})
-;
+});

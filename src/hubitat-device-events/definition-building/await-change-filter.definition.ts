@@ -54,7 +54,7 @@ export class AwaitChangeFilterDefinition {
    */
   is(value: string | number | null): WithAttributesDefinition {
     return this.registerChangeFilter((event) => {
-      if (typeof (value) === 'number') return event.newValue === `${value}`;
+      if (typeof value === 'number') return event.newValue === `${value}`;
       return event.newValue === value;
     });
   }
@@ -77,7 +77,7 @@ export class AwaitChangeFilterDefinition {
    */
   was(value: string | number | null | undefined): WithAttributesDefinition {
     return this.registerChangeFilter((event) => {
-      if (typeof (value) === 'number') return event.previousValue === `${value}`;
+      if (typeof value === 'number') return event.previousValue === `${value}`;
       return event.previousValue === value;
     });
   }
@@ -99,7 +99,7 @@ export class AwaitChangeFilterDefinition {
    */
   isNot(value: string | number | null): WithAttributesDefinition {
     return this.registerChangeFilter((event) => {
-      if (typeof (value) === 'number') return event.newValue !== `${value}`;
+      if (typeof value === 'number') return event.newValue !== `${value}`;
       return event.newValue !== value;
     });
   }
@@ -122,7 +122,7 @@ export class AwaitChangeFilterDefinition {
    */
   wasNot(value: string | number | null | undefined): WithAttributesDefinition {
     return this.registerChangeFilter((event) => {
-      if (typeof (value) === 'number') return event.previousValue !== `${value}`;
+      if (typeof value === 'number') return event.previousValue !== `${value}`;
       return event.previousValue !== value;
     });
   }
