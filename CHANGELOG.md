@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0-beta.7] - 2020-08-29
+
 ### Added
 
 - Added new event value filters when building Hubitat device event trigger definitions:
@@ -92,7 +94,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `common` functions set to mostly simplify interactions with collections and random number generation for
   testing purposes.
 
-[unreleased]: https://github.com/hubhazard/core/compare/v0.1.0-beta.6...HEAD
+[unreleased]: https://github.com/hubhazard/core/compare/v0.1.0-beta.7...HEAD
+[0.1.0-beta.7]: https://github.com/hubhazard/core/compare/v0.1.0-beta.6...v0.1.0-beta.7
 [0.1.0-beta.6]: https://github.com/hubhazard/core/compare/v0.1.0-beta.5...v0.1.0-beta.6
 [0.1.0-beta.5]: https://github.com/hubhazard/core/compare/v0.1.0-beta.4...v0.1.0-beta.5
 [0.1.0-beta.4]: https://github.com/hubhazard/core/compare/v0.1.0-beta.3...v0.1.0-beta.4
