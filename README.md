@@ -25,9 +25,7 @@
   - [Documentation](#documentation)
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
-  - [Basic terms](#basic-terms)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
+  - [Guides](#guides)
   - [Your first automation](#your-first-automation)
   - [Hubitat integration setup](#hubitat-integration-setup)
 - [Roadmap](#roadmap)
@@ -65,12 +63,6 @@ The project documentation is available in for of a wiki at [https://github.com/h
 
 ## Getting Started
 
-Creating a new automation server with HubHazard is very simple. In following sections we'll describe it step by step\
-from the beginning, but if you want to get your hands on a fully preconfigured project, go and grab the
-[HubHazard Basic Template][hubhazardtemplate].
-
-### Basic terms
-
 Before we get started, let's explain some common terms you'll encounter throughout this guide:
 
 - **Automation** - A piece of code responsible for handling specific events. An automation requests events by declaring
@@ -80,108 +72,12 @@ Before we get started, let's explain some common terms you'll encounter througho
 - **Trigger** - A declaration describing what kind of events the automation requests.
 - **Event service** - A functionality responsible for receiving/generating specific kind of events and propagating
   them to matching automations.
+  
+### Guides
 
-### Prerequisites
-
-Before we continue, install [Node.js 10.x+][nodejsdownload] on your machine of choice. We suggest installing even
-versions of Node.js (v10.x, v12.x, v14.x...) as some libraries don't like uneven numbers...
-
-### Installation
-
-1. [Install the Nest.js CLI][nestjsinstallation]
-2. Create the Nest.js project
-3. Add the HubHazard Core package to your dependencies
-4. Register `AutomationsModule`
-
-#### Steps: 1, 2, 3
-
-```sh
-$ npm i -g @nestjs/cli
-$ nest new project-name
-$ npm i @hubhazard/core
-```
-
-or
-
-```sh
-$ yarn global add @nestjs/cli
-$ nest new project-name
-$ yarn add $hubhazard/core
-```
-
-#### Step 4
-
-Now register the `AutomationsModule` [Nest.js module][nestjsmodules]
-in the `src/app.module.ts`.
-
-```ts
-import { AutomationsModule } from '@hubhazard/core';
-import { Module } from '@nestjs/common';
-
-@Module({
-  imports: [AutomationsModule],
-  providers: [],
-})
-export class AppModule {}
-```
-
-That's it. Now, when you [start the Nest.js server][nestjsstart], the HubHazard's
-`AutomationsModule` will be initialized.
-
-### Your first automation
-
-It's time to create your first automation. We recommend creating a directory inside the `src` folder named `automations`
-and placing your automations there. Now create the `my-first-automation.ts` file. In that file create an injectable
-class extending the `Automation` base class:
-
-```ts
-import { Automation, TimerEvent } from '@hubhazard/core';
-import { Injectable } from '@nestjs/common';
-
-@Injectable()
-export class MyFirstAutomation extends Automation {
-  // Name of the automation. Must be unique.
-  readonly name = 'My first automation';
-
-  // List of triggers this automation subscribes to.
-  readonly triggers = [TimerTrigger.every(10, 'seconds')];
-
-  // A function handling received events.
-  async handleEvent(event: TimerEvent) {
-    console.log(`${this.name} was triggered!`);
-  }
-}
-```
-
-To be able to trigger this automation, register the `TimerEventsModule` alongside the `AutomationsModule` in the
-`app.module.ts`. The `TimerEventsModule` handles triggers registered with `TimerTrigger`. In addition, you have to
-register the automation itself. For automation registration use the `AutomationsService`.
-
-```ts
-import { AutomationsModule, AutomationsService, TimerEventsModule } from '@hubhazard/core';
-import { Module } from '@nestjs/common';
-import { MyFirstAutomation } from './automations/my-first-automation';
-
-@Module({
-  imports: [AutomationsModule, TimerEventsModule],
-  providers: [],
-})
-export class AppModule {
-  constructor(
-    private readonly automationsService: AutomationsService,
-    private readonly myFirstAutomation: MyFirstAutomation,
-  ) {
-    automationsService.registerAutomation(myFirstAutomation);
-  }
-}
-```
-
-You just created your first automation. When you'll [start the server][nestjsstart],
-every 10 seconds the message will show up in the console:
-
-```sh
-My first automation was triggered!
-```
+- [Create a new project from the template](https://github.com/hubhazard/hubhazard-basic-template)
+- [Create a new project from scratch](https://github.com/hubhazard/core/wiki/Create-new-project-from-scratch)
+- [Your first automation](https://github.com/hubhazard/core/wiki/Your-first-automation)
 
 ### Hubitat integration setup
 
