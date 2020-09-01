@@ -136,7 +136,7 @@ export class AwaitChangeFilterDefinition {
    * readonly triggers = [
    *   HubitatDeviceTrigger.for(119)
    *     .where('level')
-   *     .wasGreaterThan(15),
+   *     .isGreaterThan(15),
    * ];
    * ```
    *
@@ -158,7 +158,7 @@ export class AwaitChangeFilterDefinition {
    * readonly triggers = [
    *   HubitatDeviceTrigger.for(119)
    *     .where('level')
-   *     .isGreaterThan(15),
+   *     .wasGreaterThan(15),
    * ];
    * ```
    *

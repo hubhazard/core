@@ -2,7 +2,6 @@
 import { AutomationEvent } from './automation-event';
 
 describe('AutomationEvent', () => {
-
   const noAdditionalsType = 'no-additionals';
   const withAdditionals = 'with-additionals';
 
@@ -30,6 +29,5 @@ describe('AutomationEvent', () => {
 
     event = new EventWithAdditionals();
     expect(() => event.handleAs(EventWithNoAdditionals)).toThrow();
-  })
-
+  });
 });
