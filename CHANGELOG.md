@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2020-09-01
+
+### Removed
+
 - Move guides in README.md to the wiki
 
 ## [0.1.0-beta.7] - 2020-08-29
@@ -97,6 +101,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   testing purposes.
 
 [unreleased]: https://github.com/hubhazard/core/compare/v0.1.0-beta.7...HEAD
+[0.1.1]: https://github.com/hubhazard/core/compare/v0.1.1...v0.1.1-beta.7
 [0.1.0-beta.7]: https://github.com/hubhazard/core/compare/v0.1.0-beta.6...v0.1.0-beta.7
 [0.1.0-beta.6]: https://github.com/hubhazard/core/compare/v0.1.0-beta.5...v0.1.0-beta.6
 [0.1.0-beta.5]: https://github.com/hubhazard/core/compare/v0.1.0-beta.4...v0.1.0-beta.5
