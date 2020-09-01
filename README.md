@@ -22,7 +22,7 @@
 
 - [About the Project](#about-the-project)
   - [What is HubHazard?](#what-is-hubhazard)
-  - [Available modules?](#available-modules)
+  - [Documentation](#documentation)
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
   - [Basic terms](#basic-terms)
@@ -30,7 +30,6 @@
   - [Installation](#installation)
   - [Your first automation](#your-first-automation)
   - [Hubitat integration setup](#hubitat-integration-setup)
-- [Documentation](#documentation)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
@@ -44,50 +43,25 @@ This is a core module of the HubHazard server.
 
 ### What is HubHazard?
 
-HubHazard is a simple home-automation server leaning towards users with basic coding skills. You can write your
-automations using [Typescript][typescript]. Your automations can be as simple as a _button toggling a light_
-or as complex as _an automated co-op escape room controller_. All you need is a computer that supports Node.js 10+,
-for example a
-Raspberry Pi.
+HubHazard is a simple home-automation server that allows you to easily write automations using [Typescirpt][typescript].
+It's targeted towards people with basic programming skills. You don't have to be a professional developer to use it
+effectively.
 
-### [Hubitat Elevation hub][hubitat] integration
+When using HubHazard our automations can be as simple as a _button toggling a light_ or as complex as _an automated
+co-op escape room controller_. You could even integrate an AI to help you control your house. All you need is a device
+that supports Node.js 10+, for example a $5 Raspberry Pi Zero W.
 
-This is a **very early** phase of the project and so far the HubHazard core integrates with Hubitat via the
-[Maker API][makerapi] allowing for writing automations:
+**The HubHazard server integrates with [Hubitat Elevation hub][hubitat]!**
 
-- Querying devices list and their details
-- Reacting to device events sent from Hubitat
-- Sending commands to Hubitat devices
+### Documentation
 
-### Available modules
-
-The HubHazard's core package contains a set of [Nest.js modules][nestjsmodules]:
-
-- `AutomationsModule` - A module containing the most basic functionality of:
-  - Registering event services
-  - Registering automations
-  - Exposing base classes and interfaces for events and event services.
-- `HubitatApiModule` - A module enabling communication with Hubitat Maker API. It allows:
-  - Querying devices on Hubitat hub
-  - Receiving device-related events from Hubitat hub
-  - Sending commands to Hubitat's devices
-- `HubitatDeviceEventsModule` - A module containing:
-  - Events service handling Hubitat's device events
-  - Devices service maintaining an up-to-date cache of all Hubitat's devices for querying purposes
-- `TimerEventsModule` - A module containing events service allowing automations to be triggered periodically.
-
-In addition, there are utility-based functionality groups:
-
-- `Common` - A set of helpers for common tasks related to collections, random numbers generation etc...
-- `HubitatCapabilities` - A collection of functions simplifying interactions with Hubitat's devices.
+The project documentation is available in for of a wiki at [https://github.com/hubhazard/core/wiki/][hubhazardcorewiki].
 
 ### Built With
 
 - [Node.js][nodejs]
 - [Nest.js][nestjs]
 - [Typescript][typescript]
-
-<!-- GETTING STARTED -->
 
 ## Getting Started
 
@@ -310,19 +284,9 @@ export class StaircaseButtonAutomation extends Automation {
 }
 ```
 
-<!-- DOCUMENTATION -->
-
-## Documentation
-
-The project documentation is available in for of a wiki at [https://github.com/hubhazard/core/wiki/][hubhazardcorewiki].
-
-<!-- ROADMAP -->
-
 ## Roadmap
 
 See a list of [open issues][tasks] with the `task` label.
-
-<!-- CONTRIBUTING -->
 
 ## Contributing
 
@@ -347,13 +311,9 @@ and create. Any contributions you make are **greatly appreciated**.
 
 See [`CONTRIBUTING.md`][contributingfile] from more information.
 
-<!-- LICENSE -->
-
 ## License
 
 Distributed under the MIT License. See [`LICENSE`][licensefile] for more information.
-
-<!-- CONTACT -->
 
 ## Contact
 
@@ -362,7 +322,6 @@ Beniamin (Xkonti) Dudek - [@xkonti][twitterxkonti] - online.xkonti@gmail.com
 Project Link: [https://github.com/hubhazard/core][hubhazardcore]
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [licensefile]: ./LICENSE
 [contributingfile]: ./CONTRIBUTING.md
