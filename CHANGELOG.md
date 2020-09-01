@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Move guides in README.md to the wiki
+
 ## [0.1.0-beta.7] - 2020-08-29
 
 ### Added

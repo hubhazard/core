@@ -4,7 +4,6 @@ about: "If something isn't working as expected \U0001F914"
 title: ''
 labels: 'i: bug'
 assignees: ''
-
 ---
 
 ## Bug Report
@@ -14,7 +13,7 @@ A clear and concise description of the behavior.
 ### Input Code
 
 ```ts
-const your = code => here;
+const your = (code) => here;
 ```
 
 ### Expected behavior / code
