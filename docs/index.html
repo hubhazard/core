@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>HubHazard Core - v0.1.0-beta.7</title>
-	<meta name="description" content="Documentation for HubHazard Core - v0.1.0-beta.7">
+	<title>HubHazard Core - v0.1.1</title>
+	<meta name="description" content="Documentation for HubHazard Core - v0.1.1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">HubHazard Core - v0.1.0-beta.7</a>
+					<a href="index.html" class="title">HubHazard Core - v0.1.1</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -54,7 +54,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1>HubHazard Core - v0.1.0-beta.7</h1>
+			<h1>HubHazard Core - v0.1.1</h1>
 		</div>
 	</div>
 </header>
@@ -79,83 +79,31 @@
 						<a href="https://github.com/hubhazard/core/issues">Request Feature</a>
 					</p>
 				</p>
-				<!-- TABLE OF CONTENTS -->
 				<a href="#table-of-contents" id="table-of-contents" style="color: inherit; text-decoration: none;">
 					<h2>Table of Contents</h2>
 				</a>
 				<ul>
-					<li><a href="#about-the-project">About the Project</a><ul>
-							<li><a href="#what-is-hubhazard">What is HubHazard?</a></li>
-							<li><a href="#available-modules">Available modules?</a></li>
-							<li><a href="#built-with">Built With</a></li>
-						</ul>
-					</li>
-					<li><a href="#getting-started">Getting Started</a><ul>
-							<li><a href="#basic-terms">Basic terms</a></li>
-							<li><a href="#prerequisites">Prerequisites</a></li>
-							<li><a href="#installation">Installation</a></li>
-							<li><a href="#your-first-automation">Your first automation</a></li>
-							<li><a href="#hubitat-integration-setup">Hubitat integration setup</a></li>
-						</ul>
-					</li>
-					<li><a href="#documentation">Documentation</a></li>
+					<li><a href="#about-the-project">About the Project</a></li>
+					<li><a href="#getting-started">Getting Started</a></li>
 					<li><a href="#roadmap">Roadmap</a></li>
 					<li><a href="#contributing">Contributing</a></li>
 					<li><a href="#license">License</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
-				<!-- ABOUT THE PROJECT -->
 				<a href="#about-the-project" id="about-the-project" style="color: inherit; text-decoration: none;">
 					<h2>About The Project</h2>
 				</a>
-				<p>This is a core module of the HubHazard server.</p>
-				<a href="#what-is-hubhazard" id="what-is-hubhazard" style="color: inherit; text-decoration: none;">
-					<h3>What is HubHazard?</h3>
+				<p>HubHazard is a simple home-automation server that allows you to easily write automations using <a href="https://www.typescriptlang.org/">Typescirpt</a>.
+					It&#39;s targeted towards people with basic programming skills. You don&#39;t have to be a professional developer to use it
+				effectively.</p>
+				<p>When using HubHazard our automations can be as simple as a <em>button toggling a light</em> or as complex as <em>an automated
+					co-op escape room controller</em>. You could even integrate an AI to help you control your house. All you need is a device
+				that supports Node.js 10+, for example a $5 Raspberry Pi Zero W.</p>
+				<p><strong>The HubHazard server integrates with <a href="https://hubitat.com/">Hubitat Elevation hub</a>!</strong></p>
+				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+					<h3>Documentation</h3>
 				</a>
-				<p>HubHazard is a simple home-automation server leaning towards users with basic coding skills. You can write your
-					automations using <a href="https://www.typescriptlang.org/">Typescript</a>. Your automations can be as simple as a <em>button toggling a light</em>
-					or as complex as <em>an automated co-op escape room controller</em>. All you need is a computer that supports Node.js 10+,
-					for example a
-				Raspberry Pi.</p>
-				<a href="#hubitat-elevation-hub-integration" id="hubitat-elevation-hub-integration" style="color: inherit; text-decoration: none;">
-					<h3><a href="https://hubitat.com/">Hubitat Elevation hub</a> integration</h3>
-				</a>
-				<p>This is a <strong>very early</strong> phase of the project and so far the HubHazard core integrates with Hubitat via the
-				<a href="https://docs.hubitat.com/index.php?title=Maker_API">Maker API</a> allowing for writing automations:</p>
-				<ul>
-					<li>Querying devices list and their details</li>
-					<li>Reacting to device events sent from Hubitat</li>
-					<li>Sending commands to Hubitat devices</li>
-				</ul>
-				<a href="#available-modules" id="available-modules" style="color: inherit; text-decoration: none;">
-					<h3>Available modules</h3>
-				</a>
-				<p>The HubHazard&#39;s core package contains a set of <a href="https://docs.nestjs.com/modules">Nest.js modules</a>:</p>
-				<ul>
-					<li><code>AutomationsModule</code> - A module containing the most basic functionality of:<ul>
-							<li>Registering event services</li>
-							<li>Registering automations</li>
-							<li>Exposing base classes and interfaces for events and event services.</li>
-						</ul>
-					</li>
-					<li><code>HubitatApiModule</code> - A module enabling communication with Hubitat Maker API. It allows:<ul>
-							<li>Querying devices on Hubitat hub</li>
-							<li>Receiving device-related events from Hubitat hub</li>
-							<li>Sending commands to Hubitat&#39;s devices</li>
-						</ul>
-					</li>
-					<li><code>HubitatDeviceEventsModule</code> - A module containing:<ul>
-							<li>Events service handling Hubitat&#39;s device events</li>
-							<li>Devices service maintaining an up-to-date cache of all Hubitat&#39;s devices for querying purposes</li>
-						</ul>
-					</li>
-					<li><code>TimerEventsModule</code> - A module containing events service allowing automations to be triggered periodically.</li>
-				</ul>
-				<p>In addition, there are utility-based functionality groups:</p>
-				<ul>
-					<li><code>Common</code> - A set of helpers for common tasks related to collections, random numbers generation etc...</li>
-					<li><code>HubitatCapabilities</code> - A collection of functions simplifying interactions with Hubitat&#39;s devices.</li>
-				</ul>
+				<p>The project documentation is available in for of a wiki at <a href="https://github.com/hubhazard/core/wiki">https://github.com/hubhazard/core/wiki/</a>.</p>
 				<a href="#built-with" id="built-with" style="color: inherit; text-decoration: none;">
 					<h3>Built With</h3>
 				</a>
@@ -164,199 +112,22 @@
 					<li><a href="https://nestjs.com/">Nest.js</a></li>
 					<li><a href="https://www.typescriptlang.org/">Typescript</a></li>
 				</ul>
-				<!-- GETTING STARTED -->
 				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
 					<h2>Getting Started</h2>
 				</a>
-				<p>Creating a new automation server with HubHazard is very simple. In following sections we&#39;ll describe it step by step<br>from the beginning, but if you want to get your hands on a fully preconfigured project, go and grab the
-				<a href="https://github.com/hubhazard/hubhazard-basic-template">HubHazard Basic Template</a>.</p>
-				<a href="#basic-terms" id="basic-terms" style="color: inherit; text-decoration: none;">
-					<h3>Basic terms</h3>
-				</a>
-				<p>Before we get started, let&#39;s explain some common terms you&#39;ll encounter throughout this guide:</p>
-				<ul>
-					<li><strong>Automation</strong> - A piece of code responsible for handling specific events. An automation requests events by declaring
-					triggers. An automation could for example switch lights on and off depending on an input from a group of motion sensors.</li>
-					<li><strong>Event</strong> - A piece of information describing something that happened. Events are sent to matching automations for
-					handling. There could be an event describing that a light switch changed it&#39;s state.</li>
-					<li><strong>Trigger</strong> - A declaration describing what kind of events the automation requests.</li>
-					<li><strong>Event service</strong> - A functionality responsible for receiving/generating specific kind of events and propagating
-					them to matching automations.</li>
-				</ul>
-				<a href="#prerequisites" id="prerequisites" style="color: inherit; text-decoration: none;">
-					<h3>Prerequisites</h3>
-				</a>
-				<p>Before we continue, install <a href="https://nodejs.org/en/download/">Node.js 10.x+</a> on your machine of choice. We suggest installing even
-				versions of Node.js (v10.x, v12.x, v14.x...) as some libraries don&#39;t like uneven numbers...</p>
-				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
-					<h3>Installation</h3>
-				</a>
 				<ol>
-					<li><a href="https://docs.nestjs.com/#installation">Install the Nest.js CLI</a></li>
-					<li>Create the Nest.js project</li>
-					<li>Add the HubHazard Core package to your dependencies</li>
-					<li>Register <code>AutomationsModule</code></li>
+					<li>Create a new project:<ul>
+							<li><a href="https://github.com/hubhazard/hubhazard-basic-template">Using the template</a></li>
+							<li><a href="https://github.com/hubhazard/core/wiki/Create-new-project-from-scratch">From scratch</a></li>
+						</ul>
+					</li>
+					<li><a href="https://github.com/hubhazard/core/wiki/Your-first-automation">Your first automation</a></li>
+					<li><a href="https://github.com/hubhazard/core/wiki/Setup-Hubitat-integration">Setup Hubitat integration</a></li>
 				</ol>
-				<a href="#steps-1-2-3" id="steps-1-2-3" style="color: inherit; text-decoration: none;">
-					<h4>Steps: 1, 2, 3</h4>
-				</a>
-				<pre><code class="language-sh">$ npm i -g @nestjs/cli
-$ nest new project-name
-$ npm i @hubhazard/core</code></pre>
-				<p>or</p>
-				<pre><code class="language-sh">$ yarn global add @nestjs/cli
-$ nest new project-name
-$ yarn add <span class="hljs-variable">$hubhazard</span>/core</code></pre>
-				<a href="#step-4" id="step-4" style="color: inherit; text-decoration: none;">
-					<h4>Step 4</h4>
-				</a>
-				<p>Now register the <code>AutomationsModule</code> <a href="https://docs.nestjs.com/modules">Nest.js module</a>
-				in the <code>src/app.module.ts</code>.</p>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { AutomationsModule } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@hubhazard/core&#x27;</span>;
-<span class="hljs-keyword">import</span> { Module } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@nestjs/common&#x27;</span>;
-
-<span class="hljs-meta">@Module</span>({
-  imports: [AutomationsModule],
-  providers: [],
-})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AppModule {}</code></pre>
-				<p>That&#39;s it. Now, when you <a href="https://docs.nestjs.com/cli/usages#nest-start">start the Nest.js server</a>, the HubHazard&#39;s
-				<code>AutomationsModule</code> will be initialized.</p>
-				<a href="#your-first-automation" id="your-first-automation" style="color: inherit; text-decoration: none;">
-					<h3>Your first automation</h3>
-				</a>
-				<p>It&#39;s time to create your first automation. We recommend creating a directory inside the <code>src</code> folder named <code>automations</code>
-					and placing your automations there. Now create the <code>my-first-automation.ts</code> file. In that file create an injectable
-				class extending the <code>Automation</code> base class:</p>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { Automation, TimerEvent } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@hubhazard/core&#x27;</span>;
-<span class="hljs-keyword">import</span> { Injectable } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@nestjs/common&#x27;</span>;
-
-<span class="hljs-meta">@Injectable</span>()
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyFirstAutomation <span class="hljs-keyword">extends</span> Automation {
-  <span class="hljs-comment">// Name of the automation. Must be unique.</span>
-  <span class="hljs-keyword">readonly</span> name = <span class="hljs-string">&#x27;My first automation&#x27;</span>;
-
-  <span class="hljs-comment">// List of triggers this automation subscribes to.</span>
-  <span class="hljs-keyword">readonly</span> triggers = [TimerTrigger.every(<span class="hljs-number">10</span>, <span class="hljs-string">&#x27;seconds&#x27;</span>)];
-
-  <span class="hljs-comment">// A function handling received events.</span>
-  <span class="hljs-keyword">async</span> handleEvent(event: TimerEvent) {
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-built_in">this</span>.name}</span> was triggered!`</span>);
-  }
-}</code></pre>
-				<p>To be able to trigger this automation, register the <code>TimerEventsModule</code> alongside the <code>AutomationsModule</code> in the
-					<code>app.module.ts</code>. The <code>TimerEventsModule</code> handles triggers registered with <code>TimerTrigger</code>. In addition, you have to
-				register the automation itself. For automation registration use the <code>AutomationsService</code>.</p>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { AutomationsModule, AutomationsService, TimerEventsModule } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@hubhazard/core&#x27;</span>;
-<span class="hljs-keyword">import</span> { Module } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@nestjs/common&#x27;</span>;
-<span class="hljs-keyword">import</span> { MyFirstAutomation } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./automations/my-first-automation&#x27;</span>;
-
-<span class="hljs-meta">@Module</span>({
-  imports: [AutomationsModule, TimerEventsModule],
-  providers: [],
-})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AppModule {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> automationsService: AutomationsService,
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> myFirstAutomation: MyFirstAutomation,
-  </span>) {
-    automationsService.registerAutomation(myFirstAutomation);
-  }
-}</code></pre>
-				<p>You just created your first automation. When you&#39;ll <a href="https://docs.nestjs.com/cli/usages#nest-start">start the server</a>,
-				every 10 seconds the message will show up in the console:</p>
-				<pre><code class="language-sh">My first automation was triggered!</code></pre>
-				<a href="#hubitat-integration-setup" id="hubitat-integration-setup" style="color: inherit; text-decoration: none;">
-					<h3>Hubitat integration setup</h3>
-				</a>
-				<p>Before you can write automations for <a href="https://hubitat.com/">Hubitat Elevation</a> you need to install the Maker API app on
-				the Hubitat hub. Just follow <a href="https://docs.hubitat.com/index.php?title=Maker_API">official instructions</a>.</p>
-				<p>For HubHazard to be able to receive events from Hubitat, you need to set the <code>URL to send device events to by POST</code>
-				field to:</p>
-				<p><code>http://10.0.0.83:3000/api/hubitat/event</code></p>
-				<p>Just replace the IP address with the IP address of the machine that will run the server. <strong>Make sure the Hubitat hub and
-				your server machine have static IP addresses.</strong></p>
-				<p>While you&#39;re in Maker API app settings look at one of the example query URLs. You&#39;ll need parts of those URLs for
-				further HubHazard configuration. Let&#39;s take following URL as an example:</p>
-				<blockquote>
-					<p><strong>Get Device Info (replace [DeviceID] with actual subscribed device id</strong></p>
-					<p>http://<strong>10.0.0.178</strong>/apps/api/<strong>172</strong>/devices/[DeviceID]?access_token=<strong>64ac3f13-f640-42bc-ab8f-48ae8b40d106</strong></p>
-				</blockquote>
-				<p>This URL contains 3 configuration values:</p>
-				<ul>
-					<li>Hubitat IP address: <code>10.0.0.178</code></li>
-					<li>Maker API app id: <code>172</code></li>
-					<li>Maker API access token: <code>64ac3f13-f640-42bc-ab8f-48ae8b40d106</code></li>
-				</ul>
-				<p>Let&#39;s get back to the server code. To be able to receive device events from Hubitat you need to register the
-				<code>HubitatDeviceEventsModule</code>. That module requires to be configured using the <a href="https://docs.nestjs.com/techniques/configuration">Nest.js <code>ConfigModule</code></a>. Install it first:</p>
-				<pre><code>$ npm i @nestjs<span class="hljs-built_in">/config
-</span><span class="hljs-keyword">or</span>
-$ yarn <span class="hljs-builtin-name">add</span> <span class="hljs-variable">$nestjs</span>/config</code></pre>
-				<p>Now create the <code>.env</code> file in the root directory of your project and fill it in with correct data from Maker API
-				settings screen:</p>
-				<pre><code class="language-dotenv">HUBITAT_IP=10.0.0.178
-HUBITAT_MAKER_API_APP_ID=172
-HUBITAT_MAKER_API_ACCESS_TOKEN=64ac3f13-f640-42bc-ab8f-48ae8b40d106</code></pre>
-				<p>Now register the <code>HubitatDeviceEventsModule</code> in your <code>AppModule</code>:</p>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { AutomationsModule, AutomationsService, HubitatDeviceEventsModule, TimerEventsModule } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@hubhazard/core&#x27;</span>;
-<span class="hljs-keyword">import</span> { Module } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@nestjs/common&#x27;</span>;
-<span class="hljs-keyword">import</span> { MyFirstAutomation } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./automations/my-first-automation&#x27;</span>;
-
-<span class="hljs-meta">@Module</span>({
-  imports: [AutomationsModule, HubitatDeviceEventsModule, TimerEventsModule],
-  providers: [],
-})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AppModule {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> automationsService: AutomationsService,
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> myFirstAutomation: MyFirstAutomation,
-  </span>) {
-    automationsService.registerAutomation(myFirstAutomation);
-  }
-}</code></pre>
-				<p>At this point when you&#39;ll <a href="https://docs.nestjs.com/cli/usages#nest-start">start the server</a> the server will
-				connect to the Hubitat and fetch all devices details to <code>DevicesService</code> cache.</p>
-				<p>To finish it off here&#39;s an example of a simple automation using the Hubitat&#39;s device events:</p>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { Automation, HubitatDeviceEvent, HubitatDeviceTrigger, toggle } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@hubhazard/core&#x27;</span>;
-<span class="hljs-keyword">import</span> { Injectable } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@nestjs/common&#x27;</span>;
-
-<span class="hljs-comment">// Id&#x27;s of Hubitat devices</span>
-<span class="hljs-keyword">const</span> BASEMENT_CEILING_LIGHTS = <span class="hljs-number">130</span>;
-<span class="hljs-keyword">const</span> STAIRCASE_BUTTON = <span class="hljs-number">42</span>;
-<span class="hljs-keyword">const</span> STAIRCASE_LIGHT = <span class="hljs-number">67</span>;
-
-<span class="hljs-meta">@Injectable</span>()
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> StaircaseButtonAutomation <span class="hljs-keyword">extends</span> Automation {
-  name = <span class="hljs-string">&#x27;Staircase Button Automation&#x27;</span>;
-
-  <span class="hljs-comment">// A trigger for STAIRCASE_BUTTON&#x27;s &#x27;pushed&#x27; and &#x27;doubleTapped&#x27; events</span>
-  triggers = [HubitatDeviceTrigger.for(STAIRCASE_BUTTON).where(<span class="hljs-string">&#x27;pushed&#x27;</span>).changes().andWhere(<span class="hljs-string">&#x27;doubleTapped&#x27;</span>).changes()];
-
-  <span class="hljs-keyword">async</span> handleEvent(automationEvent: HubitatDeviceEvent) {
-    <span class="hljs-keyword">switch</span> (automationEvent.attributeName) {
-      <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;pushed&#x27;</span>: {
-        <span class="hljs-keyword">await</span> toggle(STAIRCASE_LIGHT);
-        <span class="hljs-keyword">break</span>;
-      }
-      <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;doubleTapped&#x27;</span>: {
-        <span class="hljs-keyword">await</span> toggle(BASEMENT_CEILING_LIGHTS);
-        <span class="hljs-keyword">break</span>;
-      }
-    }
-  }
-}</code></pre>
-				<!-- DOCUMENTATION -->
-				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
-					<h2>Documentation</h2>
-				</a>
-				<p>The project documentation is available in for of a wiki at <a href="https://github.com/hubhazard/core/wiki">https://github.com/hubhazard/core/wiki/</a>.</p>
-				<!-- ROADMAP -->
 				<a href="#roadmap" id="roadmap" style="color: inherit; text-decoration: none;">
 					<h2>Roadmap</h2>
 				</a>
 				<p>See a list of <a href="https://github.com/hubhazard/core/labels/task">open issues</a> with the <code>task</code> label.</p>
-				<!-- CONTRIBUTING -->
 				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
 					<h2>Contributing</h2>
 				</a>
@@ -382,19 +153,16 @@ HUBITAT_MAKER_API_ACCESS_TOKEN=64ac3f13-f640-42bc-ab8f-48ae8b40d106</code></pre>
 					<li>Open a pull request.</li>
 				</ol>
 				<p>See <a href="./CONTRIBUTING.md"><code>CONTRIBUTING.md</code></a> from more information.</p>
-				<!-- LICENSE -->
 				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
 					<h2>License</h2>
 				</a>
 				<p>Distributed under the MIT License. See <a href="./LICENSE"><code>LICENSE</code></a> for more information.</p>
-				<!-- CONTACT -->
 				<a href="#contact" id="contact" style="color: inherit; text-decoration: none;">
 					<h2>Contact</h2>
 				</a>
-				<p>Beniamin (Xkonti) Dudek - <a href="https://twitter.com/xkonti">@xkonti</a> - <a href="mailto:&#111;&#110;&#x6c;&#105;&#x6e;&#101;&#x2e;&#x78;&#x6b;&#x6f;&#x6e;&#116;&#x69;&#64;&#103;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#111;&#110;&#x6c;&#105;&#x6e;&#101;&#x2e;&#x78;&#x6b;&#x6f;&#x6e;&#116;&#x69;&#64;&#103;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+				<p>Beniamin (Xkonti) Dudek - <a href="https://twitter.com/xkonti">@xkonti</a> - <a href="mailto:&#x6f;&#x6e;&#108;&#x69;&#x6e;&#101;&#46;&#120;&#x6b;&#x6f;&#110;&#x74;&#105;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;">&#x6f;&#x6e;&#108;&#x69;&#x6e;&#101;&#46;&#120;&#x6b;&#x6f;&#110;&#x74;&#105;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;</a></p>
 				<p>Project Link: <a href="https://github.com/hubhazard/core">https://github.com/hubhazard/core</a></p>
 				<!-- MARKDOWN LINKS & IMAGES -->
-				<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
