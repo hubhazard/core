@@ -17,6 +17,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2020-09-01
+
+### Changed
+
+- Automations do not need manual registration by calling the `automationsService.registerAutomation(...)` anymore.
+
 ## [0.1.1] - 2020-09-01
 
 ### Removed
@@ -100,7 +106,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `common` functions set to mostly simplify interactions with collections and random number generation for
   testing purposes.
 
-[unreleased]: https://github.com/hubhazard/core/compare/v0.1.0-beta.7...HEAD
+[unreleased]: https://github.com/hubhazard/core/compare/v0.1.2...HEAD
+[0.1.1]: https://github.com/hubhazard/core/compare/v0.1.2...v0.1.1
 [0.1.1]: https://github.com/hubhazard/core/compare/v0.1.1...v0.1.1-beta.7
 [0.1.0-beta.7]: https://github.com/hubhazard/core/compare/v0.1.0-beta.6...v0.1.0-beta.7
 [0.1.0-beta.6]: https://github.com/hubhazard/core/compare/v0.1.0-beta.5...v0.1.0-beta.6
