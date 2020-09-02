@@ -3,10 +3,11 @@
  * @module Automations
  */
 
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { AutomationEvent } from './automation-event';
 import { BuildableToTriggerDefinition } from './buildable-to-trigger-definition';
 import { TriggerDefinition } from './trigger-definition';
+import { AutomationsService } from './automations.service';
 
 /**
  * A base class for all automations. Allows for automations to be correctly
@@ -32,10 +33,26 @@ export abstract class Automation {
   abstract readonly triggers: BuildableToTriggerDefinition[];
 
   /**
+   * A reference to automations service injected by the Nest.js Dependency
+   * Injection. Its value is not available in the constructor.
+   * @protected
+   */
+  @Inject()
+  protected readonly automationsService: AutomationsService;
+
+  /**
    * A cache for `get builtTriggers`.
    * @private
    */
   private builtTriggersCache: TriggerDefinition[] | undefined = undefined;
+
+  /**
+   * A default constructor that registers this automation to the automations
+   * service.
+   */
+  public constructor() {
+    setTimeout(() => this.automationsService.registerAutomation(this), 1000);
+  }
 
   /**
    * Returns a list of triggers already built as {@link TriggerDefinition}.
