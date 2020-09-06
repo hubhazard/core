@@ -33,6 +33,9 @@ export function getAlarmSetting(device: HubitatDevice, defaultValue: EAlarmSetti
  */
 export function getAlarmSetting(deviceId: number, defaultValue: EAlarmSetting): EAlarmSetting;
 
-export function getAlarmSetting(deviceOrId: HubitatDevice | number, defaultValue: EAlarmSetting = 'off'): EAlarmSetting {
+export function getAlarmSetting(
+  deviceOrId: HubitatDevice | number,
+  defaultValue: EAlarmSetting = 'off',
+): EAlarmSetting {
   return (getDevice(deviceOrId).getAttributeAsString('alarm') as EAlarmSetting) ?? defaultValue;
 }

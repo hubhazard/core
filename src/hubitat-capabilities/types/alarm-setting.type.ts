@@ -4,7 +4,6 @@
  */
 
 /**
- * All possible settings of the alarm (Alarm capability).
- * @category Alarm capability
+ * All possible settings of the alarm.
  */
 export type EAlarmSetting = 'both' | 'off' | 'siren' | 'strobe';
