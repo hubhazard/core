@@ -25,7 +25,8 @@ export * from './src/hubitat-api/dtos/device-info-capability-attribute.dto';
 export * from './src/hubitat-api/dtos/devices-list-item.dto';
 
 // HUBITAT-CAPABILITIES
-export * from './src/hubitat-capabilities/alarm.capability';
+export * from './src/hubitat-capabilities/index';
+
 export * from './src/hubitat-capabilities/battery.capability';
 export * from './src/hubitat-capabilities/bulb.capability';
 export * from './src/hubitat-capabilities/capabilities.helpers';
