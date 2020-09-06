@@ -30,7 +30,6 @@ export * from './src/hubitat-capabilities/index';
 export * from './src/hubitat-capabilities/battery.capability';
 export * from './src/hubitat-capabilities/bulb.capability';
 export * from './src/hubitat-capabilities/capabilities.helpers';
-export * from './src/hubitat-capabilities/change-level.capability';
 export * from './src/hubitat-capabilities/contact-sensor.capability';
 export * from './src/hubitat-capabilities/double-tappable-button.capability';
 export * from './src/hubitat-capabilities/holdable-button.capability';

@@ -22,9 +22,13 @@ export * from './functions/set-thermostat-operating-state.function';
 export * from './functions/set-thermostat-schedule.function';
 export * from './functions/set-thermostat-setpoint.function';
 
+export * from './functions/start-level-change.function';
+export * from './functions/stop-level-change.function';
+
 /* TYPES */
 
 export * from './types/alarm-setting.type';
+export * from './types/level-change-direction.type';
 export * from './types/thermostat-fan-modes.type';
 export * from './types/thermostat-modes.type';
 export * from './types/thermostat-operating-modes.type';
