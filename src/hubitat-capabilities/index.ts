@@ -5,6 +5,7 @@ export * from './functions/get-battery-status.function';
 export * from './functions/get-contact-sensor-status.function';
 export * from './functions/get-cooling-setpoint.function';
 export * from './functions/get-heating-setpoint.function';
+export * from './functions/get-number-of-buttons.function';
 export * from './functions/get-supported-thermostat-fan-modes.function';
 export * from './functions/get-supported-thermostat-modes.function';
 export * from './functions/get-thermostat-fan-mode.function';
@@ -33,6 +34,11 @@ export * from './functions/start-level-change.function';
 export * from './functions/stop-level-change.function';
 
 export * from './functions/toggle.function';
+
+export * from './functions/which-button-double-tapped.function';
+export * from './functions/which-button-held.function';
+export * from './functions/which-button-pushed.function';
+export * from './functions/which-button-released.function';
 
 /* TYPES */
 

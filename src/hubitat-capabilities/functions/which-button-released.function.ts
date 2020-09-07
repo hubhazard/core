@@ -3,27 +3,31 @@
  * @module HubitatCapabilities
  */
 
-import { HubitatDevice } from '../hubitat-device-events/hubitat-device';
-import { getDevice } from './capabilities.helpers';
+import { HubitatDevice } from '../../hubitat-device-events/hubitat-device';
+import { getDevice } from '../capabilities.helpers';
 
 /**
  * Returns a number of the button that was released.
+ *
+ * Capabilities:
+ * - ReleasableButton
  *
  * @param device A target device.
  * @returns A number of the button that was released.
- * @category ReleasableButton capability
  */
-export function whichButtonIsReleased(device: HubitatDevice): number;
+export function whichButtonReleased(device: HubitatDevice): number;
 
 /**
  * Returns a number of the button that was released.
  *
+ * Capabilities:
+ * - ReleasableButton
+ *
  * @param deviceId An ID of the target device.
  * @returns A number of the button that was released.
- * @category ReleasableButton capability
  */
-export function whichButtonIsReleased(deviceId: number): number;
+export function whichButtonReleased(deviceId: number): number;
 
-export function whichButtonIsReleased(deviceOrId: HubitatDevice | number): number {
+export function whichButtonReleased(deviceOrId: HubitatDevice | number): number {
   return getDevice(deviceOrId).getAttributeAsInt('released');
 }
