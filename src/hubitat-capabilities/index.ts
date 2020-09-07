@@ -16,6 +16,7 @@ export * from './functions/get-thermostat-schedule.function';
 export * from './functions/get-thermostat-setpoint.function';
 
 export * from './functions/is-any-on.function';
+export * from './functions/is-motion-detected.function';
 export * from './functions/is-on.function';
 export * from './functions/is-open.function';
 
