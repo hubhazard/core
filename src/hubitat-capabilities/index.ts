@@ -30,6 +30,7 @@ export * from './functions/get-thermostat-operating-state.function';
 export * from './functions/get-thermostat-schedule.function';
 export * from './functions/get-thermostat-setpoint.function';
 
+export * from './functions/is-accelerating';
 export * from './functions/is-any-on.function';
 export * from './functions/is-motion-detected.function';
 export * from './functions/is-on.function';
@@ -38,6 +39,7 @@ export * from './functions/is-present.function';
 
 export * from './functions/refresh.function';
 
+export * from './functions/set-acceleration.function';
 export * from './functions/set-alarm-setting.function';
 export * from './functions/set-cooling-setpoint.function';
 export * from './functions/set-heating-setpoint.function';
@@ -72,6 +74,7 @@ export * from './helpers/get-device.function';
 
 /* TYPES */
 
+export * from './types/active-status.type';
 export * from './types/alarm-setting.type';
 export * from './types/level-change-direction.type';
 export * from './types/open-status.type';
