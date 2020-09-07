@@ -22,6 +22,8 @@ export * from './functions/is-on.function';
 export * from './functions/is-open.function';
 export * from './functions/is-present.function';
 
+export * from './functions/refresh.function';
+
 export * from './functions/set-alarm-setting.function';
 export * from './functions/set-cooling-setpoint.function';
 export * from './functions/set-heating-setpoint.function';
