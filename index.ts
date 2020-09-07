@@ -28,20 +28,15 @@ export * from './src/hubitat-api/dtos/devices-list-item.dto';
 export * from './src/hubitat-capabilities/index';
 
 export * from './src/hubitat-capabilities/battery.capability';
-export * from './src/hubitat-capabilities/bulb.capability';
 export * from './src/hubitat-capabilities/capabilities.helpers';
 export * from './src/hubitat-capabilities/double-tappable-button.capability';
 export * from './src/hubitat-capabilities/holdable-button.capability';
-export * from './src/hubitat-capabilities/light.capability';
 export * from './src/hubitat-capabilities/location-mode.capability';
 export * from './src/hubitat-capabilities/motion-sensor.capability';
-export * from './src/hubitat-capabilities/outlet.capability';
 export * from './src/hubitat-capabilities/presence-sensor.capability';
 export * from './src/hubitat-capabilities/pushable-button.capability';
 export * from './src/hubitat-capabilities/refresh.capability';
-export * from './src/hubitat-capabilities/relay-switch.capability';
 export * from './src/hubitat-capabilities/releasable-button.capability';
-export * from './src/hubitat-capabilities/switch.capability';
 export * from './src/hubitat-capabilities/switch-level.capability';
 export * from './src/hubitat-capabilities/temperature-measurement.capability';
 
