@@ -29,7 +29,6 @@ export * from './src/hubitat-capabilities/index';
 
 export * from './src/hubitat-capabilities/capabilities.helpers';
 export * from './src/hubitat-capabilities/refresh.capability';
-export * from './src/hubitat-capabilities/switch-level.capability';
 export * from './src/hubitat-capabilities/temperature-measurement.capability';
 
 // HUBITAT-DEVICE-EVENTS
