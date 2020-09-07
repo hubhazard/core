@@ -1,4 +1,15 @@
-export * from './capabilities.helpers';
+/**
+ * The HubitatCapabilities module is a collection of functions that simplify
+ * interactions with Hubitat's devices. Those functions are following the
+ * naming conventions and functionalities of
+ * [Hubitat device capabilities](https://docs.hubitat.com/index.php?title=Driver_Capability_List).
+ *
+ * **These functions are intended to be used within automations only.**
+ *
+ * @packageDocumentation
+ * @module HubitatCapabilities
+ * @preferred
+ */
 
 /* FUNCTIONS */
 
@@ -50,6 +61,11 @@ export * from './functions/which-button-double-tapped.function';
 export * from './functions/which-button-held.function';
 export * from './functions/which-button-pushed.function';
 export * from './functions/which-button-released.function';
+
+/* HELPERS */
+
+export * from './helpers/enum-list-to-string-list.function';
+export * from './helpers/get-device.function';
 
 /* TYPES */
 
