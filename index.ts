@@ -27,7 +27,6 @@ export * from './src/hubitat-api/dtos/devices-list-item.dto';
 // HUBITAT-CAPABILITIES
 export * from './src/hubitat-capabilities/index';
 
-export * from './src/hubitat-capabilities/battery.capability';
 export * from './src/hubitat-capabilities/capabilities.helpers';
 export * from './src/hubitat-capabilities/double-tappable-button.capability';
 export * from './src/hubitat-capabilities/holdable-button.capability';
