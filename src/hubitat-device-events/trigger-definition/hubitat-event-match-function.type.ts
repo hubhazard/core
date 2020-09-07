@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @module HubitatDeviceEvents
+ */
+
 import { HubitatDeviceEvent } from '../hubitat-device-event';
 
 /**

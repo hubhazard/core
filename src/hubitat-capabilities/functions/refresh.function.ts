@@ -13,7 +13,6 @@ import { getDevice } from '..';
  * - Refresh
  *
  * @param device A target device.
- * @category Refresh capability
  */
 export async function refresh(device: HubitatDevice): Promise<void>;
 
