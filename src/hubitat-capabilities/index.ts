@@ -19,6 +19,7 @@ export * from './functions/is-any-on.function';
 export * from './functions/is-motion-detected.function';
 export * from './functions/is-on.function';
 export * from './functions/is-open.function';
+export * from './functions/is-present.function';
 
 export * from './functions/set-alarm-setting.function';
 export * from './functions/set-cooling-setpoint.function';
