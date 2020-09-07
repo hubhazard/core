@@ -3,46 +3,30 @@
  * @module HubitatCapabilities
  */
 
-import { HubitatDevice } from '../hubitat-device-events/hubitat-device';
-import { getDevice } from './capabilities.helpers';
-
-/**
- * Returns the last temperature measurement.
- *
- * @param device A target device.
- * @returns Returns the last temperature measurement.
- * @category TemperatureMeasurement capability
- */
-export function getTemperature(device: HubitatDevice): number;
-
-/**
- * Returns the last temperature measurement.
- *
- * @param deviceId An ID of the target device.
- * @returns Returns the last temperature measurement.
- * @category TemperatureMeasurement capability
- */
-export function getTemperature(deviceId: number): number;
-
-export function getTemperature(deviceOrId: HubitatDevice | number): number {
-  return getDevice(deviceOrId).getAttributeAsFloat('temperature');
-}
+import { HubitatDevice } from '../../hubitat-device-events/hubitat-device';
+import { getDevice } from '../capabilities.helpers';
 
 /**
  * Sets the temperature measurement of a **virtual** temperature measurement device.
  *
+ * Capabilities:
+ * - TemperatureMeasurement
+ * - Thermostat
+ *
  * @param device A target device.
  * @param temperature A temperature to set.
- * @category TemperatureMeasurement capability
  */
 export async function setTemperature(device: HubitatDevice, temperature: number): Promise<void>;
 
 /**
  * Sets the temperature measurement of a **virtual** temperature measurement device.
  *
+ * Capabilities:
+ * - TemperatureMeasurement
+ * - Thermostat
+ *
  * @param deviceId An ID of the target device.
  * @param temperature A temperature to set.
- * @category TemperatureMeasurement capability
  */
 export async function setTemperature(deviceId: number, temperature: number): Promise<void>;
 
