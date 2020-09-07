@@ -17,6 +17,55 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Hubitat capabilities module:
+  - Generic `getLevel` function for capabilities: MusicPlayer, SwitchLevel
+  - Generic functions for capabilities: Bulb, Light, Outlet, RelaySwitch, SamsungTV, Switch:
+    - `isAnyOn`
+    - `isOn`
+    - `setSwitch`
+    - `switchOff`
+    - `switchOn`
+    - `toggle`
+  - Generic `isOpen` function for capabilities: ContactSensor
+  - Generic `isPresent` function for capabilities: Beacon, PresenceSensor
+  - `setThermostatSetpoint` function for **virtual** thermostats.
+
+### Changed
+
+- Extracted Hubitat capabilities functions and types to separate files to simplify the codebase (#44)
+- Rename `whichButtonIsDoubleTapped` to `whichButtonDoubleTapped`
+- Rename `whichButtonIsHeld` to `whichButtonHeld`
+- Rename `whichButtonIsPushed` to `whichButtonPushed`
+- Rename `whichButtonIsReleased` to `whichButtonReleased`
+
+### Removed
+
+- Hubitat capabilities module:
+  - Removed capability-specific functions:
+    - `getSwitchLevel` - use `getLevel`
+    - `isAnyBulbOn` - use `isAnyOn`
+    - `isAnyLightOn` - use `isAnyOn`
+    - `isAnyOutletOn` - use `isAnyOn`
+    - `isAnyRelaySwitchOn` - use `isAnyOn`
+    - `isAnySwitchOn` - use `isAnyOn`
+    - `isBulbOn` - use `isOn`
+    - `isLightOn` - use `isOn`
+    - `isOutletOn` - use `isOn`
+    - `isRelaySwitchOn` - use `isOn`
+    - `isSwitchOn` - use `isOn`
+    - `isContactOpen` - use `isOpen`
+    - `setBulb` - use `setSwitch`
+    - `setLight` - use `setSwitch`
+    - `setOutlet` - use `setSwitch`
+    - `setRelaySwitch` - use `setSwitch`
+    - `toggleBulb` - use `toggle`
+    - `toggleLight` - use `toggle`
+    - `toggleOutlet` - use `toggle`
+    - `toggleRelaySwitch` - use `toggle`
+    - `toggleSwitch` - use `toggle`
+
 ## [0.1.2] - 2020-09-01
 
 ### Changed

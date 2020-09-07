@@ -25,27 +25,7 @@ export * from './src/hubitat-api/dtos/device-info-capability-attribute.dto';
 export * from './src/hubitat-api/dtos/devices-list-item.dto';
 
 // HUBITAT-CAPABILITIES
-export * from './src/hubitat-capabilities/alarm.capability';
-export * from './src/hubitat-capabilities/battery.capability';
-export * from './src/hubitat-capabilities/bulb.capability';
-export * from './src/hubitat-capabilities/capabilities.helpers';
-export * from './src/hubitat-capabilities/change-level.capability';
-export * from './src/hubitat-capabilities/contact-sensor.capability';
-export * from './src/hubitat-capabilities/double-tappable-button.capability';
-export * from './src/hubitat-capabilities/holdable-button.capability';
-export * from './src/hubitat-capabilities/light.capability';
-export * from './src/hubitat-capabilities/location-mode.capability';
-export * from './src/hubitat-capabilities/motion-sensor.capability';
-export * from './src/hubitat-capabilities/outlet.capability';
-export * from './src/hubitat-capabilities/presence-sensor.capability';
-export * from './src/hubitat-capabilities/pushable-button.capability';
-export * from './src/hubitat-capabilities/refresh.capability';
-export * from './src/hubitat-capabilities/relay-switch.capability';
-export * from './src/hubitat-capabilities/releasable-button.capability';
-export * from './src/hubitat-capabilities/switch.capability';
-export * from './src/hubitat-capabilities/switch-level.capability';
-export * from './src/hubitat-capabilities/temperature-measurement.capability';
-export * from './src/hubitat-capabilities/thermostat.capability';
+export * from './src/hubitat-capabilities/index';
 
 // HUBITAT-DEVICE-EVENTS
 export * from './src/hubitat-device-events/capability.enum';
