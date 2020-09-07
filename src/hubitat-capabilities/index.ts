@@ -15,6 +15,8 @@
 
 export * from './functions/get-alarm-setting.function';
 export * from './functions/get-battery-status.function';
+export * from './functions/get-carbon-dioxide-measurement.function';
+export * from './functions/get-carbon-monoxide-measurement.function';
 export * from './functions/get-contact-sensor-status.function';
 export * from './functions/get-cooling-setpoint.function';
 export * from './functions/get-heating-setpoint.function';
