@@ -1,3 +1,5 @@
+export * from './capabilities.helpers';
+
 /* FUNCTIONS */
 
 export * from './functions/get-alarm-setting.function';

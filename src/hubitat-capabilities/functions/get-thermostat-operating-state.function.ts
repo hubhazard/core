@@ -4,8 +4,7 @@
  */
 
 import { HubitatDevice } from '../../hubitat-device-events/hubitat-device';
-import { EThermostatOperatingState } from '..';
-import { getDevice } from '../capabilities.helpers';
+import { EThermostatOperatingState, getDevice } from '..';
 
 /**
  * Returns current operating state of the thermostat.

@@ -4,8 +4,7 @@
  */
 
 import { HubitatDevice } from '../../hubitat-device-events/hubitat-device';
-import { EThermostatOperatingState } from '..';
-import { getDevice } from '../capabilities.helpers';
+import { EThermostatOperatingState, getDevice } from '..';
 
 /**
  * Sets the operating mode of a **virtual** thermostat device.

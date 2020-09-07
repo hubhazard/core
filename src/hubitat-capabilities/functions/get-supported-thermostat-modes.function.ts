@@ -4,8 +4,7 @@
  */
 
 import { HubitatDevice } from '../../hubitat-device-events/hubitat-device';
-import { EThermostatModes } from '..';
-import { enumListToStringList, getDevice } from '../capabilities.helpers';
+import { enumListToStringList, EThermostatModes, getDevice } from '..';
 
 /**
  * Returns a list of modes supported by specified thermostat.

@@ -4,8 +4,7 @@
  */
 
 import { HubitatDevice } from '../../hubitat-device-events/hubitat-device';
-import { EAlarmSetting } from '..';
-import { getDevice } from '../capabilities.helpers';
+import { EAlarmSetting, getDevice } from '..';
 
 /**
  * Returns a value of the alarm setting.

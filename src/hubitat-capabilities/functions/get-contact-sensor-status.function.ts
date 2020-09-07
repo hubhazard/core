@@ -4,8 +4,7 @@
  */
 
 import { HubitatDevice } from '../../hubitat-device-events/hubitat-device';
-import { EOpenStatus } from '..';
-import { getDevice } from '../capabilities.helpers';
+import { EOpenStatus, getDevice } from '..';
 
 /**
  * Returns current contact sensor status.

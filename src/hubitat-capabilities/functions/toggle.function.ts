@@ -4,9 +4,7 @@
  */
 
 import { HubitatDevice } from '../../hubitat-device-events/hubitat-device';
-import { getDevice } from '../capabilities.helpers';
-import { isOn } from './is-on.function';
-import { setSwitch } from './set-switch.function';
+import { getDevice, isOn, setSwitch } from '..';
 
 /**
  * Toggles the switch.

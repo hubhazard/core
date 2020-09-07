@@ -4,7 +4,7 @@
  */
 
 import { HubitatDevice } from '../../hubitat-device-events/hubitat-device';
-import { getDevice } from '../capabilities.helpers';
+import { getDevice } from '..';
 
 /**
  * Sets the setpoint of a **virtual** thermostat device.

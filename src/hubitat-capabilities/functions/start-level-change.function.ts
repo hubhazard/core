@@ -4,8 +4,7 @@
  */
 
 import { HubitatDevice } from '../../hubitat-device-events/hubitat-device';
-import { ELevelChangeDirection } from '..';
-import { getDevice } from '../capabilities.helpers';
+import { ELevelChangeDirection, getDevice } from '..';
 
 /**
  * Starts the level change in a specified direction.

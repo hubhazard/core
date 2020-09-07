@@ -4,7 +4,7 @@
  */
 
 import { HubitatDevice } from '../../hubitat-device-events/hubitat-device';
-import { isOn } from './is-on.function';
+import { isOn } from '..';
 
 /**
  * Returns a value indicating whether any of specified switches are on.

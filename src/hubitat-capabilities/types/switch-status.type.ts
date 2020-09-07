@@ -6,4 +6,4 @@
 /**
  * Switch status.
  */
-export type SwitchStatus = 'off' | 'on';
+export type ESwitchStatus = 'off' | 'on';

@@ -4,8 +4,7 @@
  */
 
 import { HubitatDevice } from '../../hubitat-device-events/hubitat-device';
-import { getDevice } from '../capabilities.helpers';
-import { setSwitch } from './set-switch.function';
+import { getDevice, setSwitch } from '..';
 
 /**
  * Sets the switch to a specified level. Can't specify level change duration due

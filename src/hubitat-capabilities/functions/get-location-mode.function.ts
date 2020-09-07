@@ -4,7 +4,7 @@
  */
 
 import { HubitatDevice } from '../../hubitat-device-events/hubitat-device';
-import { getDevice } from '../capabilities.helpers';
+import { getDevice } from '..';
 
 /**
  * Returns current location mode name.

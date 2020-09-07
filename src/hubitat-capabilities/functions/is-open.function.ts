@@ -4,9 +4,8 @@
  */
 
 import { HubitatDevice } from '../../hubitat-device-events/hubitat-device';
-import { getDevice } from '../capabilities.helpers';
 import { ECapability } from '../../hubitat-device-events/capability.enum';
-import { getContactSensorStatus } from './get-contact-sensor-status.function';
+import { getContactSensorStatus, getDevice } from '..';
 
 /**
  * Returns a value whether the sensor is open.

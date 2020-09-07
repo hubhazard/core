@@ -4,8 +4,7 @@
  */
 
 import { HubitatDevice } from '../../hubitat-device-events/hubitat-device';
-import { EThermostatFanModes } from '..';
-import { getDevice } from '../capabilities.helpers';
+import { EThermostatFanModes, getDevice } from '..';
 
 /**
  * Returns current thermostat fan mode.

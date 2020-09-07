@@ -27,8 +27,6 @@ export * from './src/hubitat-api/dtos/devices-list-item.dto';
 // HUBITAT-CAPABILITIES
 export * from './src/hubitat-capabilities/index';
 
-export * from './src/hubitat-capabilities/capabilities.helpers';
-
 // HUBITAT-DEVICE-EVENTS
 export * from './src/hubitat-device-events/capability.enum';
 export * from './src/hubitat-device-events/hubitat-device';

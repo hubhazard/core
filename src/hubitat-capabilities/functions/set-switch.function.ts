@@ -4,8 +4,7 @@
  */
 
 import { HubitatDevice } from '../../hubitat-device-events/hubitat-device';
-import { SwitchStatus } from '..';
-import { getDevice } from '../capabilities.helpers';
+import { ESwitchStatus, getDevice } from '..';
 
 /**
  * Sets the switch to a specified value.
@@ -21,7 +20,7 @@ import { getDevice } from '../capabilities.helpers';
  * @param device A target device.
  * @param setting A setting to set the switch to. `true` is on; `false` is off.
  */
-export async function setSwitch(device: HubitatDevice, setting: boolean | SwitchStatus): Promise<void>;
+export async function setSwitch(device: HubitatDevice, setting: boolean | ESwitchStatus): Promise<void>;
 
 /**
  * Sets the switch to a specified value.
@@ -37,9 +36,9 @@ export async function setSwitch(device: HubitatDevice, setting: boolean | Switch
  * @param deviceId An ID of the target device.
  * @param setting A setting to set the switch to. `true` is on; `false` is off.
  */
-export async function setSwitch(deviceId: number, setting: boolean | SwitchStatus): Promise<void>;
+export async function setSwitch(deviceId: number, setting: boolean | ESwitchStatus): Promise<void>;
 
-export async function setSwitch(deviceOrId: HubitatDevice | number, setting: boolean | SwitchStatus): Promise<void> {
+export async function setSwitch(deviceOrId: HubitatDevice | number, setting: boolean | ESwitchStatus): Promise<void> {
   if (typeof setting === 'boolean') setting = setting ? 'on' : 'off';
   const device = getDevice(deviceOrId);
   device.setAttribute('switch', setting);
