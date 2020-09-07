@@ -55,6 +55,9 @@ export * from './functions/set-thermostat-setpoint.function';
 export * from './functions/start-level-change.function';
 export * from './functions/stop-level-change.function';
 
+export * from './functions/switch-off.function';
+export * from './functions/switch-on.function';
+
 export * from './functions/toggle.function';
 
 export * from './functions/which-button-double-tapped.function';
