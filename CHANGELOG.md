@@ -28,9 +28,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `switchOff`
     - `switchOn`
     - `toggle`
-  - Generic `isOpen` function for capabilities: ContactSensor
-  - Generic `isPresent` function for capabilities: Beacon, PresenceSensor
+  - Generic `isOpen` function for ContactSensor capability.
+  - Generic `isPresent` function for capabilities: Beacon, PresenceSensor.
   - `setThermostatSetpoint` function for **virtual** thermostats.
+  - `isAccelerating` function for AccelerationSensor capability.
+  - `setAcceleration` function for **virtual** acceleration sensors.
+  - `getCarbonDioxide` function for CarbonDioxideMeasurement capability.
+  - `getCarbonMonoxide` function for CarbonMonoxideMeasurement capability.
+  - `getIlluminance` function for IlluminanceMeasurement capability.
 
 ### Changed
 
