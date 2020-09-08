@@ -35,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `setAcceleration` function for **virtual** acceleration sensors.
   - `getCarbonDioxide` function for CarbonDioxideMeasurement capability.
   - `getCarbonMonoxide` function for CarbonMonoxideMeasurement capability.
+  - `getIlluminance` function for IlluminanceMeasurement capability.
 
 ### Changed
 

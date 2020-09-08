@@ -15,11 +15,12 @@
 
 export * from './functions/get-alarm-setting.function';
 export * from './functions/get-battery-status.function';
-export * from './functions/get-carbon-dioxide-measurement.function';
-export * from './functions/get-carbon-monoxide-measurement.function';
+export * from './functions/get-carbon-dioxide.function';
+export * from './functions/get-carbon-monoxide.function';
 export * from './functions/get-contact-sensor-status.function';
 export * from './functions/get-cooling-setpoint.function';
 export * from './functions/get-heating-setpoint.function';
+export * from './functions/get-illuminance.function';
 export * from './functions/get-level.function';
 export * from './functions/get-location-mode.function';
 export * from './functions/get-number-of-buttons.function';

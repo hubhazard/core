@@ -15,7 +15,7 @@ import { getDevice } from '..';
  * @param device A target device.
  * @returns Returns the last carbon dioxide measurement.
  */
-export function getCarbonDioxideMeasurement(device: HubitatDevice): number;
+export function getCarbonDioxide(device: HubitatDevice): number;
 
 /**
  * Returns the last carbon dioxide measurement.
@@ -26,8 +26,8 @@ export function getCarbonDioxideMeasurement(device: HubitatDevice): number;
  * @param deviceId An ID of the target device.
  * @returns Returns the last carbon dioxide measurement.
  */
-export function getCarbonDioxideMeasurement(deviceId: number): number;
+export function getCarbonDioxide(deviceId: number): number;
 
-export function getCarbonDioxideMeasurement(deviceOrId: HubitatDevice | number): number {
+export function getCarbonDioxide(deviceOrId: HubitatDevice | number): number {
   return getDevice(deviceOrId).getAttributeAsFloat('carbonDioxide');
 }
