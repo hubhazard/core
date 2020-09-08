@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.3] - 2020-09-07
+
 ### Added
 
 - Hubitat capabilities module:
@@ -160,8 +162,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `common` functions set to mostly simplify interactions with collections and random number generation for
   testing purposes.
 
-[unreleased]: https://github.com/hubhazard/core/compare/v0.1.2...HEAD
-[0.1.1]: https://github.com/hubhazard/core/compare/v0.1.2...v0.1.1
+[unreleased]: https://github.com/hubhazard/core/compare/v0.1.3...HEAD
+[0.1.3]: https://github.com/hubhazard/core/compare/v0.1.3...v0.1.2
+[0.1.2]: https://github.com/hubhazard/core/compare/v0.1.2...v0.1.1
 [0.1.1]: https://github.com/hubhazard/core/compare/v0.1.1...v0.1.1-beta.7
 [0.1.0-beta.7]: https://github.com/hubhazard/core/compare/v0.1.0-beta.6...v0.1.0-beta.7
 [0.1.0-beta.6]: https://github.com/hubhazard/core/compare/v0.1.0-beta.5...v0.1.0-beta.6
