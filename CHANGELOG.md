@@ -17,7 +17,52 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.3] - 2020-09-07
+## 0.1.4 - 2020-09-13
+
+### Added
+
+- Added support for [DoorControl](https://docs.hubitat.com/index.php?title=Driver_Capability_List#DoorControl) and
+  [GarageDoorControl](https://docs.hubitat.com/index.php?title=Driver_Capability_List#GarageDoorControl) capabilities by
+  adding functions:
+  - `close`
+  - `getDoorPosition`
+  - `isClosed`
+  - `open`
+  - `setPosition`
+- Added support for [Valve](https://docs.hubitat.com/index.php?title=Driver_Capability_List#Valve) capability by adding
+  functions:
+  - `close`
+  - `getValvePosition`
+  - `isClosed`
+  - `open`
+  - `setPosition`
+- Added support for [WindowShade](https://docs.hubitat.com/index.php?title=Driver_Capability_List#WindowShade)
+  capability by adding functions:
+  - `close`
+  - `getWindowShadeCoverage`
+  - `getWindowShadePosition`
+  - `isClosed`
+  - `open`
+  - `setPosition`
+  - `setWindowShadeCoverage`
+- Added support for [ContactSensor](https://docs.hubitat.com/index.php?title=Driver_Capability_List#ContactSensor)
+  capability in virtual devices by adding functions:
+  - `close`
+  - `open`
+- Added support for [DoorControl](https://docs.hubitat.com/index.php?title=Driver_Capability_List#DoorControl),
+  [GarageDoorControl](https://docs.hubitat.com/index.php?title=Driver_Capability_List#GarageDoorControl),
+  [Valve](https://docs.hubitat.com/index.php?title=Driver_Capability_List#Valve),
+  [WindowShade](https://docs.hubitat.com/index.php?title=Driver_Capability_List#WindowShade) capabilities in `isOpen`
+  function.
+- Added capability-related types:
+  - `EDoorStatus`
+  - `EWindowShadePosition`
+
+### Changed
+
+- Renamed `EOpenStatus` type to `EOpenClosedPosition` for greater compatibility with other capabilities.
+
+## 0.1.3 - 2020-09-07
 
 ### Added
 
@@ -73,19 +118,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `toggleRelaySwitch` - use `toggle`
     - `toggleSwitch` - use `toggle`
 
-## [0.1.2] - 2020-09-01
+## 0.1.2 - 2020-09-01
 
 ### Changed
 
 - Automations do not need manual registration by calling the `automationsService.registerAutomation(...)` anymore.
 
-## [0.1.1] - 2020-09-01
+## 0.1.1 - 2020-09-01
 
 ### Removed
 
 - Move guides in README.md to the wiki
 
-## [0.1.0-beta.7] - 2020-08-29
+## 0.1.0-beta.7 - 2020-08-29
 
 ### Added
 
@@ -95,7 +140,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `increase` and `decrease` - accepts the event if the value increased/decreased.
   - `customFilter` - allows to pass a custom event-matching function to be used.
 
-## [0.1.0-beta.6] - 2020-08-27
+## 0.1.0-beta.6 - 2020-08-27
 
 ### Added
 
@@ -117,7 +162,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added capability-related helper function `enumListToStringList`.
 - Added `isHubitatDeviceEvent` and `isTimerEvent` functions for easier checking events and triggers types.
 
-## [0.1.0-beta.5] - 2020-08-26
+## 0.1.0-beta.5 - 2020-08-26
 
 ### Added
 
@@ -129,13 +174,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Documentation links now direct to the project wiki
 - Roadmap section now leads to a list of issues with a `task` label
 
-## [0.1.0-beta.4] - 2020-08-25
+## 0.1.0-beta.4 - 2020-08-25
 
 ### Added
 
 - Completed the documentation of all source code. [ #7 ]
 
-## [0.1.0-beta.3] - 2020-08-23
+## 0.1.0-beta.3 - 2020-08-23
 
 ### Added
 
@@ -146,7 +191,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Removed unused functions from `number-helpers`. [ #2 ]
 
-## [0.1.0-beta.1] - 2020-08-21
+## 0.1.0-beta.1 - 2020-08-21
 
 ### Added
 
@@ -161,14 +206,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   [capability-based](https://docs.hubitat.com/index.php?title=Driver_Capability_List) manner.
 - Added `common` functions set to mostly simplify interactions with collections and random number generation for
   testing purposes.
-
-[unreleased]: https://github.com/hubhazard/core/compare/v0.1.3...HEAD
-[0.1.3]: https://github.com/hubhazard/core/compare/v0.1.3...v0.1.2
-[0.1.2]: https://github.com/hubhazard/core/compare/v0.1.2...v0.1.1
-[0.1.1]: https://github.com/hubhazard/core/compare/v0.1.1...v0.1.1-beta.7
-[0.1.0-beta.7]: https://github.com/hubhazard/core/compare/v0.1.0-beta.6...v0.1.0-beta.7
-[0.1.0-beta.6]: https://github.com/hubhazard/core/compare/v0.1.0-beta.5...v0.1.0-beta.6
-[0.1.0-beta.5]: https://github.com/hubhazard/core/compare/v0.1.0-beta.4...v0.1.0-beta.5
-[0.1.0-beta.4]: https://github.com/hubhazard/core/compare/v0.1.0-beta.3...v0.1.0-beta.4
-[0.1.0-beta.3]: https://github.com/hubhazard/core/compare/v0.1.0-beta.1...v0.1.0-beta.3
-[0.1.0-beta.1]: https://github.com/hubhazard/core/releases/tag/v0.1.0-beta.1
