@@ -10,6 +10,7 @@ import { getDevice } from '..';
  * Opens the device.
  *
  * Capabilities:
+ * - Virtual [ContactSensor](https://docs.hubitat.com/index.php?title=Driver_Capability_List#ContactSensor)
  * - [DoorControl](https://docs.hubitat.com/index.php?title=Driver_Capability_List#DoorControl)
  * - [GarageDoorControl](https://docs.hubitat.com/index.php?title=Driver_Capability_List#GarageDoorControl)
  * - [Valve](https://docs.hubitat.com/index.php?title=Driver_Capability_List#Valve)
@@ -23,6 +24,7 @@ export async function open(device: HubitatDevice): Promise<void>;
  * Opens the device.
  *
  * Capabilities:
+ * - Virtual [ContactSensor](https://docs.hubitat.com/index.php?title=Driver_Capability_List#ContactSensor)
  * - [DoorControl](https://docs.hubitat.com/index.php?title=Driver_Capability_List#DoorControl)
  * - [GarageDoorControl](https://docs.hubitat.com/index.php?title=Driver_Capability_List#GarageDoorControl)
  * - [Valve](https://docs.hubitat.com/index.php?title=Driver_Capability_List#Valve)
@@ -36,6 +38,7 @@ export async function open(deviceId: number): Promise<void>;
  * Opens the device.
  *
  * Capabilities:
+ * - Virtual [ContactSensor](https://docs.hubitat.com/index.php?title=Driver_Capability_List#ContactSensor)
  * - [DoorControl](https://docs.hubitat.com/index.php?title=Driver_Capability_List#DoorControl)
  * - [GarageDoorControl](https://docs.hubitat.com/index.php?title=Driver_Capability_List#GarageDoorControl)
  * - [Valve](https://docs.hubitat.com/index.php?title=Driver_Capability_List#Valve)
@@ -46,5 +49,9 @@ export async function open(deviceId: number): Promise<void>;
 export async function open(deviceOrId: HubitatDevice | number): Promise<void>;
 
 export async function open(deviceOrId: HubitatDevice | number): Promise<void> {
-  await getDevice(deviceOrId).sendCommand('open');
+  const device = getDevice(deviceOrId);
+  const command = 'open';
+  if (!device.hasCommand(command))
+    throw new Error(`The device '${device.name}' doesn't support the '${command}' command.`);
+  await device.sendCommand(command);
 }
