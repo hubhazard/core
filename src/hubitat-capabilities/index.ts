@@ -26,6 +26,7 @@ export * from './functions/get-heating-setpoint.function';
 export * from './functions/get-illuminance.function';
 export * from './functions/get-level.function';
 export * from './functions/get-location-mode.function';
+export * from './functions/get-lock-status.function';
 export * from './functions/get-number-of-buttons.function';
 export * from './functions/get-supported-thermostat-fan-modes.function';
 export * from './functions/get-supported-thermostat-modes.function';
@@ -42,10 +43,14 @@ export * from './functions/get-window-shade-position.function';
 export * from './functions/is-accelerating';
 export * from './functions/is-any-on.function';
 export * from './functions/is-closed.function';
+export * from './functions/is-locked.function';
 export * from './functions/is-motion-detected.function';
 export * from './functions/is-on.function';
 export * from './functions/is-open.function';
 export * from './functions/is-present.function';
+export * from './functions/is-unlocked.function';
+
+export * from './functions/lock.function';
 
 export * from './functions/open.function';
 export * from './functions/refresh.function';
@@ -55,6 +60,7 @@ export * from './functions/set-alarm-setting.function';
 export * from './functions/set-cooling-setpoint.function';
 export * from './functions/set-heating-setpoint.function';
 export * from './functions/set-level.funciton';
+export * from './functions/set-lock.function';
 export * from './functions/set-position.function';
 export * from './functions/set-supported-thermostat-fan-modes.function';
 export * from './functions/set-supported-thermostat-modes.function';
@@ -69,11 +75,10 @@ export * from './functions/set-window-shade-coverage.function';
 
 export * from './functions/start-level-change.function';
 export * from './functions/stop-level-change.function';
-
 export * from './functions/switch-off.function';
 export * from './functions/switch-on.function';
-
 export * from './functions/toggle.function';
+export * from './functions/unlock.function';
 
 export * from './functions/which-button-double-tapped.function';
 export * from './functions/which-button-held.function';
@@ -91,6 +96,7 @@ export * from './types/active-status.type';
 export * from './types/alarm-setting.type';
 export * from './types/door-status.type';
 export * from './types/level-change-direction.type';
+export * from './types/lock-status.type';
 export * from './types/open-closed-position.type';
 export * from './types/switch-status.type';
 export * from './types/thermostat-fan-modes.type';
