@@ -4,8 +4,8 @@
  */
 
 import { TriggerDefinition } from '../../automations/trigger-definition';
-import { ShortInterval } from './timer-trigger';
 import { TIMER_EVENT_TYPE } from '../timer-event-type.const';
+import { ShortInterval } from './short-interval.type';
 
 /**
  * A class defining a timer trigger. Contains a list of

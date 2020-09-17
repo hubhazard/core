@@ -9,7 +9,7 @@ import { Automation } from '../automations/automation';
 import { AutomationsService } from '../automations/automations.service';
 import { IEventsService } from '../automations/events-service.interface';
 import { TriggerDefinition } from '../automations/trigger-definition';
-import { TimerTriggerDefinition } from './triggers/timer-trigger-definition';
+import { TimerTriggerDefinition } from './timer-trigger/timer-trigger-definition';
 import { TimerEvent } from './timer-event';
 import { isTimerEvent } from './is-timer-event.function';
 

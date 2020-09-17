@@ -2,7 +2,7 @@ import { doTimes } from '../../common/collections-helpers';
 import { randomIntRange } from '../../common/number-helpers';
 import { ShortIntervalDefinition } from './short-interval.definition';
 import { randomShortIntervalDefs } from './short-interval.definition.spec';
-import { ShortIntervalUnit, TimerTrigger } from './timer-trigger';
+import { EShortIntervalUnit, TimerTrigger } from './timer-trigger';
 import { TimerTriggerDefinition } from './timer-trigger-definition';
 
 export function randomShortIntervalUnit(): ShortIntervalUnit {
