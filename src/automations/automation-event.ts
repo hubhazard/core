@@ -12,7 +12,7 @@ import { Constructor } from '@nestjs/common/utils/merge-with-values.util';
  */
 export abstract class AutomationEvent {
   /**
-   * A type of this event. Used for routing and filtering of events.
+   * A type of event used for routing and filtering.
    *
    * @example
    * Can be used to identify the type of the event in automation:
