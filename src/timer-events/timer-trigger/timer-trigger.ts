@@ -5,9 +5,7 @@
 
 import { ShortIntervalDefinition } from './short-interval.definition';
 import { TimerTriggerDefinition } from './timer-trigger-definition';
-
-export declare type ShortIntervalUnit = 'hours' | 'minutes' | 'seconds' | 'ms';
-export declare type ShortInterval = { unit: ShortIntervalUnit; value: number };
+import { EShortIntervalUnit } from './short-interval-unit.type';
 
 /**
  * A timer trigger definition builder. Used when describing trigger definitions
@@ -28,7 +26,7 @@ export class TimerTrigger {
    * @param unit A unit of this time interval.
    * @returns A version of a *trigger builder* with the provided data.
    */
-  static every(value: number, unit: ShortIntervalUnit): ShortIntervalDefinition {
+  static every(value: number, unit: EShortIntervalUnit): ShortIntervalDefinition {
     if (value <= 0) throw new Error(`Can't create timer trigger with a value equal or less than zero: ${value}`);
     const trigger = new TimerTriggerDefinition();
     trigger.data.push({
